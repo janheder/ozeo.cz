@@ -1,0 +1,75 @@
+header{
+    background: $white;
+}
+.header-top{
+    height: 40px;
+    border-bottom: 1px solid $gray-300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-top__tel{
+    display: flex;
+    font-size: 14px;
+    line-height: 1;
+}
+.header-top__tel small{
+    display: flex;
+    font-size: 14px;
+}
+.header-top__tel img{
+    margin: 0 10px;
+}
+.header-top__tel span{
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.header-main{
+    padding: 20px 0;
+}
+.header-main .container{
+    display: flex;
+}
+.logo{
+    height: 40px;
+}
+.search{
+    display: flex;
+    flex-grow: 1;
+}
+.header-nav{
+    display: flex;
+}
+.header-nav .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+.header-nav .user img{
+    margin-right: 15px;
+}
+.header-nav .cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+.header-nav .cart img{
+    margin-right: 15px;
+}
+.header-nav .cart-content{
+    margin-right: 15px;
+}
+.header-nav .cart-title{
+    font-size: 16px;
+}
+.header-nav .cart.--active .cart-title{
+    font-size: 14px;
+    line-height: 1;
+}
+.header-nav .cart-price{
+    font-size: 16px;
+    font-weight: 500;
+}

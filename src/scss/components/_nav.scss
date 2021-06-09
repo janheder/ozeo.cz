@@ -1,0 +1,17 @@
+nav{
+    background: $gray-100;
+}
+.nav-item{
+    display: flex;
+}
+.nav-link{
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    color: $gray-900;
+}
+.nav-item:hover .nav-submenu{
+    display: flex;
+}

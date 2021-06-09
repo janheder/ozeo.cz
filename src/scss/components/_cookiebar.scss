@@ -1,0 +1,26 @@
+#cookiebar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+.cookiebar-wrapper{
+    max-width: 1460px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center;
+}
+.cookiebar-content{
+    display: flex;
+    flex-grow: 1;
+}
+.cookiebar-link{
+    margin-left: 10px;
+}
+.cookiebar-btn{
+    display: flex;
+}
