@@ -1,7 +1,30 @@
 // Custom js plugins and scripts
 
+script(src="/js/autoComplete.min.js")
+script(src="/js/micromodal.min.js")
 script(src="/js/cookiebar.min.js")
 script(src="/js/lazyload.min.js")
 script(src="/js/instant.page.min.js")
 script(src="/js/siema.min.js")
 script(src="/js/scripts.min.js")
+
+
+script.
+    const autoCompleteJS = new autoComplete({
+        placeHolder: "Hledejte název produktu, značku nebo typ",
+        data: {
+            src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+            cache: true,
+        },
+        resultItem: {
+            highlight: true
+        },
+        events: {
+            input: {
+                selection: (event) => {
+                    const selection = event.detail.selection.value;
+                    autoCompleteJS.input.value = selection;
+                }
+            }
+        }
+    });

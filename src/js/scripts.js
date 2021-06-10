@@ -1,5 +1,5 @@
-new Siema({
-    selector: '.carousel-wrapper',
+const mySiema = new Siema({
+    selector: '.carousel-inner',
     duration: 200,
     easing: 'ease-out',
     perPage: 1,
@@ -7,12 +7,13 @@ new Siema({
     draggable: true,
     multipleDrag: true,
     threshold: 20,
-    loop: false,
+    loop: true,
     rtl: false,
     onInit: () => {},
     onChange: () => {},
   });
-
+  document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+  document.querySelector('.next').addEventListener('click', () => mySiema.next());
 
 
 var cookiebar = new Cookiebar({
@@ -20,10 +21,10 @@ var cookiebar = new Cookiebar({
     cls: "cookiebar",
     cookie: "cookiebar",
     content: {
-        description: "The site uses cookies to operate. By using our services you agree to use the cookies!",
-        link: "More information",
+        description: "Tato stránka používá cookies za účelem optimalizace efektivního poskytování služeb.",
+        link: "Více informací",
         href: "http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm",
-        button: "Accept",
+        button: "Rozumím",
         more: "..."
     },
     fade: {
@@ -41,4 +42,24 @@ var cookiebar = new Cookiebar({
 lazyload();
 
 
+MicroModal.init({
+    onShow: modal => console.info(`${modal.id} is shown`),
+    onClose: modal => console.info(`${modal.id} is hidden`), 
+    /*
+    openTrigger: 'data-custom-open', //
+    closeTrigger: 'data-custom-close', // 
+    */
+    openClass: 'is-open', 
+    disableScroll: true, 
+    disableFocus: true, 
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true, 
+    debugMode: true 
+  });
+      
 
+
+
+document.getElementById('js-navToggle').onclick = function() {
+    document.body.classList.toggle('nav-active');
+}

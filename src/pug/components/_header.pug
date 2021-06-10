@@ -6,19 +6,36 @@ header
                 img(src="/icons/phone.svg")
                 span +420 605 337 238 
                 small (po–pá 7:30–15:30)
+            .header-top__links
+                a(href="/vse-o-nakupu.html") Vše o nákupu
+                a(href="/vse-o-nakupu.html") Doprava
+                a(href="/vse-o-nakupu.html") Kontakty
 
 
     .header-main  
         .container 
+            div(id="js-navToggle")
+                span
+
             a.logo(href="/")
                 img(src="/img/logo.svg")
+
             .search 
+                .search-wrapper     
+                    form.search-form(action="post") 
+                        input.search__input(type="text" id="autoComplete")
+                        button.search__button
+                            img(src="/icons/search.svg")
+
             .header-nav
-                .user(id="toggleLogin")
-                    img(src="/icons/user.svg")
-                    div Přihlášení
-                .cart.--active                
-                    img(src="/icons/cart.svg")
-                    div.cart-content
-                        div.cart-title Nákupní košík
-                        div.cart-price 2 599 Kč
+                .user(data-micromodal-trigger="modal-login")
+                    .user__icon
+                        img(src="/icons/user.svg")
+                    div.user__title Přihlášení
+                .cart.--active    
+                    .cart__icon            
+                        img(src="/icons/cart.svg")
+                        .cart__number 2
+                    .cart-content
+                        .cart-title Nákupní košík
+                        .cart-price 2 599 Kč

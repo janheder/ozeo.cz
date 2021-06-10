@@ -1,0 +1,26 @@
+.tag{
+    font-size: 13px;
+    font-weight: 500;
+    background: $gray-900;
+    color: $white;
+    height: 26px;
+    padding: 0 10px 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 24px;
+}
+.tag.--sale{
+    background: $red-500;
+}
+.tag.--new{
+    background: $green-500;
+}
+.tag.--recommended{
+    background: #5A5E6A;
+}
+.tag.--top{
+    background: $gray-900;
+}

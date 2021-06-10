@@ -7,6 +7,7 @@ html(lang=lang)
         meta(content="IE=edge" http-equiv="X-UA-Compatible")
         meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
     body
+        include components/_modal-login.pug
 
         include components/_header.pug
         include components/_nav.pug
@@ -14,14 +15,34 @@ html(lang=lang)
             section.carousel
                 .container
                     .carousel-wrapper
-                        div Hi, I'm slide 1
-                        div Hi, I'm slide 2
-                        div Hi, I'm slide 3
-                        div Hi, I'm slide 4
+                        .carousel-inner
+                            .item
+                                img(src="/img/carousel/banner1.png" alt="#" title="#")
+                                a(href="/produkt-detail.html")
+                            .item
+                                img(src="/img/carousel/banner1.png" alt="#" title="#")
+                                a(href="/produkt-detail.html")                          
+                            .item
+                                img(src="/img/carousel/banner1.png" alt="#" title="#")
+                                a(href="/produkt-detail.html")
+                        button.prev
+                            img(src="/icons/cheveron-white.svg")
+                        button.next
+                            img(src="/icons/cheveron-white.svg")
 
-            section.product-grid
+
+            section.products
                 .container
-                    include components/_productCard.pug
-                    include components/_productCard.pug
+                    h1 Novinky a akční ceny
+                    .product-grid
+                        include components/_product-card.pug
+                        include components/_product-card.pug
+                        include components/_product-card.pug
+                        include components/_product-card.pug
+
+
+            include components/_news-section.pug
+        
+        include components/_footer.pug
 
         include template/_scripts.pug  

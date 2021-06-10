@@ -8,10 +8,16 @@ header{
     justify-content: center;
     align-items: center;
 }
+.header-top .container{
+    display: flex;
+}
 .header-top__tel{
     display: flex;
     font-size: 14px;
     line-height: 1;
+    flex-shrink: 0;
+    flex-grow: 1;
+    align-items: center;
 }
 .header-top__tel small{
     display: flex;
@@ -25,19 +31,106 @@ header{
     font-weight: 500;
     padding-right: 10px;
 }
+
+.header-top__links{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-end;
+}
+.header-top__links a{
+    font-size: 14px;
+    margin: 0 0 0 20px;
+    color: $gray-500;
+}
+@media screen and (max-width: 991px){
+    .header-top{
+        display: none;
+    }
+}
+
+
 .header-main{
     padding: 20px 0;
 }
 .header-main .container{
     display: flex;
+    align-items: center;
 }
 .logo{
     height: 40px;
 }
+.logo img{
+    height: 30px;
+}
+#js-navToggle{
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    display: none;
+}
+#js-navToggle span{
+    height: 2px;
+    width: 18px;
+    background: #06070E;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: relative;
+    transition: 0.3s all ease;
+
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $gray-900;
+        transform: translate(0%, -300%);
+        transition: 0.3s all ease;
+    }
+
+    &::after {
+        transform: translate(0%, 300%);
+    }
+}
+
 .search{
     display: flex;
     flex-grow: 1;
+    justify-content: center;
+    padding: 0 60px
 }
+.search-wrapper{
+    max-width: 480px;
+    min-width: auto;
+    width: 100%;
+}
+.search-form{
+    display: flex;
+    position: relative;
+}
+.search__input{
+    background: $gray-100;
+    border: 0;
+    width: 100%;
+    outline: none;
+}
+.search__button{
+    border: 0;
+    background: $gray-100;
+    height: 52px;
+    width: 52px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
 .header-nav{
     display: flex;
 }
@@ -45,22 +138,62 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 30px 0 0;
+    cursor: pointer;
+}
+.header-nav .user__title{
+    
+}
+.header-nav .user__icon{
+    background: $gray-100;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
 }
 .header-nav .user img{
-    margin-right: 15px;
+
 }
 .header-nav .cart{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 0px 0 30px;
+}
+.header-nav .cart__icon{
+    background: $gray-100;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    position: relative;
+}  
+.header-nav .cart__number{
+    position: absolute;
+    background: $green-500;
+    color: $white;
+    border: 2px solid $gray-100;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    line-height: 1;
+    text-align: center;
+    top: 24px;
+    left: 22px;
 }
 .header-nav .cart img{
-    margin-right: 15px;
+    
 }
 .header-nav .cart-content{
-    margin-right: 15px;
+    
 }
 .header-nav .cart-title{
     font-size: 16px;
@@ -72,4 +205,46 @@ header{
 .header-nav .cart-price{
     font-size: 16px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 991px){
+    header {
+        padding-bottom: 52px;
+    }
+    .header-main{
+        padding: 0;
+        height: 52px;
+        background: $white;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .header-main .container{
+        padding: 0;
+    }
+    .logo{
+        height: 30px;
+        margin-left: 10px;
+    }
+    #js-navToggle {
+        display: block;
+        flex-shrink: 0;
+    }
+    .search{
+        display: none;
+    }
+    .header-nav .user{
+        padding: 0;
+    }
+    .header-nav .user__title{
+        display: none;
+    }
+    .header-nav .user__icon{
+        margin: 0;
+    }
+    .header-nav .cart{
+        padding: 0;
+    }
 }

@@ -12,7 +12,7 @@
 
 // Optional
 @import "node_modules/bootstrap/scss/reboot";
-
+@import "node_modules/bootstrap/scss/grid";
 
 /* ========================================================================== */
 /* VARIABLES */
@@ -35,6 +35,10 @@ body{
 a{
     color: $green-500;
     text-decoration: none;
+
+    &:hover, &:active, &:focus{
+        color: $gray-900;
+    }
 }
 .container{
     max-width: 1460px;
@@ -46,4 +50,17 @@ a{
 
 section{
     padding: 40px 0;
+}
+
+section h1{
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+.product-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-grid .product-card{
+    width: 25%;
 }

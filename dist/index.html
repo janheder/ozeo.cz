@@ -23,26 +23,34 @@
     <meta name="twitter:title" content="OZEO.cz">
     <meta name="twitter:description" content="...">
     <meta name="twitter:image" content="img/placeholder-200x200.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#24272D">
-    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/img/favicons/ms-icon-144x144.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
     <!-- Plugins CSS-->
     <!-- Custom CSS-->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="/css/style.min.css" rel="stylesheet">
+    <!-- PWA init-->
+    <script src="/upup.min.js"></script>
+    <script>
+      UpUp.start({
+      'content-url': 'offline.html',
+      'assets': ['/img/logo.svg']
+      });
+    </script>
   </head>
   <head>
     <meta charset="utf-8">
@@ -50,20 +58,45 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
   </head>
   <body>
+    <div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <div class="modal__header">
+            <h2 class="modal__title" id="modal-login-title">Modal Title</h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </div>
+          <div class="modal__content" id="modal-login-content"><span>Modal Content</span></div>
+          <div class="modal__footer"></div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="header-top">
         <div class="container"> 
           <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/icons/phone.svg"><span>+420 605 337 238 </span><small>(po–pá 7:30–15:30)</small></div>
+          <div class="header-top__links"><a href="/vse-o-nakupu.html">Vše o nákupu</a><a href="/vse-o-nakupu.html">Doprava</a><a href="/vse-o-nakupu.html">Kontakty</a></div>
         </div>
       </div>
       <div class="header-main"> 
-        <div class="container"> <a class="logo" href="/"><img src="/img/logo.svg"></a>
-          <div class="search"> </div>
-          <div class="header-nav">
-            <div class="user" id="toggleLogin"><img src="/icons/user.svg">
-              <div>Přihlášení</div>
+        <div class="container"> 
+          <div id="js-navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg"></a>
+          <div class="search"> 
+            <div class="search-wrapper">    
+              <form class="search-form" action="post"> 
+                <input class="search__input" type="text" id="autoComplete">
+                <button class="search__button"><img src="/icons/search.svg"></button>
+              </form>
             </div>
-            <div class="cart --active">               <img src="/icons/cart.svg">
+          </div>
+          <div class="header-nav">
+            <div class="user" data-micromodal-trigger="modal-login">
+              <div class="user__icon"><img src="/icons/user.svg"></div>
+              <div class="user__title">Přihlášení</div>
+            </div>
+            <div class="cart --active">   
+              <div class="cart__icon">           <img src="/icons/cart.svg">
+                <div class="cart__number">2</div>
+              </div>
               <div class="cart-content">
                 <div class="cart-title">Nákupní košík</div>
                 <div class="cart-price">2 599 Kč</div>
@@ -75,38 +108,244 @@
     </header>
     <nav>
       <div class="container">
-        <div class="nav-item"> <a class="nav-link" href="produkty-vypis">Home</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Akční nabídka</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Rošty</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Skříně</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Šuplíky</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Postele</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Komody</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Noční stolky</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Dřevěné krabičky</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Dřevěné boxy</a></div>
       </div>
     </nav>
     <main>
       <section class="carousel">
         <div class="container">
           <div class="carousel-wrapper">
-            <div>Hi, I'm slide 1</div>
-            <div>Hi, I'm slide 2</div>
-            <div>Hi, I'm slide 3</div>
-            <div>Hi, I'm slide 4</div>
+            <div class="carousel-inner">
+              <div class="item"><img src="/img/carousel/banner1.png" alt="#" title="#"><a href="/produkt-detail.html"></a></div>
+              <div class="item"><img src="/img/carousel/banner1.png" alt="#" title="#"><a href="/produkt-detail.html">                         </a></div>
+              <div class="item"><img src="/img/carousel/banner1.png" alt="#" title="#"><a href="/produkt-detail.html"></a></div>
+            </div>
+            <button class="prev"><img src="/icons/cheveron-white.svg"></button>
+            <button class="next"><img src="/icons/cheveron-white.svg"></button>
           </div>
         </div>
       </section>
-      <section class="product-grid">
+      <section class="products">
         <div class="container">
-          <div class="productCard"> <a href="produkt-detail.html">
-              <div class="top">
-                <p>ahoj</p>
-              </div></a></div>
-          <div class="productCard"> <a href="produkt-detail.html">
-              <div class="top">
-                <p>ahoj</p>
-              </div></a></div>
+          <h1>Novinky a akční ceny</h1>
+          <div class="product-grid">
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__imgWrap"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI"></div>
+                  </div>
+                  <h4 class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</h4>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__delivery"><img src="/icons/check.svg">
+                    <p class="product-card__deliveryText">Skladem 10 ks</p>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">999 Kč</div>
+                    <div class="product-card__priceMain">899 Kč</div>
+                  </div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__imgWrap"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI"></div>
+                  </div>
+                  <h4 class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</h4>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__delivery"><img src="/icons/check.svg">
+                    <p class="product-card__deliveryText">Skladem 10 ks</p>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">999 Kč</div>
+                    <div class="product-card__priceMain">899 Kč</div>
+                  </div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__imgWrap"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI"></div>
+                  </div>
+                  <h4 class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</h4>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__delivery"><img src="/icons/check.svg">
+                    <p class="product-card__deliveryText">Skladem 10 ks</p>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">999 Kč</div>
+                    <div class="product-card__priceMain">899 Kč</div>
+                  </div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__imgWrap"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI"></div>
+                  </div>
+                  <h4 class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</h4>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__delivery"><img src="/icons/check.svg">
+                    <p class="product-card__deliveryText">Skladem 10 ks</p>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">999 Kč</div>
+                    <div class="product-card__priceMain">899 Kč</div>
+                  </div>
+                </div></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="section-news">
+        <div class="container">
+          <h1 class="section-news__title">Co je u nás v OZEO nového </h1>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-4"><a class="news-single" href="#">
+                <div class="news-single__top">
+                  <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-medium.jpg" alt="#" title="#">
+                </div>
+                <div class="news-single__bottom">
+                  <h4 class="news-single__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                </div></a></div>
+            <div class="col-12 col-sm-12 col-md-4"><a class="news-single" href="#">
+                <div class="news-single__top">
+                  <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-medium.jpg" alt="#" title="#">
+                </div>
+                <div class="news-single__bottom">
+                  <h4 class="news-single__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                </div></a></div>
+            <div class="col-12 col-sm-12 col-md-4"><a class="news-single" href="#">
+                <div class="news-single__top">
+                  <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-medium.jpg" alt="#" title="#">
+                </div>
+                <div class="news-single__bottom">
+                  <h4 class="news-single__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                </div></a></div>
+          </div>
+          <div class="section-news__btnWrap"> <a class="btn" href="aktuality-vypis.html">Starší aktuality</a></div>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="container footer__container">
+        <div class="row footer__row">
+          <div class="col-6 col-sm-6 col-lg-3">
+            <h5 class="footer__title">O nákupu</h5><a class="footer__link" href="#">Obchodní podmínky</a><a class="footer__link" href="#">Reklamační řád</a><a class="footer__link" href="#">Jak nakupovat</a><a class="footer__link" href="#">Osobní odběry</a><a class="footer__link" href="#">Možnosti platby</a>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-3">
+            <h5 class="footer__title">Uživatelský účet</h5><a class="footer__link" href="#" data-toggle="modal" data-target="#modal-login">Přihlášení</a><a class="footer__link" href="#">Vytvořit účet</a><a class="footer__link" href="#">Zapomenuté údaje</a>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-3">
+            <h5 class="footer__title">Další odkazy</h5><a class="footer__link" href="#">Výhody nákupu</a><a class="footer__link" href="#">Doprava zdarma</a><a class="footer__link" href="#">Ochrana osobních údajů</a><a class="footer__link" href="#">Zásady používání cookie</a>
+          </div>
+          <div class="col-6 col-sm-6 col-lg-3">
+            <h5 class="footer__title">Kontaktní informace</h5>
+            <p class="footer__text">Ondera Aleš</p>
+            <p class="footer__text">J.Čapka 3097</p>
+            <p class="footer__text">Frýdek-Místek, 738 01</p><a class="footer__link" href="#">Více kontaktů</a>
+          </div>
+        </div>
+      </div>
+      <section class="copyright">
+        <div class="container copyright__container">
+          <div class="copyright__wrap">
+            <h5 class="copyright__h5">Copyright © 2021 <a class="copyright__link" href="https://ozeo.cz">ozeo.cz</a></h5>
+            <h5 class="copyright__pull">Vytvořeno v <a class="copyright__link" href="http://eline.cz">Eline.cz</a></h5>
+          </div>
+        </div>
+      </section>
+    </footer>
     <!-- Custom js plugins and scripts-->
+    <script src="/js/autoComplete.min.js"></script>
+    <script src="/js/micromodal.min.js"></script>
     <script src="/js/cookiebar.min.js"></script>
     <script src="/js/lazyload.min.js"></script>
     <script src="/js/instant.page.min.js"></script>
     <script src="/js/siema.min.js"></script>
     <script src="/js/scripts.min.js"></script>
+    <script>
+      const autoCompleteJS = new autoComplete({
+          placeHolder: "Hledejte název produktu, značku nebo typ",
+          data: {
+              src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+              cache: true,
+          },
+          resultItem: {
+              highlight: true
+          },
+          events: {
+              input: {
+                  selection: (event) => {
+                      const selection = event.detail.selection.value;
+                      autoCompleteJS.input.value = selection;
+                  }
+              }
+          }
+      });
+    </script>
   </body>
 </html>

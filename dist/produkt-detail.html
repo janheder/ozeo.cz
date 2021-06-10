@@ -23,26 +23,34 @@
     <meta name="twitter:title" content="OZEO.cz">
     <meta name="twitter:description" content="...">
     <meta name="twitter:image" content="img/placeholder-200x200.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#24272D">
-    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/img/favicons/ms-icon-144x144.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
     <!-- Plugins CSS-->
     <!-- Custom CSS-->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="/css/style.min.css" rel="stylesheet">
+    <!-- PWA init-->
+    <script src="/upup.min.js"></script>
+    <script>
+      UpUp.start({
+      'content-url': 'offline.html',
+      'assets': ['/img/logo.svg']
+      });
+    </script>
   </head>
   <head>
     <meta charset="utf-8">
@@ -50,20 +58,45 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
   </head>
   <body>
+    <div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <div class="modal__header">
+            <h2 class="modal__title" id="modal-login-title">Modal Title</h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </div>
+          <div class="modal__content" id="modal-login-content"><span>Modal Content</span></div>
+          <div class="modal__footer"></div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="header-top">
         <div class="container"> 
           <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/icons/phone.svg"><span>+420 605 337 238 </span><small>(po–pá 7:30–15:30)</small></div>
+          <div class="header-top__links"><a href="/vse-o-nakupu.html">Vše o nákupu</a><a href="/vse-o-nakupu.html">Doprava</a><a href="/vse-o-nakupu.html">Kontakty</a></div>
         </div>
       </div>
       <div class="header-main"> 
-        <div class="container"> <a class="logo" href="/"><img src="/img/logo.svg"></a>
-          <div class="search"> </div>
-          <div class="header-nav">
-            <div class="user" id="toggleLogin"><img src="/icons/user.svg">
-              <div>Přihlášení</div>
+        <div class="container"> 
+          <div id="js-navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg"></a>
+          <div class="search"> 
+            <div class="search-wrapper">    
+              <form class="search-form" action="post"> 
+                <input class="search__input" type="text" id="autoComplete">
+                <button class="search__button"><img src="/icons/search.svg"></button>
+              </form>
             </div>
-            <div class="cart --active">               <img src="/icons/cart.svg">
+          </div>
+          <div class="header-nav">
+            <div class="user" data-micromodal-trigger="modal-login">
+              <div class="user__icon"><img src="/icons/user.svg"></div>
+              <div class="user__title">Přihlášení</div>
+            </div>
+            <div class="cart --active">   
+              <div class="cart__icon">           <img src="/icons/cart.svg">
+                <div class="cart__number">2</div>
+              </div>
               <div class="cart-content">
                 <div class="cart-title">Nákupní košík</div>
                 <div class="cart-price">2 599 Kč</div>
@@ -75,9 +108,47 @@
     </header>
     <nav>
       <div class="container">
-        <div class="nav-item"> <a class="nav-link" href="produkty-vypis">Home</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Akční nabídka</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Rošty</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Skříně</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Šuplíky</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Postele</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Komody</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Noční stolky</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Dřevěné krabičky</a></div>
+        <div class="nav-item"> <a class="nav-link" href="produkty-vypis.html">Dřevěné boxy</a></div>
       </div>
     </nav>
-    <h1>produkt detail</h1>
+    <main>
+      <div class="container"></div>
+    </main>
+    <!-- Custom js plugins and scripts-->
+    <script src="/js/autoComplete.min.js"></script>
+    <script src="/js/micromodal.min.js"></script>
+    <script src="/js/cookiebar.min.js"></script>
+    <script src="/js/lazyload.min.js"></script>
+    <script src="/js/instant.page.min.js"></script>
+    <script src="/js/siema.min.js"></script>
+    <script src="/js/scripts.min.js"></script>
+    <script>
+      const autoCompleteJS = new autoComplete({
+          placeHolder: "Hledejte název produktu, značku nebo typ",
+          data: {
+              src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+              cache: true,
+          },
+          resultItem: {
+              highlight: true
+          },
+          events: {
+              input: {
+                  selection: (event) => {
+                      const selection = event.detail.selection.value;
+                      autoCompleteJS.input.value = selection;
+                  }
+              }
+          }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,36 @@
+.product-card 
+    a.product-card__link(href="/produkt-detail.html")
+
+        .product-card__top     
+
+            .product-card__thumb
+
+                .product-card__tags
+                    .product-card__tagSingle
+                        .tag.--sale Akce
+                    .product-card__tagSingle    
+                        .tag.--new Novinka
+                    .product-card__tagSingle 
+                        .tag.--recommended Doporučené
+                    .product-card__tagSingle 
+                        .tag.--top Top
+
+                .product-card__imgWrap
+                    img.lazyload.product-card__img(src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt=ProductName title=ProductName)
+
+            h4.product-card__title #{ProductName}
+
+
+
+
+
+        .product-card__bottom
+
+            .product-card__delivery
+                img(src="/icons/check.svg")
+                p.product-card__deliveryText Skladem 10 ks
+                
+
+            .product-card__price
+                .product-card__priceOld 999 Kč
+                .product-card__priceMain 899 Kč
