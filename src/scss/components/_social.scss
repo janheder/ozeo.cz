@@ -1,0 +1,27 @@
+.social{
+
+}
+.social-single{
+
+}
+.social-single__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $gray-300;
+    padding: 30px 20px;
+    color: $gray-900;
+}
+.social-single__img{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-single img{
+    
+}
+.social-single__text{
+    font-size: 18px;
+    padding-left: 20px;
+}

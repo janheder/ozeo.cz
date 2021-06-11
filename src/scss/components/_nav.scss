@@ -1,5 +1,6 @@
 nav{
     background: $gray-100;
+    position: relative;
 }
 nav .container{
     display: flex;
@@ -7,19 +8,58 @@ nav .container{
 .nav-item{
     display: flex;
     flex-grow: 1;
+    justify-content: center;
 }
 .nav-link{
     height: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 20px;
     color: $gray-900;
+    text-align: center;
+    flex-grow: 1;
+}
+.nav-link img{
+    margin-left: 10px;
+}
+.nav-item:hover .nav-link{
+    background: $white;
 }
 .nav-item:hover .nav-submenu{
     display: flex;
 }
 
+.nav-submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 100%;
+    background: $white;
+    z-index: 2;
+    padding: 20px 0;
+}
+.nav-submenu__single{
+    display: flex;
+    padding: 40px 0;
+}
+.nav-submenu__single ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
+.nav-submenu__single li{
+    padding: 0;
+}
+.nav-submenu__title{
+    color: $gray-900;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.nav-submenu__link{
+    color: $gray-500;
+}
 
 @media screen and (max-width: 991px){
     nav{
@@ -27,7 +67,7 @@ nav .container{
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 3;
         bottom: 0;
         overflow-y: auto;
         width: 260px;
@@ -43,9 +83,14 @@ nav .container{
     nav .container{
         display: flex;
         flex-direction: column;
+        padding: 0;
     }
     .nav-item{
         display: flex;
         flex-grow: 1;
+    }
+    .nav-link {
+        justify-content: flex-start;
+        width: 100%;
     }
 }

@@ -1,0 +1,36 @@
+footer{
+    border-top: 1px solid $gray-300;
+    padding: 60px 0;
+}
+.footer__title{
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.footer__link{
+    color: $gray-900;
+    line-height: 2;
+    display: flex;
+}
+.footer__text{
+    color: $gray-900;
+    line-height: 2;
+    display: flex;
+    margin: 0;
+}
+.copyright{
+
+}
+.copyright a{
+    color: $gray-900;
+}
+.copyright__wrap{
+    display: flex;
+}
+.copyright__title{
+
+    flex-grow: 1;
+}
+.copyright__author{
+
+}

@@ -8,6 +8,9 @@
 .carousel .item{
     position: relative;
 }
+.carousel .item img{
+    width: 100%;
+}
 .carousel .prev, .carousel .next{
     background: rgba(0,0,0,0.6);
     height: 52px;
@@ -22,4 +25,15 @@
 }
 .carousel .prev img{
     transform: rotate(180deg);
+}
+
+@media screen and (max-width:991px){
+    .carousel{
+        padding: 20px 0;
+    }
+}
+@media screen and (max-width:500px){
+    .carousel{
+        padding: 10px 0;
+    }
 }

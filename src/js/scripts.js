@@ -54,12 +54,15 @@ MicroModal.init({
     disableFocus: true, 
     awaitOpenAnimation: true,
     awaitCloseAnimation: true, 
-    debugMode: true 
+    debugMode: false 
   });
       
 
 
 
 document.getElementById('js-navToggle').onclick = function() {
+    document.body.classList.toggle('nav-active');
+}
+document.getElementById('darkBackdrop').onclick = function() {
     document.body.classList.toggle('nav-active');
 }

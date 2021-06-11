@@ -1,0 +1,41 @@
+.points{
+
+}
+.points-single{
+    display: flex;
+    align-items: center;
+}
+.points-single__icon {
+
+}
+.points-single__icon img{
+    width: 100%;
+}
+.points-single__content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.points-single__content strong{
+    font-weight: 500;
+}
+.points-single__content span{
+    color: $gray-500;
+}
+
+@media screen and (max-width: 991px){
+    .points{
+        padding-top: 0;
+    }
+    .points-single{
+        padding: 20px 0;
+    }
+    .points-single__icon {
+        width: 60px;
+    }  
+}
+@media screen and (max-width:500px){
+    .points-single{
+        padding: 10px 0;
+    }
+}

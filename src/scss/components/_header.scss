@@ -60,11 +60,11 @@ header{
     height: 40px;
 }
 .logo img{
-    height: 30px;
+    height: 100%;
 }
 #js-navToggle{
     height: 100%;
-    width: 50px;
+    width: 52px;
     cursor: pointer;
     display: none;
 }
@@ -138,7 +138,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px 0 0;
+    margin: 0 30px 0 0;
     cursor: pointer;
 }
 .header-nav .user__title{
@@ -161,7 +161,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0px 0 30px;
+    margin: 0 0px 0 30px;
+    color: $gray-900;
 }
 .header-nav .cart__icon{
     background: $gray-100;
@@ -220,12 +221,14 @@ header{
         top: 0;
         left: 0;
         width: 100%;
+        box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.05);
     }
     .header-main .container{
         padding: 0;
+        height: 100%;
     }
     .logo{
-        height: 30px;
+        height: 28px;
         margin-left: 10px;
     }
     #js-navToggle {
@@ -233,7 +236,13 @@ header{
         flex-shrink: 0;
     }
     .search{
+        padding: 0;
+    }
+    .search-wrapper{
         display: none;
+    }
+    .header-nav {
+        height: 100%;
     }
     .header-nav .user{
         padding: 0;
@@ -243,8 +252,22 @@ header{
     }
     .header-nav .user__icon{
         margin: 0;
+        border-radius: 0;
+        background: transparent;
+        height: 100%;
+        width: 52px;
     }
     .header-nav .cart{
         padding: 0;
+    }
+    .header-nav .cart__icon{
+        margin: 0;
+        border-radius: 0;
+        background: transparent;
+        height: 100%;
+        width: 52px;
+    }
+    .header-nav .cart-content{
+        display: none;
     }
 }

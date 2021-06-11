@@ -1,27 +1,24 @@
 footer
 
-    .container.footer__container
-        .row.footer__row
+    .container
+        .row
             .col-6.col-sm-6.col-lg-3
                 h5.footer__title O nákupu
                 a.footer__link(href="#") Obchodní podmínky
                 a.footer__link(href="#") Reklamační řád
                 a.footer__link(href="#") Jak nakupovat
-                a.footer__link(href="#") Osobní odběry
-                a.footer__link(href="#") Možnosti platby
+                a.footer__link(href="#") Výhody nákupu
 
             .col-6.col-sm-6.col-lg-3
-                h5.footer__title Uživatelský účet
-                a.footer__link(href="#" data-toggle="modal" data-target="#modal-login") Přihlášení
-                a.footer__link(href="#") Vytvořit účet
-                a.footer__link(href="#") Zapomenuté údaje
+                h5.footer__title O nás
+                a.footer__link(href="#") O společnosti
+                a.footer__link(href="#") Aktuality
 
             .col-6.col-sm-6.col-lg-3
                 h5.footer__title Další odkazy
-                a.footer__link(href="#") Výhody nákupu
-                a.footer__link(href="#") Doprava zdarma
                 a.footer__link(href="#") Ochrana osobních údajů
                 a.footer__link(href="#") Zásady používání cookie
+                a.footer__link(href="#") GDPR
 
             .col-6.col-sm-6.col-lg-3
                 h5.footer__title Kontaktní informace
@@ -32,7 +29,7 @@ footer
                 
 
     section.copyright
-        .container.copyright__container
+        .container
             .copyright__wrap
-                h5.copyright__h5 Copyright © 2021 #[a.copyright__link(href=metaURL) #{metaSitename}]
-                h5.copyright__pull Vytvořeno v #[a.copyright__link(href=metaAuthorURL) #{metaAuthor}]
+                .copyright__title Copyright © 2021 #[a.copyright__link(href=metaURL) #{metaSitename}]
+                .copyright__author Vytvořeno v #[a.copyright__link(href=metaAuthorURL) #{metaAuthor}]

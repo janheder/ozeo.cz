@@ -1,0 +1,25 @@
+.categories{
+
+}
+.categories-single{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: $gray-100;
+}
+.categories-single img{
+    height: 180px;
+}
+.categories-single__link{
+    font-size:  18px;
+    color: $gray-900;
+    font-weight: 500;
+    padding: 20px 0 10px 0;
+}
+.categories-single__text{
+    margin: 0;
+    text-align: center;
+    color: $gray-500;
+}
