@@ -62,13 +62,13 @@ header{
 .logo img{
     height: 100%;
 }
-#js-navToggle{
+#navToggle{
     height: 100%;
     width: 52px;
     cursor: pointer;
     display: none;
 }
-#js-navToggle span{
+#navToggle span{
     height: 2px;
     width: 18px;
     background: #06070E;
@@ -231,7 +231,7 @@ header{
         height: 28px;
         margin-left: 10px;
     }
-    #js-navToggle {
+    #navToggle {
         display: block;
         flex-shrink: 0;
     }
@@ -246,6 +246,7 @@ header{
     }
     .header-nav .user{
         padding: 0;
+        margin: 0;
     }
     .header-nav .user__title{
         display: none;
@@ -259,6 +260,7 @@ header{
     }
     .header-nav .cart{
         padding: 0;
+        margin: 0;
     }
     .header-nav .cart__icon{
         margin: 0;

@@ -50,7 +50,7 @@ strong{
     width: 100%;
     margin: 0 auto;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 575px){
     .container{
         padding-right: 10px;
         padding-left: 10px;
@@ -60,7 +60,6 @@ strong{
 .row {
     margin-right: -10px;
     margin-left: -10px;
-    width: 100%;
 }
 .row>* {
     padding-right: 10px;
@@ -75,7 +74,7 @@ section h1{
     font-weight: 500;
     padding-bottom: 40px;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 575px){
     section{
         padding: 20px 0;
     }
@@ -87,21 +86,27 @@ section h1{
 }
 
 
-.product-grid{
+.products-grid{
     display: flex;
     flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px;
 }
-.product-grid .product-card{
+.products-grid .product-card{
     width: 25%;
 }
 @media screen and (max-width: 767px){
-    .product-grid{
+    .products-grid{
 
     }
-    .product-grid .product-card{
+    .products-grid .product-card{
         width: 50%;
+    }
+}
+@media screen and (max-width: 575px){
+    .products-grid{
+        margin-left: -5px;
+        margin-right: -5px;
     }
 }
 
@@ -118,7 +123,7 @@ section h1{
     height: 100%;
     z-index: 2;
 }
-.nav-active #darkBackdrop{
+.--nav-active #darkBackdrop{
     opacity: 1;
     pointer-events: auto;
 }

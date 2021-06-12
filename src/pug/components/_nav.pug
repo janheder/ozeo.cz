@@ -9,29 +9,81 @@ nav
             .nav-submenu
                 .container
                     .row 
-                        .col-12.col-sm-6.col-ms-4
-                            .nav-submenu__single    
-                                img(src="/img/product-thumb-medium.jpg" alt="" title="")
-                                ul 
-                                    li 
-                                        a(href="/produkt-vypis").nav-submenu__title Rošty
-                                    li 
-                                        a(href="/produkt-vypis").nav-submenu__link Noční stolky
-                                    li 
-                                        a(href="/produkt-vypis").nav-submenu__link Dřevěné krabičky
-                                    li 
-                                        a(href="/produkt-vypis").nav-submenu__link Dřevěné boxy
+                        - for (var i=0; i<8; i++)
+                            .col-12.col-sm-6.col-md-4
+                                .nav-submenu__single    
+                                    img(src="/img/product-thumb-medium.jpg" alt="" title="")
+                                    ul 
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__title Rošty
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Noční stolky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné krabičky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné boxy
 
 
         .nav-item 
             a.nav-link(href="produkt-vypis.html") Šuplíky
-        .nav-item 
-            a.nav-link(href="produkt-vypis.html") Postele
+        .nav-item.expandable
+            a.nav-link(href="produkt-vypis.html") Postele #[img(src="/icons/cheveron.svg")]
+            .nav-submenu
+                .container
+                    .row 
+                        - for (var i=0; i<8; i++)
+                            .col-12.col-sm-6.col-md-4
+                                .nav-submenu__single    
+                                    img(src="/img/product-thumb-medium.jpg" alt="" title="")
+                                    ul 
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__title Rošty
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Noční stolky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné krabičky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné boxy
+
         .nav-item 
             a.nav-link(href="produkt-vypis.html") Komody
-        .nav-item 
-            a.nav-link(href="produkt-vypis.html") Noční stolky
-        .nav-item 
-            a.nav-link(href="produkt-vypis.html") Dřevěné krabičky
+        .nav-item.expandable 
+            a.nav-link(href="produkt-vypis.html") Noční stolky #[img(src="/icons/cheveron.svg")]
+            .nav-submenu
+                .container
+                    .row 
+                        - for (var i=0; i<8; i++)
+                            .col-12.col-sm-6.col-md-4
+                                .nav-submenu__single    
+                                    img(src="/img/product-thumb-medium.jpg" alt="" title="")
+                                    ul 
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__title Rošty
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Noční stolky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné krabičky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné boxy
+            
+        .nav-item.expandable
+            a.nav-link(href="produkt-vypis.html") Dřevěné krabičky #[img(src="/icons/cheveron.svg")]
+            .nav-submenu
+                .container
+                    .row 
+                        - for (var i=0; i<8; i++)
+                            .col-12.col-sm-6.col-md-4
+                                .nav-submenu__single    
+                                    img(src="/img/product-thumb-medium.jpg" alt="" title="")
+                                    ul 
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__title Rošty
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Noční stolky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné krabičky
+                                        li 
+                                            a(href="/produkt-vypis.html").nav-submenu__link Dřevěné boxy
+
         .nav-item 
             a.nav-link(href="produkt-vypis.html") Dřevěné boxy

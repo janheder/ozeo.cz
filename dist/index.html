@@ -52,24 +52,44 @@
       });
     </script>
   </head>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
-  </head>
   <body>
     <div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
           <div class="modal__header">
-            <h2 class="modal__title" id="modal-login-title">Modal Title</h2>
+            <h2 class="modal__title" id="modal-login-title">Přihlášení</h2>
             <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
           </div>
-          <div class="modal__content" id="modal-login-content"><span>Modal Content</span></div>
+          <div class="modal__content" id="modal-login-content">
+            <div class="form"> 
+              <div class="form-group"> 
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="login-email" required>
+              </div>
+              <div class="form-group"> 
+                <label for="login-password">Heslo</label>
+                <input type="password" id="login-password" name="login-password" required>
+                <input class="show-password" type="checkbox" id="showLoginPassword">
+              </div>
+              <div class="form-group"> 
+                <button class="btn --fullWidth" name="login-submit" id="login-submit">Přihlásit <img src="/icons/cheveron-white.svg"></button>
+              </div>
+            </div>
+          </div>
           <div class="modal__footer"></div>
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById('showLoginPassword').onclick = function() {
+          var x = document.getElementById('login-password');
+          if (x.type === "password") {
+              x.type = "text";
+          } else {
+              x.type = "password";
+          }
+      }
+    </script>
     <header>
       <div class="header-top">
         <div class="container"> 
@@ -79,7 +99,7 @@
       </div>
       <div class="header-main"> 
         <div class="container"> 
-          <div id="js-navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg"></a>
+          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg"></a>
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" action="post"> 
@@ -113,13 +133,83 @@
           <div class="nav-submenu">
             <div class="container">
               <div class="row"> 
-                <div class="col-12 col-sm-6 col-ms-4">
+                <div class="col-12 col-sm-6 col-md-4">
                   <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
                     <ul> 
-                      <li> <a class="nav-submenu__title" href="/produkt-vypis">Rošty</a></li>
-                      <li> <a class="nav-submenu__link" href="/produkt-vypis">Noční stolky</a></li>
-                      <li> <a class="nav-submenu__link" href="/produkt-vypis">Dřevěné krabičky</a></li>
-                      <li> <a class="nav-submenu__link" href="/produkt-vypis">Dřevěné boxy</a></li>
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
                     </ul>
                   </div>
                 </div>
@@ -128,10 +218,271 @@
           </div>
         </div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Šuplíky</a></div>
-        <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Postele</a></div>
+        <div class="nav-item expandable"><a class="nav-link" href="produkt-vypis.html">Postele <img src="/icons/cheveron.svg"></a>
+          <div class="nav-submenu">
+            <div class="container">
+              <div class="row"> 
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Komody</a></div>
-        <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Noční stolky</a></div>
-        <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Dřevěné krabičky</a></div>
+        <div class="nav-item expandable"> <a class="nav-link" href="produkt-vypis.html">Noční stolky <img src="/icons/cheveron.svg"></a>
+          <div class="nav-submenu">
+            <div class="container">
+              <div class="row"> 
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item expandable"><a class="nav-link" href="produkt-vypis.html">Dřevěné krabičky <img src="/icons/cheveron.svg"></a>
+          <div class="nav-submenu">
+            <div class="container">
+              <div class="row"> 
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="nav-submenu__single">   <img src="/img/product-thumb-medium.jpg" alt="" title="">
+                    <ul> 
+                      <li> <a class="nav-submenu__title" href="/produkt-vypis.html">Rošty</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Noční stolky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné krabičky</a></li>
+                      <li> <a class="nav-submenu__link" href="/produkt-vypis.html">Dřevěné boxy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Dřevěné boxy</a></div>
       </div>
     </nav>
@@ -149,6 +500,28 @@
           </div>
         </div>
       </section>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        
+            const mySiema = new Siema({
+                selector: '.carousel-inner',
+                duration: 200,
+                easing: 'ease-out',
+                perPage: 1,
+                startIndex: 0,
+                draggable: true,
+                multipleDrag: true,
+                threshold: 20,
+                loop: true,
+                rtl: false,
+                onInit: () => {},
+                onChange: () => {},
+            });
+            document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+            document.querySelector('.next').addEventListener('click', () => mySiema.next());
+        
+        });
+      </script>
       <section class="points">
         <div class="container"> 
           <div class="row"> 
@@ -182,7 +555,7 @@
       <section class="products">
         <div class="container">
           <h1>Novinky a akční ceny</h1>
-          <div class="product-grid">
+          <div class="products-grid">
             <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
                 <div class="product-card__top">    
                   <div class="product-card__thumb">
@@ -385,6 +758,11 @@
                   <div class="social-single__text">Sledujte nás na Instagramu</div></a></div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="contact"> 
+        <div class="container"> 
+          <h1>contact</h1>
         </div>
       </section>
     </main>

@@ -1,21 +1,3 @@
-const mySiema = new Siema({
-    selector: '.carousel-inner',
-    duration: 200,
-    easing: 'ease-out',
-    perPage: 1,
-    startIndex: 0,
-    draggable: true,
-    multipleDrag: true,
-    threshold: 20,
-    loop: true,
-    rtl: false,
-    onInit: () => {},
-    onChange: () => {},
-  });
-  document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-  document.querySelector('.next').addEventListener('click', () => mySiema.next());
-
-
 var cookiebar = new Cookiebar({
     id: "cookiebar",
     cls: "cookiebar",
@@ -34,8 +16,6 @@ var cookiebar = new Cookiebar({
     },
     debug: 0
 });
-
-
 
 
 
@@ -60,9 +40,17 @@ MicroModal.init({
 
 
 
-document.getElementById('js-navToggle').onclick = function() {
-    document.body.classList.toggle('nav-active');
+document.getElementById('navToggle').onclick = function() {
+    document.body.classList.toggle('--nav-active');
 }
 document.getElementById('darkBackdrop').onclick = function() {
-    document.body.classList.toggle('nav-active');
+    document.body.classList.toggle('--nav-active');
+}
+
+
+
+
+
+document.getElementById('readMore').onclick = function() {
+    document.getElementById('pageDescription').classList.toggle('--active');
 }

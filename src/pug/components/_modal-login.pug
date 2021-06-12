@@ -7,13 +7,33 @@
 
 
         .modal__header
-            h2.modal__title(id="modal-login-title") Modal Title
-
-
+            h2.modal__title(id="modal-login-title") Přihlášení
 
             button.modal__close(aria-label="Close modal" data-micromodal-close)
 
 
         .modal__content(id="modal-login-content")
-            span Modal Content
+            .form 
+                .form-group 
+                    label(for="login-email") Email
+                    input(type="email" id="login-email" name="login-email" required)
+                .form-group 
+                    label(for="login-password") Heslo
+                    input(type="password" id="login-password" name="login-password" required)
+                    input.show-password(type="checkbox" id="showLoginPassword")
+                .form-group 
+                    button.btn.--fullWidth(name="login-submit" id="login-submit") Přihlásit #[img(src="/icons/cheveron-white.svg")]
+            
+
         .modal__footer
+
+
+script.
+    document.getElementById('showLoginPassword').onclick = function() {
+        var x = document.getElementById('login-password');
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }

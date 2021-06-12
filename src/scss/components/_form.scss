@@ -7,3 +7,26 @@ input{
     display: flex;
     border: 1px solid $gray-300;
 }
+
+.form-group{
+    padding: 0;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+
+}
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"]{
+
+}
+.form-group input[type="password"]{
+
+}
+
+input.show-password{
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}

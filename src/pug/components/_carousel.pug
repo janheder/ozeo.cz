@@ -1,0 +1,40 @@
+section.carousel
+    .container
+        .carousel-wrapper
+            .carousel-inner
+                .item
+                    img(src="/img/carousel/banner1.png" alt="#" title="#")
+                    a(href="/produkt-detail.html")
+                .item
+                    img(src="/img/carousel/banner1.png" alt="#" title="#")
+                    a(href="/produkt-detail.html")                          
+                .item
+                    img(src="/img/carousel/banner1.png" alt="#" title="#")
+                    a(href="/produkt-detail.html")
+            button.prev
+                img(src="/icons/cheveron-white.svg")
+            button.next
+                img(src="/icons/cheveron-white.svg")
+
+
+script.
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const mySiema = new Siema({
+            selector: '.carousel-inner',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: true,
+            rtl: false,
+            onInit: () => {},
+            onChange: () => {},
+        });
+        document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+        document.querySelector('.next').addEventListener('click', () => mySiema.next());
+
+    });
