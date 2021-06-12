@@ -48,9 +48,3 @@ document.getElementById('darkBackdrop').onclick = function() {
 }
 
 
-
-
-
-document.getElementById('readMore').onclick = function() {
-    document.getElementById('pageDescription').classList.toggle('--active');
-}

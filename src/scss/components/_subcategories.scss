@@ -17,6 +17,10 @@
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     }
 }
+.subcategories__img{
+    height: 46px;
+    width: 46px;
+}
 .subcategories__link img{
 
 }
@@ -33,5 +37,8 @@
     }
     .subcategories .row{
         flex-wrap: nowrap;
+    }
+    .subcategories__single{
+        padding: 0;
     }
 }

@@ -32,5 +32,10 @@ footer{
     flex-grow: 1;
 }
 .copyright__author{
-
+    display: flex;
+    align-items: center;
+}
+.copyright__author img{
+    margin-left: 10px;
+    margin-top: -8px;
 }

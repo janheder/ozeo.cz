@@ -1,0 +1,28 @@
+.products-grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.products-grid .product-card{
+    width: 25%;
+}
+.products-count{
+    color: $gray-500;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 767px){
+    .products-grid{
+
+    }
+    .products-grid .product-card{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 575px){
+    .products-grid{
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+}

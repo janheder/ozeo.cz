@@ -1,0 +1,22 @@
+.page{
+
+}
+.page.--narrow{
+    width: 100%;
+    max-width: 820px;
+    padding: 80px 110px 60px 110px;
+    border: 1px solid $gray-300;
+    margin: 60px auto 80px auto;
+}
+.page.--narrow .page-heading{
+    padding-top: 0;
+}
+.page.--narrow .page-heading h1{
+    text-align: center;
+    padding-top: 0;
+}
+.page.--narrow .page-heading p{
+    text-align: center;
+    color: $gray-500;
+    font-size: 14px;
+}

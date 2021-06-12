@@ -1,13 +1,26 @@
 form{
 
 }
-input{
-    height: 52px;
+
+input, select{
+    height: 54px;
     padding: 0 20px;
     display: flex;
     border: 1px solid $gray-300;
 }
-
+select{
+    appearance: none;
+    position: relative;
+    background-image: url("../icons/cheveron.svg");
+    background-position: right 20px center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+textarea{
+    padding: 20px;
+    display: flex;
+    border: 1px solid $gray-300; 
+}
 .form-group{
     padding: 0;
     position: relative;
@@ -16,7 +29,7 @@ input{
     flex-direction: column;
 }
 .form-group label{
-
+    padding-bottom: 2px;
 }
 .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"]{
 
@@ -24,9 +37,55 @@ input{
 .form-group input[type="password"]{
 
 }
+.form-group input[type="file"]{
+    padding: 12px;
+}
 
 input.show-password{
     position: absolute;
     right: 20px;
     top: 25px;
+}
+
+.form-spacer{
+    height: 60px;
+}
+
+.form-group.--checkbox{
+
+}
+.form-group.--checkbox > label{
+    padding: 14px 20px 14px 45px;
+    height: auto;
+    border: 1px solid $gray-300;
+    display: block;
+    cursor: pointer;
+}
+
+.form-group.--checkbox > input{
+    position: absolute;
+    left: 20px;
+    top: 19px;
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    padding: 0;
+    border: 1px solid $gray-900;
+}
+.form-group.--checkbox > input:checked{
+    background-color: $gray-900;
+    background-image: url("../icons/check-white.svg");
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.form-collapse{
+    display: none;
+    padding: 20px 0 0 0;
+}
+
+.form-group.--checkbox > input:checked + .form-collapse{
+    display: flex;
+    flex-direction: column;
 }

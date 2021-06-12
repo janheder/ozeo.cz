@@ -56,12 +56,12 @@
     <div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <div class="modal__header">
-            <h2 class="modal__title" id="modal-login-title">Přihlášení</h2>
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          </div>
           <div class="modal__content" id="modal-login-content">
-            <div class="form"> 
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-login-title">Přihlášení</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <form action="post" id="login-form">
               <div class="form-group"> 
                 <label for="login-email">Email</label>
                 <input type="email" id="login-email" name="login-email" required>
@@ -70,13 +70,13 @@
                 <label for="login-password">Heslo</label>
                 <input type="password" id="login-password" name="login-password" required>
                 <input class="show-password" type="checkbox" id="showLoginPassword">
-              </div>
+              </div><a class="forgot-password" href="/zapomenute-heslo.html">Zapomenuté heslo?</a>
               <div class="form-group"> 
                 <button class="btn --fullWidth" name="login-submit" id="login-submit">Přihlásit <img src="/icons/cheveron-white.svg"></button>
-              </div>
-            </div>
+              </div><span class="register">Nemáte u nás účet? <a href="/registrace.html">Zaregistrujte se</a></span>
+            </form>
           </div>
-          <div class="modal__footer"></div>
+          <div class="modal__side" id="modal-login-side"><img src="/img/login-modal.png"></div>
         </div>
       </div>
     </div>
@@ -93,27 +93,27 @@
     <header>
       <div class="header-top">
         <div class="container"> 
-          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/icons/phone.svg"><span>+420 605 337 238 </span><small>(po–pá 7:30–15:30)</small></div>
-          <div class="header-top__links"><a href="/vse-o-nakupu.html">Vše o nákupu</a><a href="/vse-o-nakupu.html">Doprava</a><a href="/vse-o-nakupu.html">Kontakty</a></div>
+          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/icons/phone.svg"><span>+420 605 337 238 </span><small>(po–pá 7:30 – 14:30)</small></div>
+          <div class="header-top__links"><a href="/vse-o-nakupu.html">Vše o nákupu</a><a href="/vse-o-nakupu.html">Doprava</a><a href="/kontakty.html">Kontakty</a></div>
         </div>
       </div>
       <div class="header-main"> 
         <div class="container"> 
-          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg"></a>
+          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz"></a>
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" action="post"> 
                 <input class="search__input" type="text" id="autoComplete">
-                <button class="search__button"><img src="/icons/search.svg"></button>
+                <button class="search__button"><img src="/icons/search.svg" alt="Vyhledávání"></button>
               </form>
             </div>
           </div>
           <div class="header-nav">
             <div class="user" data-micromodal-trigger="modal-login">
-              <div class="user__icon"><img src="/icons/user.svg"></div>
+              <div class="user__icon"><img src="/icons/user.svg" alt="Přihlášení"></div>
               <div class="user__title">Přihlášení</div>
-            </div><a class="cart --active" href="/kosik-1">
-              <div class="cart__icon">           <img src="/icons/cart.svg">
+            </div><a class="cart --active" href="/kosik-1.html">
+              <div class="cart__icon">           <img src="/icons/cart.svg" alt="Košík">
                 <div class="cart__number">2</div>
               </div>
               <div class="cart-content">
@@ -496,40 +496,54 @@
           <p id="pageDescription">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný... <span class="read-more" id="readMore">Číst více</span></p>
           <p id="pageDescriptionFull">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný</p>
         </div>
+        <script>
+          document.getElementById('readMore').onclick = function() {
+              document.getElementById('pageDescription').classList.toggle('--active');
+          }
+          
+        </script>
       </section>
       <section class="subcategories">
         <div class="container">
           <div class="row"> 
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
             <div class="col-8 col-sm-6 col-md-3">
-              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> <img src="/img/product-thumb-small.jpg" alt="" title="">
+              <div class="subcategories__single"><a class="subcategories__link" href="/produkt-vypis.html"> 
+                  <div class="subcategories__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol"></div>
                   <h5>Krabice na alkohol</h5></a></div>
             </div>
           </div>
@@ -545,24 +559,46 @@
               </div>
               <div class="products-sort__single">
                 <input type="radio" id="sort-2" name="sort-products" required>
-                <label for="sort-2">Nejprodávanější</label>
+                <label for="sort-2">Od nejnovějšího</label>
+              </div>
+              <div class="products-sort__single">
+                <input type="radio" id="sort-3" name="sort-products" checked required>
+                <label for="sort-3">Od nejlevnějšího</label>
+              </div>
+              <div class="products-sort__single">
+                <input type="radio" id="sort-4" name="sort-products" required>
+                <label for="sort-4">Od nejdražšího</label>
               </div>
             </form>
           </div>
           <div class="products-heading">
-            <div class="filter"> 
-              <div class="filter__button">Filtrovat produkty <img src="/icons/filter.svg"></div>
+            <div class="filter" id="filter">
+              <div class="filter__button" id="filterToggle">Filtrovat produkty <img src="/icons/filter.svg"></div>
+              <div class="filter__content" id="filterContent">
+                <form class="filter__form" action="post"> 
+                  <div class="filter__item"> </div>
+                  <h4>Zvolit rozmezí ceny </h4>
+                  <h4>Podle štítku  </h4>
+                  <button class="btn --fullWidth" name="filter-submit" id="filter-submit">Filtrovat <img src="/icons/cheveron-white.svg"></button>
+                </form>
+              </div>
             </div>
+            <script>
+              document.getElementById('filterToggle').onclick = function() {
+                  document.getElementById('filter').classList.toggle('--active');
+              }
+            </script>
             <div class="pagination" aria-label="Stránkování produktů">
               <ul class="pagination__list">
-                <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+                <li class="pagination__item --active"><a class="pagination__link" href="#">1</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-                <li class="pagination__item"><a class="pagegination__link" href="#">5</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
               </ul>
             </div>
           </div>
+          <div class="products-count">Zobrazeno 12 z 160 produktů</div>
           <div class="products-grid">
             <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
                 <div class="product-card__top">    
@@ -821,6 +857,17 @@
                   <div class="btn product-card__btn">Detail produktu</div>
                 </div></a></div>
           </div>
+          <div class="products-footer"><a class="btn" href="#">Načíst další produkty</a>
+            <div class="pagination" aria-label="Stránkování produktů">
+              <ul class="pagination__list">
+                <li class="pagination__item --active"><a class="pagination__link" href="#">1</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section class="points">
@@ -851,6 +898,11 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="contact"> 
+        <div class="container"> 
+          <h1>contact</h1>
         </div>
       </section>
       <section class="social">
@@ -892,7 +944,7 @@
             <h5 class="footer__title">Kontaktní informace</h5>
             <p class="footer__text">Ondera Aleš</p>
             <p class="footer__text">J.Čapka 3097</p>
-            <p class="footer__text">Frýdek-Místek, 738 01</p><a class="footer__link" href="#">Více kontaktů</a>
+            <p class="footer__text">Frýdek-Místek, 738 01</p><a class="footer__link" href="/kontakty.html">Více kontaktů</a>
           </div>
         </div>
       </div>
@@ -900,7 +952,7 @@
         <div class="container">
           <div class="copyright__wrap">
             <div class="copyright__title">Copyright © 2021 <a class="copyright__link" href="https://ozeo.cz">ozeo.cz</a></div>
-            <div class="copyright__author">Vytvořeno v <a class="copyright__link" href="http://eline.cz">Eline.cz</a></div>
+            <div class="copyright__author">Vytvořeno v <a class="copyright__link" href="http://eline.cz"><img src="/img/eline-logo.svg"></a></div>
           </div>
         </div>
       </section>

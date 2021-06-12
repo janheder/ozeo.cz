@@ -16,6 +16,10 @@ html(lang=lang)
                         span.read-more(id="readMore") Číst více
                     p(id="pageDescriptionFull") Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný
                  
+                script.
+                    document.getElementById('readMore').onclick = function() {
+                        document.getElementById('pageDescription').classList.toggle('--active');
+                    }
 
             section.subcategories
                 .container
@@ -24,7 +28,8 @@ html(lang=lang)
                             .col-8.col-sm-6.col-md-3
                                 .subcategories__single
                                     a.subcategories__link(href="/produkt-vypis.html") 
-                                        img(src="/img/product-thumb-small.jpg" alt="" title="")
+                                        .subcategories__img
+                                            img.lazyload(src="/img/load-symbol.svg" data-src="/img/product-thumb-small.jpg" alt="Krabice na alkohol" title="Krabice na alkohol")
                                         h5 Krabice na alkohol
 
 
@@ -38,23 +43,35 @@ html(lang=lang)
                                 label(for="sort-1") Nejprodávanější
                             .products-sort__single
                                 input(type="radio" id="sort-2" name="sort-products" required)
-                                label(for="sort-2") Nejprodávanější
+                                label(for="sort-2") Od nejnovějšího
+                            .products-sort__single
+                                input(type="radio" id="sort-3" name="sort-products" checked required)
+                                label(for="sort-3") Od nejlevnějšího
+                            .products-sort__single
+                                input(type="radio" id="sort-4" name="sort-products" required)
+                                label(for="sort-4") Od nejdražšího
+
 
                     .products-heading
-                        .filter 
-                            .filter__button Filtrovat produkty #[img(src="/icons/filter.svg")]
+                        include components/_filter.pug
 
                         include components/_pagination.pug
 
+                    
+                    .products-count Zobrazeno 12 z 160 produktů
+
                     .products-grid
+                        
                         - for (var i=0; i<8; i++)
                             include components/_product-card.pug
 
 
-
+                    .products-footer
+                        a.btn(href="#") Načíst další produkty
+                        include components/_pagination.pug
 
             include components/_points-section.pug
-
+            include components/_contact-section.pug
             include components/_social-section.pug
 
 

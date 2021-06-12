@@ -7,6 +7,13 @@
 }
 @font-face {
     font-family: "Cerebri Sans";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/CerebriSans-Italic.woff2") format("woff2"),
+         url("../fonts/CerebriSans-Italic.woff") format("woff");
+}
+@font-face {
+    font-family: "Cerebri Sans";
     font-style: normal;
     font-weight: 500;
     src: url("../fonts/CerebriSans-Medium.woff2") format("woff2"),

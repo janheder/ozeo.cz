@@ -1,0 +1,161 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        include components/_nav.pug
+        main
+            include components/_breadcrumbs.pug
+            .container 
+                .page.--narrow
+                    section.page-heading
+                        h1 Registrace
+                        p Registrovaný uživatel získává slevu 1% na zboží, které není aktuálně ve slevě. Po odeslání registrace Vám bude neprodleně doručen na e-mailovou adresu uvedenou v registračním formuláři aktivační e-mail.
+                    
+                    form(action="post" id="register-form")
+                        .form-group     
+                            label(for="register-name") Jméno
+                            input(type="text" id="register-name" name="register-name" required)
+                        .form-group     
+                            label(for="register-surname") Příjmení
+                            input(type="text" id="register-surname" name="register-surname" required)
+                        .form-group     
+                            label(for="register-email") Email
+                            input(type="email" id="register-email" name="register-email" required)
+                        .form-group     
+                            label(for="register-tel") Telefon
+                            input(type="tel" id="register-tel" name="register-tel" required)
+                        .form-group     
+                            label(for="register-username") Uživatelské jméno
+                            input(type="text" id="register-username" name="register-username" required)
+                        .form-group     
+                            label(for="register-password") Heslo
+                            input(type="password" id="register-password" name="register-password" required)
+
+                        .form-spacer 
+
+                        .form-group     
+                            label(for="register-street") Ulice a Číslo popisné
+                            input(type="text" id="register-street" name="register-street" required)
+                        .form-group     
+                            label(for="register-city") Město/obec
+                            input(type="text" id="register-city" name="register-city" required)      
+                        .form-group     
+                            label(for="register-psc") PSČ
+                            input(type="text" id="register-psc" name="register-psc" required)      
+                        .form-group     
+                            label(for="register-state") Stát
+                            select(name="register-state" id="register-state" required)   
+                                option(value="cz") Česká republika
+                                option(value="sk") Slovensko
+
+                        .form-spacer 
+
+                        .form-group.--checkbox
+                            label(for="register-fa-address" id="faToggle") Vyplnit fakturační adresu
+                            input(type="checkbox" name="register-fa-address" id="register-fa-address")
+
+                            .form-collapse
+
+                                .form-group     
+                                    label(for="register-fa-name") Jméno a příjmení (nepovinné)
+                                    input(type="text" id="register-fa-name" name="register-fa-name")
+                                .form-group     
+                                    label(for="register-fa-company") Název firmy
+                                    input(type="text" id="register-fa-company" name="register-fa-company" )
+                                .form-group     
+                                    label(for="register-fa-ico") IČO
+                                    input(type="text" id="register-fa-ico" name="register-fa-ico" )
+                                .form-group     
+                                    label(for="register-fa-dic") DIČ (nepovinné)
+                                    input(type="text" id="register-fa-dic" name="register-fa-dic")
+                                .form-group     
+                                    label(for="register-fa-street") Ulice a číslo popisné
+                                    input(type="text" id="register-fa-street" name="register-fa-street" )
+                                .form-group     
+                                    label(for="register-fa-city") Město/obec
+                                    input(type="text" id="register-fa-city" name="register-fa-city" )
+                                .form-group     
+                                    label(for="register-fa-psc") PSČ
+                                    input(type="text" id="register-fa-psc" name="register-fa-psc" )
+                                .form-group     
+                                    label(for="register-fa-state") Stát
+                                    select(name="register-fa-state" id="register-fa-state" )   
+                                        option(value="cz") Česká republika
+                                        option(value="sk") Slovensko
+
+                        .form-group.--checkbox
+                            label(for="register-da-address" id="daToggle") Jiná dodací adresa
+                            input(type="checkbox" name="register-da-address" id="register-da-address")
+
+                            .form-collapse
+
+                                .form-group     
+                                    label(for="register-da-name") Jméno a příjmení 
+                                    input(type="text" id="register-da-name" name="register-da-name" )
+                                .form-group     
+                                    label(for="register-da-company") Název firmy (nepovinné)
+                                    input(type="text" id="register-da-company" name="register-da-company")
+                                .form-group     
+                                    label(for="register-da-street") Ulice a číslo popisné
+                                    input(type="text" id="register-da-street" name="register-da-street" )
+                                .form-group     
+                                    label(for="register-da-city") Město/obec
+                                    input(type="text" id="register-da-city" name="register-da-city" )
+                                .form-group     
+                                    label(for="register-da-psc") PSČ
+                                    input(type="text" id="register-da-psc" name="register-da-psc" )
+                                .form-group     
+                                    label(for="register-da-state") Stát
+                                    select(name="register-da-state" id="register-da-state" )   
+                                        option(value="cz") Česká republika
+                                        option(value="sk") Slovensko
+
+
+
+
+                        .form-spacer 
+
+                        .form-group.--checkbox
+                            label(for="register-agree1") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.
+                            input(type="checkbox" name="register-agree1" id="register-agree1")
+
+                        .form-group.--checkbox
+                            label(for="register-agree2") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace.
+                            input(type="checkbox" name="register-agree2" id="register-agree2" required)
+
+
+                        .form-group 
+                            button.btn.--fullWidth(name="register-submit" id="register-submit") Vytvořit účet #[img(src="/icons/cheveron-white.svg")]
+
+
+                    script.
+                        document.getElementById('faToggle').onclick = function() {
+                            document.getElementById("register-fa-company").toggleAttribute("required");
+                            document.getElementById("register-fa-ico").toggleAttribute("required");
+                            document.getElementById("register-fa-street").toggleAttribute("required");
+                            document.getElementById("register-fa-city").toggleAttribute("required");
+                            document.getElementById("register-fa-psc").toggleAttribute("required");
+                            document.getElementById("register-fa-state").toggleAttribute("required");
+                        }
+                        document.getElementById('daToggle').onclick = function() {
+                            document.getElementById("register-da-name").toggleAttribute("required");
+                            document.getElementById("register-da-street").toggleAttribute("required");
+                            document.getElementById("register-da-city").toggleAttribute("required");
+                            document.getElementById("register-da-psc").toggleAttribute("required");
+                            document.getElementById("register-fa-state").toggleAttribute("required");
+                        }
+
+
+
+            include components/_contact-section.pug
+            include components/_social-section.pug
+
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

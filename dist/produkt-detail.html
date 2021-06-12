@@ -61,12 +61,12 @@
     <div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <div class="modal__header">
-            <h2 class="modal__title" id="modal-login-title">Přihlášení</h2>
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          </div>
           <div class="modal__content" id="modal-login-content">
-            <div class="form"> 
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-login-title">Přihlášení</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <form action="post" id="login-form">
               <div class="form-group"> 
                 <label for="login-email">Email</label>
                 <input type="email" id="login-email" name="login-email" required>
@@ -75,13 +75,13 @@
                 <label for="login-password">Heslo</label>
                 <input type="password" id="login-password" name="login-password" required>
                 <input class="show-password" type="checkbox" id="showLoginPassword">
-              </div>
+              </div><a class="forgot-password" href="/zapomenute-heslo.html">Zapomenuté heslo?</a>
               <div class="form-group"> 
                 <button class="btn --fullWidth" name="login-submit" id="login-submit">Přihlásit <img src="/icons/cheveron-white.svg"></button>
-              </div>
-            </div>
+              </div><span class="register">Nemáte u nás účet? <a href="/registrace.html">Zaregistrujte se</a></span>
+            </form>
           </div>
-          <div class="modal__footer"></div>
+          <div class="modal__side" id="modal-login-side"><img src="/img/login-modal.png"></div>
         </div>
       </div>
     </div>
@@ -98,27 +98,27 @@
     <header>
       <div class="header-top">
         <div class="container"> 
-          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/icons/phone.svg"><span>+420 605 337 238 </span><small>(po–pá 7:30–15:30)</small></div>
-          <div class="header-top__links"><a href="/vse-o-nakupu.html">Vše o nákupu</a><a href="/vse-o-nakupu.html">Doprava</a><a href="/vse-o-nakupu.html">Kontakty</a></div>
+          <div class="header-top__tel"> <small>Máte dotaz?</small><img src="/icons/phone.svg"><span>+420 605 337 238 </span><small>(po–pá 7:30 – 14:30)</small></div>
+          <div class="header-top__links"><a href="/vse-o-nakupu.html">Vše o nákupu</a><a href="/vse-o-nakupu.html">Doprava</a><a href="/kontakty.html">Kontakty</a></div>
         </div>
       </div>
       <div class="header-main"> 
         <div class="container"> 
-          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg"></a>
+          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz"></a>
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" action="post"> 
                 <input class="search__input" type="text" id="autoComplete">
-                <button class="search__button"><img src="/icons/search.svg"></button>
+                <button class="search__button"><img src="/icons/search.svg" alt="Vyhledávání"></button>
               </form>
             </div>
           </div>
           <div class="header-nav">
             <div class="user" data-micromodal-trigger="modal-login">
-              <div class="user__icon"><img src="/icons/user.svg"></div>
+              <div class="user__icon"><img src="/icons/user.svg" alt="Přihlášení"></div>
               <div class="user__title">Přihlášení</div>
-            </div><a class="cart --active" href="/kosik-1">
-              <div class="cart__icon">           <img src="/icons/cart.svg">
+            </div><a class="cart --active" href="/kosik-1.html">
+              <div class="cart__icon">           <img src="/icons/cart.svg" alt="Košík">
                 <div class="cart__number">2</div>
               </div>
               <div class="cart-content">

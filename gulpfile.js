@@ -6,14 +6,18 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const pug = require('gulp-pug-3');
 const uglify = require('gulp-uglify');
+const postcss = require('gulp-postcss');
+const autoprefixer= require('autoprefixer');
 
 //compile scss into css
 function style() {
+    var processors = [ autoprefixer()];
     return gulp.src('./src/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('style.min.css'))
+    .pipe(postcss(processors))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
