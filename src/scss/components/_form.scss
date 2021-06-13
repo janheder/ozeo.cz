@@ -7,6 +7,7 @@ input, select{
     padding: 0 20px;
     display: flex;
     border: 1px solid $gray-300;
+    font-size: 16px;
 }
 select{
     appearance: none;
@@ -15,11 +16,17 @@ select{
     background-position: right 20px center;
     background-size: auto;
     background-repeat: no-repeat;
+    padding: 0 50px 0 20px;
 }
 textarea{
     padding: 20px;
     display: flex;
     border: 1px solid $gray-300; 
+    font-size: 16px;
+}
+button{
+    font-size: 16px;
+    font-weight: 500;
 }
 .form-group{
     padding: 0;

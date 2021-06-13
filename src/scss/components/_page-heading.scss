@@ -37,9 +37,14 @@
         padding: 40px 0;
     }
     .page-heading h1 {
-        padding-bottom: 10px;
+        padding-bottom: 0px;
+        font-size: 30px;
     }
     .page-heading p{
+        padding-top: 10px;
         font-size: 14px;
+    }
+    #pageDescription{
+        display: none;
     }
 }

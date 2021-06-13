@@ -1,8 +1,8 @@
 .social{
-
+    padding-bottom: 60px;
 }
 .social-single{
-
+    padding: 10px 0;
 }
 .social-single__link{
     display: flex;
@@ -19,9 +19,22 @@
     justify-content: center;
 }
 .social-single img{
-    
+    max-height: 100%;
 }
 .social-single__text{
     font-size: 18px;
     padding-left: 20px;
+}
+@media screen and (max-width: 575px){
+    .social-single{
+        padding: 5px 0;
+    }
+    .social-single__link{
+        padding: 20px 20px;
+
+    }
+    .social-single__img{
+        height: 30px;
+
+    }
 }

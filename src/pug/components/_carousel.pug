@@ -20,7 +20,7 @@ section.carousel
 script.
     document.addEventListener('DOMContentLoaded', function() {
 
-        const mySiema = new Siema({
+        const indexCarousel = new Siema({
             selector: '.carousel-inner',
             duration: 200,
             easing: 'ease-out',
@@ -34,7 +34,7 @@ script.
             onInit: () => {},
             onChange: () => {},
         });
-        document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-        document.querySelector('.next').addEventListener('click', () => mySiema.next());
+        document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
+        document.querySelector('.next').addEventListener('click', () => indexCarousel.next());
 
     });

@@ -41,6 +41,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
     <!-- Plugins CSS-->
+    <link href="/css/lightbox.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="/css/style.min.css" rel="stylesheet">
     <!-- PWA init-->
@@ -61,7 +62,7 @@
               <h2 class="modal__title" id="modal-login-title">Přihlášení</h2>
               <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </div>
-            <form action="post" id="login-form">
+            <form method="post" id="login-form">
               <div class="form-group"> 
                 <label for="login-email">Email</label>
                 <input type="email" id="login-email" name="login-email" required>
@@ -102,8 +103,8 @@
           <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz"></a>
           <div class="search"> 
             <div class="search-wrapper">    
-              <form class="search-form" action="post"> 
-                <input class="search__input" type="text" id="autoComplete">
+              <form class="search-form" method="post"> 
+                <input class="search__input" type="text" id="autoComplete" autocomplete="off">
                 <button class="search__button"><img src="/icons/search.svg" alt="Vyhledávání"></button>
               </form>
             </div>

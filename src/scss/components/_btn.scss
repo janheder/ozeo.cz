@@ -1,5 +1,6 @@
 .btn{
     color: $white;
+    font-size: 16px;
     min-height: 54px;
     height: 100%;
     padding: 0rem 30px;
@@ -20,9 +21,18 @@
         background: $black;
     }
 }
+.btn img{
+    margin-left: 15px;
+}
+
 .btn.--fullWidth{
     width: 100%;
 }
-.btn img{
-    margin-left: 15px;
+
+.btn.--green{
+    background: $green-500;
+}
+.btn.--green img{
+    margin-left: 0px;
+    margin-right: 15px;
 }

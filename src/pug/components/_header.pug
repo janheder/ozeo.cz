@@ -22,8 +22,8 @@ header
 
             .search 
                 .search-wrapper     
-                    form.search-form(action="post") 
-                        input.search__input(type="text" id="autoComplete")
+                    form.search-form(method="post") 
+                        input.search__input(type="text" id="autoComplete" autocomplete="off")
                         button.search__button
                             img(src="/icons/search.svg" alt="Vyhledávání")
 

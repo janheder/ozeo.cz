@@ -1,0 +1,217 @@
+.product-detail{
+    padding: 60px 0;
+}
+.product-detail__photos{
+    padding-right: 60px;
+}
+.product-detail__carousel{
+
+}
+.product-detail__carouselItem{
+    position: relative;
+    padding-bottom: 80%;
+}
+.product-detail__carouselLink{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.product-detail__carouselLink img{
+    max-height: 100%;
+}
+.product-detail__thumbs{
+    display: flex;
+    margin: 0 -10px;
+    padding-top: 20px;
+}
+.product-detail__thumbWrap{
+    padding: 10px;    
+    width: 20%;    
+    flex-wrap: wrap;
+}
+.product-detail__thumb{
+
+    position: relative;
+    padding-bottom: 140px;
+}
+.product-detail__thumbInner{
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.product-detail__thumbs img{
+    max-height: 100%;
+}
+.product-detail__info{
+
+}
+.product-detail__title{
+    font-size: 36px;
+}
+.product-detail__info{
+    font-size: 14px;
+    line-height: 1;
+    color: $gray-500;
+}
+.product-detail__text{
+    font-size: 14px;
+    line-height: 1.5;
+    color: $gray-500;
+    padding-bottom: 40px;
+}
+.product-detail form{
+
+}
+.variants{
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 420px;
+}
+.variants__title{
+    font-size: 14px;
+    line-height: 1;
+    color: $gray-500;
+    font-weight: 500; 
+    text-transform: uppercase;
+    padding-bottom: 10px; 
+}
+.variants__select{
+    width: 100%;
+}
+.product-detail__stock{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    color: $gray-500;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    font-weight: 500;
+}
+.product-detail__stock img{
+    margin-right: 10px;
+}
+.product-detail__stock.--available{
+    color: $green-500;
+}
+.product-detail__price{
+    padding-bottom: 40px;
+}
+.product-detail__priceMain{
+    font-size: 24px;
+    color: $red-500;
+    font-weight: 500; 
+    padding-bottom: 5px;
+}
+.product-detail__priceMain span{
+    text-decoration: line-through;
+    font-size: 16px;
+    color: $gray-500;
+}
+.product-detail__priceVAT{
+    font-size: 13px;
+    color: $gray-500;
+}
+.product-detail__cta{
+    display: flex;
+}
+.product-detail__qty{
+
+}
+
+.product-detail__button{
+    margin-left: 10px;
+}
+.product-detail__button button{
+
+}
+
+
+.product-detail__description {
+    padding: 60px 0 0 0;
+}
+.product-detail__description h2{
+    padding-bottom: 20px;
+}
+.product-detail__parameters{
+    padding: 60px 0 0 0;
+}
+.product-detail__parameters h2{
+    padding-bottom: 20px;
+}
+.product-detail__parameters table{ 
+    width: 100%;
+}
+.product-detail__parameters table td{ 
+    color: $gray-500;
+    padding: 5px 10px 5px 0;
+}
+.product-detail__parameters table tr > td:last-child{ 
+    font-weight: 500;
+    color: $gray-900;
+}
+
+
+@media screen and (max-width: 991px){
+    .product-detail__photos{
+        padding: 0;
+    }
+    .product-detail__info{
+        padding-top: 40px;
+    }
+    .product-detail__thumb {
+        padding-bottom: 100px;
+    }
+}
+@media screen and (max-width: 575px){
+    .product-detail{
+        padding-top: 0;
+    }
+    .product-detail__photos{
+        padding: 0;
+        margin: 0 -10px;
+    }
+    .product-detail__thumbs {
+        margin: 0;
+        display: none;
+    }
+    .product-detail__thumbWrap {
+        padding: 5px;
+        width: 25%;
+    }
+    .product-detail__title{
+        font-size: 24px;
+        padding-bottom: 30px;
+    }
+    .product-detail__text{
+        display: none;
+    }
+    .product-detail__button{
+        flex-grow: 1;
+    }
+    .product-detail__button .btn{
+        flex-grow: 1;
+        width: 100%;
+    }
+    .product-detail__description{
+        padding-top: 60px;
+    }
+    .product-detail__parameters{
+        padding-top: 40px;
+    }
+}

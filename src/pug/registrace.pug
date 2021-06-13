@@ -15,7 +15,7 @@ html(lang=lang)
                         h1 Registrace
                         p Registrovaný uživatel získává slevu 1% na zboží, které není aktuálně ve slevě. Po odeslání registrace Vám bude neprodleně doručen na e-mailovou adresu uvedenou v registračním formuláři aktivační e-mail.
                     
-                    form(action="post" id="register-form")
+                    form(method="post" id="register-form")
                         .form-group     
                             label(for="register-name") Jméno
                             input(type="text" id="register-name" name="register-name" required)
