@@ -82,9 +82,11 @@ nav .container{
         flex-direction: column;
         overflow-y: auto;
     }
+    body.--nav-active{
+        overflow-y: hidden;
+    }
     body.--nav-active nav{
         transform: translateX(0%);
-        overflow-y: hidden;
     }
     nav .container{
         display: flex;
