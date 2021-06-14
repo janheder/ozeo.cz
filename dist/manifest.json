@@ -1,8 +1,8 @@
 {
     "name": "OZEO.cz",
     "short_name" : "OZEO.cz",
-    "start_url": "http://localhost:3000/",
-    "scope" : "http://localhost:3000/",
+    "start_url": "https://wonderful-almeida-03b438.netlify.app/",
+    "scope" : "https://wonderful-almeida-03b438.netlify.app/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",

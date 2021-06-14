@@ -19,9 +19,13 @@
     display: flex;
     flex-grow: 1;
     color: $white;
+    flex-wrap: wrap;
+}
+.cookiebar-desciption{
+    margin-right: 10px;
 }
 .cookiebar-link a{
-    margin-left: 10px;
+
     color: $white;
     opacity: 0.8;
 

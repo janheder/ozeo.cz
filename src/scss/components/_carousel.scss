@@ -43,4 +43,7 @@
     .carousel{
         padding: 10px 0;
     }
+    .carousel .prev, .carousel .next{
+        display: none;
+    }
 }

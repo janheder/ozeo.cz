@@ -50,8 +50,21 @@ button{
 
 input.show-password{
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 25px;
+    cursor: pointer;
+    appearance: none;
+    background: url("../icons/show.svg");
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    border: 0;
+    opacity: 0.5;
+    transition: 0.2s ease opacity;
+
+    &:hover, &:active, &:focus{
+        opacity: 1;
+    }
 }
 
 .form-spacer{

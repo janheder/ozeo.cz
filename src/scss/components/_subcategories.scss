@@ -24,7 +24,7 @@
 .subcategories__link img{
 
 }
-.subcategories__link h5{
+.subcategories__title{
     font-size: 16px;
     color: $gray-900;
     font-weight: 400;
@@ -44,7 +44,7 @@
     .subcategories__link{
         padding: 0 10px;
     }
-    .subcategories__link h5{
+    .subcategories__title{
         padding-left: 10px;
     }
 }

@@ -78,7 +78,7 @@
     }
     .news-single__bottom{
         flex-grow: 1;
-        padding: 0 0 0 1.5rem;
+        padding: 0 0 0 10px;
     }
     .news-single__title {
         max-height: 4.5rem;
@@ -87,6 +87,9 @@
     }
     .o-sectionNews__btnWrap{
         margin-top: 15px;
+    }
+    .news-single__dateWrap{
+        display: none;
     }
 }
 @media screen and (max-width: 575px){
@@ -100,7 +103,7 @@
 
 .news-single.--full{
     margin-bottom: 60px;
-    
+
     .news-single__top{
         min-height: 340px;
     }

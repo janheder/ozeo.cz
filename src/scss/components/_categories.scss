@@ -23,3 +23,9 @@
     text-align: center;
     color: $gray-500;
 }
+
+@media screen and (max-width: 767px){
+    .categories-single{
+        border-bottom: 2px solid $white;
+    }
+}

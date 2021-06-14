@@ -84,6 +84,7 @@ nav .container{
     }
     body.--nav-active nav{
         transform: translateX(0%);
+        overflow-y: hidden;
     }
     nav .container{
         display: flex;
