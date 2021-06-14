@@ -3,18 +3,27 @@ section.carousel
         .carousel-wrapper
             .carousel-inner
                 .item
-                    img(src="/img/carousel/banner1.png" alt="#" title="#")
+                    picture 
+                        source(media="(max-width:575px)" srcset="/img/carousel/banner1-575.png")
+                        source(media="(max-width:991px)" srcset="/img/carousel/banner1-991.png")
+                        img(src="/img/carousel/banner1.png" alt="#" title="#")
                     a(href="/produkt-detail.html" aria-label="Popis slidu 1")
                 .item
-                    img(src="/img/carousel/banner1.png" alt="#" title="#")
+                    picture 
+                        source(media="(max-width:575px)" srcset="/img/carousel/banner1-575.png")
+                        source(media="(max-width:991px)" srcset="/img/carousel/banner1-991.png")
+                        img(src="/img/carousel/banner1.png" alt="#" title="#")
                     a(href="/produkt-detail.html" aria-label="Popis slidu 2")                          
                 .item
-                    img(src="/img/carousel/banner1.png" alt="#" title="#")
+                    picture 
+                        source(media="(max-width:575px)" srcset="/img/carousel/banner1-575.png")
+                        source(media="(max-width:991px)" srcset="/img/carousel/banner1-991.png")
+                        img(src="/img/carousel/banner1.png" alt="#" title="#")
                     a(href="/produkt-detail.html" aria-label="Popis slidu 3")
-            button.prev
-                img(src="/icons/cheveron-white.svg")
-            button.next
-                img(src="/icons/cheveron-white.svg")
+            button.prev(aria-label="Zpět")
+                img(src="/icons/cheveron-white.svg" alt="Zpět")
+            button.next(aria-label="Vpřed")
+                img(src="/icons/cheveron-white.svg" alt="Vpřed")
 
 
 script.
