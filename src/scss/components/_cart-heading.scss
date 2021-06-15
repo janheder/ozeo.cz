@@ -25,6 +25,7 @@
     justify-content: center;
     background: $white;
     border-radius: 50%;
+    position: relative;
 }
 .cart-heading__icon img{
     opacity: 0.6;
@@ -39,6 +40,32 @@
 
 .cart-heading__item.--active {
     .cart-heading__icon{
+    }
+    .cart-heading__icon img{
+        opacity: 1;
+    }
+    .cart-heading__title{
+        font-size: 16px;
+        color: $gray-900;
+        font-weight: 500;
+    }
+}
+
+.cart-heading__item.--complete {
+    .cart-heading__icon::after{
+        content: "";
+        background: url("../icons/check-full.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 16px;
+        width: 16px;
+        display: block;
+        border: 1px solid $white;
+        border-radius: 50%;
+        position: absolute;
+        background-size: 100%;
+        top: 36px;
+        right: 18px;
     }
     .cart-heading__icon img{
         opacity: 1;

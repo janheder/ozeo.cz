@@ -131,15 +131,15 @@
     <main>
       <section class="cart-heading">
         <div class="container">
-          <div class="cart-heading__item --active">
+          <div class="cart-heading__item --complete">
             <div class="cart-heading__icon"><img src="/icons/cart-big.svg" alt="1. Nákupní košík"></div>
             <div class="cart-heading__title">1. Nákupní košík</div>
           </div>
-          <div class="cart-heading__item">
+          <div class="cart-heading__item --complete">
             <div class="cart-heading__icon"><img src="/icons/car.svg" alt="2. Doprava a platba"></div>
             <div class="cart-heading__title">2. Doprava a platba</div>
           </div>
-          <div class="cart-heading__item">
+          <div class="cart-heading__item --active">
             <div class="cart-heading__icon"><img src="/icons/personal-data.svg" alt="3. Osobní údaje"></div>
             <div class="cart-heading__title">3. Osobní údaje</div>
           </div>
@@ -155,56 +155,147 @@
             <div class="col-12 col-md-8">
               <div class="cart-table">
                 <form class="cart-content__form" method="post">
-                  <div class="cart-table__title">Zboží v košíku</div>
-                  <div class="cart-table-items">   
-                    <div class="cart-item"> 
-                      <div class="cart-item-thumb-wrap">
-                        <div class="cart-item-thumb"><img src="/img/product-thumb-medium.jpg" alt="#" title="#"></div>
-                      </div>
-                      <div class="cart-item-content"> 
-                        <div class="cart-item-main">    
-                          <div class="cart-item-name">Dřevěná bedna na 2 vína CARMEN VI
-                            <div class="cart-item-stock --available"><img src="/icons/check.svg" alt="Skladem 10 ks">Skladem 10 ks</div>
-                          </div>
-                          <div class="cart-item-price-pc">520 Kč/ks</div>
-                          <div class="cart-item-price">1 118 Kč</div>
+                  <div class="cart-table__title">Vyplňte osobní údaje</div>
+                  <div class="cart-table-personal">
+                    <div class="form-group">    
+                      <label for="cart-name">Jméno</label>
+                      <input type="text" id="cart-name" name="cart-name" required>
+                    </div>
+                    <div class="form-group">    
+                      <label for="cart-surname">Příjmení</label>
+                      <input type="text" id="cart-surname" name="cart-surname" required>
+                    </div>
+                    <div class="form-group">    
+                      <label for="cart-email">Email</label>
+                      <input type="email" id="cart-email" name="cart-email" required>
+                    </div>
+                    <div class="form-group">    
+                      <label for="cart-tel">Telefon</label>
+                      <input type="tel" id="cart-tel" name="cart-tel" required>
+                    </div>
+                    <div class="form-spacer"> </div>
+                    <div class="form-group">    
+                      <label for="cart-street">Ulice a Číslo popisné</label>
+                      <input type="text" id="cart-street" name="cart-street" required>
+                    </div>
+                    <div class="form-group">    
+                      <label for="cart-city">Město/obec</label>
+                      <input type="text" id="cart-city" name="cart-city" required>
+                    </div>
+                    <div class="form-group">    
+                      <label for="cart-psc">PSČ</label>
+                      <input type="text" id="cart-psc" name="cart-psc" required>
+                    </div>
+                    <div class="form-group">    
+                      <label for="cart-state">Stát</label>
+                      <select name="cart-state" id="cart-state" required>  
+                        <option value="cz">Česká republika</option>
+                        <option value="sk">Slovensko</option>
+                      </select>
+                    </div>
+                    <div class="form-spacer"> </div>
+                    <div class="form-group --checkbox">
+                      <label for="cart-fa-address" id="faToggle">Vyplnit fakturační adresu</label>
+                      <input type="checkbox" name="cart-fa-address" id="cart-fa-address">
+                      <div class="form-collapse">
+                        <div class="form-group">    
+                          <label for="cart-fa-name">Jméno a příjmení (nepovinné)</label>
+                          <input type="text" id="cart-fa-name" name="cart-fa-name">
                         </div>
-                        <div class="cart-item-bottom">
-                          <div class="cart-item-stepper stepper"> <span class="minus">–</span>
-                            <input id="qty-stepper-input-1" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek"><span class="plus">+</span>
-                          </div><a class="cart-item-remove" href="#">  
-                            <div class="cart-item-remove-icon"><img src="/icons/cross-alt.svg" alt="Odstranit z košíku"></div>
-                            <div class="cart-item-remove-text">Odstranit z košíku</div></a>
+                        <div class="form-group">    
+                          <label for="cart-fa-company">Název firmy</label>
+                          <input type="text" id="cart-fa-company" name="cart-fa-company">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-fa-ico">IČO</label>
+                          <input type="text" id="cart-fa-ico" name="cart-fa-ico">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-fa-dic">DIČ (nepovinné)</label>
+                          <input type="text" id="cart-fa-dic" name="cart-fa-dic">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-fa-street">Ulice a číslo popisné</label>
+                          <input type="text" id="cart-fa-street" name="cart-fa-street">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-fa-city">Město/obec</label>
+                          <input type="text" id="cart-fa-city" name="cart-fa-city">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-fa-psc">PSČ</label>
+                          <input type="text" id="cart-fa-psc" name="cart-fa-psc">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-fa-state">Stát</label>
+                          <select name="cart-fa-state" id="cart-fa-state">  
+                            <option value="cz">Česká republika</option>
+                            <option value="sk">Slovensko</option>
+                          </select>
                         </div>
                       </div>
                     </div>
-                    <div class="cart-item"> 
-                      <div class="cart-item-thumb-wrap">
-                        <div class="cart-item-thumb"><img src="/img/product-thumb-medium.jpg" alt="#" title="#"></div>
-                      </div>
-                      <div class="cart-item-content"> 
-                        <div class="cart-item-main">    
-                          <div class="cart-item-name">Dřevěná bedna na 2 vína CARMEN VI
-                            <div class="cart-item-stock --available"><img src="/icons/check.svg" alt="Skladem 10 ks">Skladem 10 ks</div>
-                          </div>
-                          <div class="cart-item-price-pc">520 Kč/ks</div>
-                          <div class="cart-item-price">1 118 Kč</div>
+                    <div class="form-group --checkbox">
+                      <label for="cart-da-address" id="daToggle">Jiná dodací adresa</label>
+                      <input type="checkbox" name="cart-da-address" id="cart-da-address">
+                      <div class="form-collapse">
+                        <div class="form-group">    
+                          <label for="cart-da-name">Jméno a příjmení </label>
+                          <input type="text" id="cart-da-name" name="cart-da-name">
                         </div>
-                        <div class="cart-item-bottom">
-                          <div class="cart-item-stepper stepper"><span class="minus">–</span>
-                            <input id="qty-stepper-input-2" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek"><span class="plus">+</span>
-                          </div><a class="cart-item-remove" href="#">  
-                            <div class="cart-item-remove-icon"><img src="/icons/cross-alt.svg" alt="Odstranit z košíku"></div>
-                            <div class="cart-item-remove-text">Odstranit z košíku</div></a>
+                        <div class="form-group">    
+                          <label for="cart-da-company">Název firmy (nepovinné)</label>
+                          <input type="text" id="cart-da-company" name="cart-da-company">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-da-street">Ulice a číslo popisné</label>
+                          <input type="text" id="cart-da-street" name="cart-da-street">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-da-city">Město/obec</label>
+                          <input type="text" id="cart-da-city" name="cart-da-city">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-da-psc">PSČ</label>
+                          <input type="text" id="cart-da-psc" name="cart-da-psc">
+                        </div>
+                        <div class="form-group">    
+                          <label for="cart-da-state">Stát</label>
+                          <select name="cart-da-state" id="cart-da-state">  
+                            <option value="cz">Česká republika</option>
+                            <option value="sk">Slovensko</option>
+                          </select>
                         </div>
                       </div>
                     </div>
+                    <div class="form-spacer"> </div>
+                    <div class="form-group --checkbox">
+                      <label for="register-agree1">Chci odebírat newsletter a souhlasím se <a href="#">zpracováním osobních údajů</a> za účelem zasílání informací o novinkách a slevách.</label>
+                      <input type="checkbox" name="register-agree1" id="register-agree1">
+                    </div>
+                    <script>
+                      document.getElementById('faToggle').onclick = function() {
+                          document.getElementById("cart-fa-company").toggleAttribute("required");
+                          document.getElementById("cart-fa-ico").toggleAttribute("required");
+                          document.getElementById("cart-fa-street").toggleAttribute("required");
+                          document.getElementById("cart-fa-city").toggleAttribute("required");
+                          document.getElementById("cart-fa-psc").toggleAttribute("required");
+                          document.getElementById("cart-fa-state").toggleAttribute("required");
+                      }
+                      document.getElementById('daToggle').onclick = function() {
+                          document.getElementById("cart-da-name").toggleAttribute("required");
+                          document.getElementById("cart-da-street").toggleAttribute("required");
+                          document.getElementById("cart-da-city").toggleAttribute("required");
+                          document.getElementById("cart-da-psc").toggleAttribute("required");
+                          document.getElementById("cart-fa-state").toggleAttribute("required");
+                      }
+                      
+                      
+                    </script>
                   </div>
                   <div class="cart-table__footer"><a class="cart-table__footer-link" href="/"> 
-                      <div class="cart-table__footer-icon"><img src="/icons/cheveron.svg" alt="Zpět do obchod"></div>
-                      <div class="cart-table__footer-text">Zpět do obchodu</div></a><a class="cart-table__footer-link" href="#"> 
-                      <div class="cart-table__footer-icon"><img src="/icons/cross-alt.svg" alt="Vyprázdnit košík"></div>
-                      <div class="cart-table__footer-text">Vyprázdnit košík</div></a></div>
+                      <div class="cart-table__footer-icon"><img src="/icons/cheveron.svg" alt="Krok zpět"></div>
+                      <div class="cart-table__footer-text">Krok zpět</div></a></div>
                 </form>
               </div>
             </div>
@@ -240,7 +331,7 @@
                     <button class="btn">Použít</button>
                   </div>
                 </form>
-                <button class="btn --cart" name="nextstep">Doprava a platba <img src="/icons/cheveron-white.svg" alt="Pokračovat"></button>
+                <button class="btn --cart" name="nextstep">Souhrn objednávky <img src="/icons/cheveron-white.svg" alt="Pokračovat"></button>
               </aside>
             </div>
           </div>

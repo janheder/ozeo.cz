@@ -170,10 +170,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+var elements = document.querySelectorAll('.expandable .nav-link');
 
+for (let loop = 0; loop < elements.length; loop++) {
 
-    document.getElementsByClassName('navToggle').onclick = function(e) {
-        e.preventDefault();
-    }
-});
+    document.getElementById('subToggle-'+ loop).addEventListener('click', function(e) {
+        document.getElementById('sub-'+ loop).classList.toggle('--active');
+        
+    });
+
+        
+    
+}

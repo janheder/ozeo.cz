@@ -13,13 +13,16 @@
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
-.cart-items{
+.cart-table-items{
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
 }
 
 .cart-item{
     display: flex;
+    padding: 40px 0;
+    border-bottom: 1px solid $gray-300;
 }
 .cart-item-thumb-wrap{
     position: relative;
@@ -51,6 +54,7 @@
 }
 .cart-item-name{
     padding-bottom: 10px;
+    flex-grow: 1;
 }
 .cart-item-stock{
     display: flex;
@@ -69,10 +73,12 @@
     color: $green-500;
 }
 .cart-item-price-pc{
-
+    color: $gray-500;
 }
 .cart-item-price{
-    
+    font-weight: 500;
+    color: $red-500;
+    padding-left: 20px;
 }
 .cart-item-bottom{
     display: flex;
@@ -100,17 +106,75 @@
 
 }
 .cart-item-remove-text{
-
+    color: $gray-500;
+    font-size: 14px;
+}
+.cart-table__footer{
+    padding: 0px 0 40px 0;
+    display: flex;
+}
+.cart-table__footer-link{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.cart-table__footer-icon{
+    background: $gray-100;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.cart-table__footer-icon img{
+    width: 10px;
+    transform: rotate(90deg);
+}
+.cart-table__footer-text{
+    color: $gray-500;
+    font-size: 14px;
 }
 
 
+.cart-table-shipping{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 40px 0;
+}
+.cart-table-shipping:last-child{
+    margin-bottom: 40px;
+}
 
+.cart-table-shipping-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid $gray-300;
+    margin-top: -1px;
+}
+.cart-table-shipping-item input {
 
+}
+.cart-table-shipping-img{
+    padding-left: 30px;
+}
+.cart-table-shipping-text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+.cart-table-shipping-price{
 
-
+}
 
 .cart-aside{
     padding-left: 40px;
+    position: sticky;
+    top: 20px;
 }
 .cart-aside__title{
     font-weight: 600;
@@ -163,6 +227,7 @@
     background: rgba($green-500,0.1);
     margin-bottom: 20px;
     padding: 10px 20px;
+    font-weight: 500;
 }
 .cart-aside__login{
     padding: 30px;
@@ -192,7 +257,7 @@
     color: $gray-500;
 }
 .cart-aside__code{
-
+    margin-bottom: 40px;
 }
 .cart-aside__code .btn{
     position: absolute;

@@ -10,7 +10,7 @@ nav .container{
     flex-grow: 1;
     justify-content: center;
 }
-.nav-link{
+.nav-link, .nav-linkDesktop{
     height: 54px;
     display: flex;
     justify-content: center;
@@ -20,15 +20,13 @@ nav .container{
     text-align: center;
     flex-grow: 1;
 }
-.nav-link img{
+.nav-link img, .nav-linkDesktop img{
     margin-left: 10px;
 }
-.nav-item:hover .nav-link{
-    background: $white;
+.nav-linkDesktop + .nav-link{
+    display: none;
 }
-.nav-item:hover .nav-submenu{
-    display: flex;
-}
+
 
 .nav-submenu{
     display: none;
@@ -66,6 +64,14 @@ nav .container{
     color: $gray-500;
 }
 
+@media screen and (min-width: 992px){
+    .nav-item:hover .nav-link{
+        background: $white;
+    }
+    .nav-item:hover .nav-submenu{
+        display: flex;
+    }
+}
 @media screen and (max-width: 991px){
     nav{
         background: $white;
@@ -80,6 +86,7 @@ nav .container{
         transition: 0.3s ease transform;
         height: 100%;
         flex-direction: column;
+        overflow-x: hidden;
         overflow-y: auto;
     }
     body.--nav-active{
@@ -96,9 +103,60 @@ nav .container{
     .nav-item{
         display: flex;
         flex-grow: 1;
+        flex-direction: column;
+    }
+    .nav-linkDesktop + .nav-link{
+        display: flex;
+        width: 100%;
+        flex-grow: 1;
+        justify-content: space-between;
     }
     .nav-link {
         justify-content: flex-start;
         width: 100%;
+        display: flex;
+    }
+    .nav-linkDesktop{
+        display: none;
+    }
+    .nav-submenu{
+        position: relative;
+        flex-direction: column;
+        background: $gray-100;
+        padding: 10px 0;
+    }
+    .nav-submenu__single{
+        padding: 0;
+        flex-grow: 1;
+        width: 100%;
+    }
+    .nav-submenu .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .nav-submenu .row>* {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .nav-submenu__single img{
+        display: none;
+    }
+    .nav-submenu__title{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        font-weight: 400;
+    }
+    .nav-submenu__link{
+        display: none;
+    }
+    .nav-submenu__single ul{
+        padding: 0;
+        width: 100%;
+    }
+    .nav-submenu.--active{
+        display: flex;
     }
 }
