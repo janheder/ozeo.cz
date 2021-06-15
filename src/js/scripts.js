@@ -102,11 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const $imagesContainer = document.getElementById('product-carousel');
         const $lightbox = document.getElementById('lightbox');
      
+        const delta = 6;
+        let startX;
+        let startY;
+
         $imagesContainer.addEventListener('mousedown', (event) => {
-            clickTime = new Date();
+            startX = event.pageX;
+            startY = event.pageY;
         });
         $imagesContainer.addEventListener('mouseup', e => {
-            if (new Date() - clickTime < 150) {
+            const diffX = Math.abs(event.pageX - startX);
+            const diffY = Math.abs(event.pageY - startY);
+            if (diffX < delta && diffY < delta) {
                 const imageWrapper = e.target.closest('.product-detail__carouselLink');
                 if (imageWrapper) {
                     const image = imageWrapper.querySelector('img');
@@ -141,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loop: true,
             rtl: false,
             onInit: () => {},
-            onChange: () => {},
+            onChange: () => {lazyload();},
         });
     
         // Add a function that generates pagination to prototype
@@ -163,3 +170,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    document.getElementsByClassName('navToggle').onclick = function(e) {
+        e.preventDefault();
+    }
+});

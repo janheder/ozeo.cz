@@ -21,7 +21,7 @@ html(lang=lang)
                                                 img(src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum")
                                         .product-detail__carouselItem
                                             .product-detail__carouselLink
-                                                img(src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum")
+                                                img.lazyload(src="/img/load-symbol.svg" data-src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum")
                                         .product-detail__carouselItem
                                             .product-detail__carouselLink
                                                 img(src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum")
@@ -67,9 +67,9 @@ html(lang=lang)
 
                                     .product-detail__cta 
                                         .product-detail__qty.stepper(id="qty-stepper" ) 
-                                            button.minus –
-                                            input(id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1") 
-                                            button.plus +
+                                            span.minus –
+                                            input(id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek") 
+                                            span.plus +
                                         .product-detail__button 
                                             button.btn.--green(name="add-to-cart") #[img(src="icons/cart-white.svg" alt="Vložit do košíku")] Vložit do košíku
 

@@ -119,7 +119,7 @@
               <div class="cart__icon">           <img src="/icons/cart.svg" alt="Košík">
                 <div class="cart__number">2</div>
               </div>
-              <div class="cart-content">
+              <div class="cart-wrap">
                 <div class="cart-title">Nákupní košík</div>
                 <div class="cart-price">2 599 Kč</div>
               </div></a>
@@ -503,7 +503,7 @@
               <div class="item">
                 <picture> 
                   <source media="(max-width:575px)" srcset="/img/carousel/banner1-575.png">
-                  <source media="(max-width:991px)" srcset="/img/carousel/banner1-991.png"><img src="/img/carousel/banner1.png" alt="#" title="#">
+                  <source media="(max-width:991px)" srcset="/img/carousel/banner1-991.png"><img class="lazyload" src="" data-src="/img/carousel/banner1.png" alt="#" title="#">
                 </picture><a href="/produkt-detail.html" aria-label="Popis slidu 2">                         </a>
               </div>
               <div class="item">
@@ -533,7 +533,7 @@
                 loop: true,
                 rtl: false,
                 onInit: () => {},
-                onChange: () => {},
+                onChange: () => {lazyload();},
             });
             document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
             document.querySelector('.next').addEventListener('click', () => indexCarousel.next());
@@ -780,7 +780,17 @@
       </section>
       <section class="contact"> 
         <div class="container"> 
-          <h1>contact</h1>
+          <div class="contact__content">
+            <h1 class="contact__title">Máte dotazy nebo potřebujete poradit s výběrem?</h1>
+            <div class="contact__wrap"> 
+              <div class="contact__item"> <img src="/icons/envelope.svg" alt="info@ozeo.cz">
+                <div class="contact__text">info@ozeo.cz</div>
+              </div>
+              <div class="contact__item"> <img src="/icons/phone-big.svg" alt="+420 123 456 789">
+                <div class="contact__text">+420 123 456 789 <small>PO - PÁ 8:30 – 17:30</small></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

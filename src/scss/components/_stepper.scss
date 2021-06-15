@@ -19,7 +19,7 @@
 .stepper input{
   -moz-appearance: textfield;
 }
-.stepper button{
+.stepper span{
     height: 54px;
     position: absolute;
     top: 0;
@@ -27,6 +27,11 @@
     background: transparent;
     padding: 0;
     width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
 }
 .stepper .minus{
     height: 54px;

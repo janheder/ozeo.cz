@@ -12,7 +12,7 @@ section.carousel
                     picture 
                         source(media="(max-width:575px)" srcset="/img/carousel/banner1-575.png")
                         source(media="(max-width:991px)" srcset="/img/carousel/banner1-991.png")
-                        img(src="/img/carousel/banner1.png" alt="#" title="#")
+                        img.lazyload(src="" data-src="/img/carousel/banner1.png" alt="#" title="#")
                     a(href="/produkt-detail.html" aria-label="Popis slidu 2")                          
                 .item
                     picture 
@@ -20,6 +20,7 @@ section.carousel
                         source(media="(max-width:991px)" srcset="/img/carousel/banner1-991.png")
                         img(src="/img/carousel/banner1.png" alt="#" title="#")
                     a(href="/produkt-detail.html" aria-label="Popis slidu 3")
+
             button.prev(aria-label="Zpět")
                 img(src="/icons/cheveron-white.svg" alt="Zpět")
             button.next(aria-label="Vpřed")
@@ -41,7 +42,7 @@ script.
             loop: true,
             rtl: false,
             onInit: () => {},
-            onChange: () => {},
+            onChange: () => {lazyload();},
         });
         document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
         document.querySelector('.next').addEventListener('click', () => indexCarousel.next());

@@ -1,0 +1,41 @@
+.contact{
+    display: flex;
+    padding-bottom: 60px;
+}
+.contact__content{
+    background: $gray-100;
+    display: flex;
+    padding: 50px 60px;
+}
+.contact__title{
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 480px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.contact__wrap{
+    padding-left: 60px;
+}
+.contact__item{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.contact__item img{
+    margin-right: 20px;
+}
+.contact__text{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+.contact__text small{
+    font-size: 14px;
+    font-weight: 400;
+} 
