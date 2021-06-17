@@ -34,7 +34,7 @@ html(lang=lang)
                     .row 
                         .col-12.col-md-8
                             .cart-table
-                                form.cart-content__form(method="post")
+                                form.cart-content__form(method="post" id="cart-form")
                                     .cart-table__title Zboží v košíku
 
                                     .cart-table-items    
@@ -123,7 +123,7 @@ html(lang=lang)
                                         input(type="text" id="code" name="code" required)
                                         button.btn Použít
                                 
-                                button.btn.--cart(name="nextstep") Doprava a platba #[img(src="/icons/cheveron-white.svg" alt="Pokračovat")]
+                                button.btn.--cart(name="nextstep" form="cart-form") Doprava a platba #[img(src="/icons/cheveron-white.svg" alt="Pokračovat")]
 
 
 

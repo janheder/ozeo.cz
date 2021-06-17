@@ -491,6 +491,7 @@
           </div>
         </div>
         <div class="nav-item"> <a class="nav-link" href="produkt-vypis.html">Dřevěné boxy</a></div>
+        <div class="nav-item-backdrop"></div>
       </div>
     </nav>
     <main>
@@ -506,19 +507,19 @@
           <form method="post" id="register-form">
             <div class="form-group">    
               <label for="register-name">Jméno</label>
-              <input type="text" id="register-name" name="register-name" required>
+              <input type="text" id="register-name" name="register-name" required minlength="2" maxlength="45">
             </div>
             <div class="form-group">    
               <label for="register-surname">Příjmení</label>
-              <input type="text" id="register-surname" name="register-surname" required>
+              <input type="text" id="register-surname" name="register-surname" required minlength="2" maxlength="45">
             </div>
             <div class="form-group">    
               <label for="register-email">Email</label>
-              <input type="email" id="register-email" name="register-email" required>
+              <input type="email" id="register-email" name="register-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})">
             </div>
             <div class="form-group">    
-              <label for="register-tel">Telefon</label>
-              <input type="tel" id="register-tel" name="register-tel" required>
+              <label for="register-tel">Telefon </label>
+              <input type="tel" id="register-tel" name="register-tel" required pattern="d{1,15}">
             </div>
             <div class="form-group">    
               <label for="register-username">Uživatelské jméno</label>
@@ -531,15 +532,15 @@
             <div class="form-spacer"> </div>
             <div class="form-group">    
               <label for="register-street">Ulice a Číslo popisné</label>
-              <input type="text" id="register-street" name="register-street" required>
+              <input type="text" id="register-street" name="register-street" required maxlength="50">
             </div>
             <div class="form-group">    
               <label for="register-city">Město/obec</label>
-              <input type="text" id="register-city" name="register-city" required>
+              <input type="text" id="register-city" name="register-city" required maxlength="50">
             </div>
             <div class="form-group">    
               <label for="register-psc">PSČ</label>
-              <input type="text" id="register-psc" name="register-psc" required>
+              <input type="text" id="register-psc" name="register-psc" required maxlength="50">
             </div>
             <div class="form-group">    
               <label for="register-state">Stát</label>

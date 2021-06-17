@@ -32,10 +32,10 @@ html(lang=lang)
                 
                 .container
                     .row 
-                        .col-12.col-md-8
+                        .col-12.col-lg-8
                             .cart-table
 
-                                form.cart-content__form(method="post")
+                                form.cart-content__form(method="post" id="cart-form")
 
                                     .cart-table__title Vyplňte osobní údaje
                                     .cart-table-personal
@@ -161,7 +161,7 @@ html(lang=lang)
                                                 document.getElementById("cart-fa-state").toggleAttribute("required");
                                             }
 
-                                            
+
                                     .cart-table__footer
                                         a.cart-table__footer-link(href="/") 
                                             .cart-table__footer-icon
@@ -171,7 +171,7 @@ html(lang=lang)
 
 
 
-                        .col-12.col-md-4 
+                        .col-12.col-lg-4 
                             aside.cart-aside
                                 .cart-aside__title Shrnutí objednávky
                                 .cart-aside__table 
@@ -199,7 +199,7 @@ html(lang=lang)
                                         input(type="text" id="code" name="code" required)
                                         button.btn Použít
                                 
-                                button.btn.--cart(name="nextstep") Souhrn objednávky #[img(src="/icons/cheveron-white.svg" alt="Pokračovat")]
+                                button.btn.--cart(name="nextstep" form="cart-form") Souhrn objednávky #[img(src="/icons/cheveron-white.svg" alt="Pokračovat")]
 
 
 

@@ -19,16 +19,16 @@ html(lang=lang)
                     form(method="post" id="register-form")
                         .form-group     
                             label(for="register-name") Jméno
-                            input(type="text" id="register-name" name="register-name" required)
+                            input(type="text" id="register-name" name="register-name" required minlength="2" maxlength="45")
                         .form-group     
                             label(for="register-surname") Příjmení
-                            input(type="text" id="register-surname" name="register-surname" required)
+                            input(type="text" id="register-surname" name="register-surname" required minlength="2" maxlength="45")
                         .form-group     
                             label(for="register-email") Email
-                            input(type="email" id="register-email" name="register-email" required)
+                            input(type="email" id="register-email" name="register-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})")
                         .form-group     
-                            label(for="register-tel") Telefon
-                            input(type="tel" id="register-tel" name="register-tel" required)
+                            label(for="register-tel") Telefon 
+                            input(type="tel" id="register-tel" name="register-tel" required pattern="\d{1,15}")
                         .form-group     
                             label(for="register-username") Uživatelské jméno
                             input(type="text" id="register-username" name="register-username" required)
@@ -40,13 +40,13 @@ html(lang=lang)
 
                         .form-group     
                             label(for="register-street") Ulice a Číslo popisné
-                            input(type="text" id="register-street" name="register-street" required)
+                            input(type="text" id="register-street" name="register-street" required maxlength="50")
                         .form-group     
                             label(for="register-city") Město/obec
-                            input(type="text" id="register-city" name="register-city" required)      
+                            input(type="text" id="register-city" name="register-city" required maxlength="50")      
                         .form-group     
                             label(for="register-psc") PSČ
-                            input(type="text" id="register-psc" name="register-psc" required)      
+                            input(type="text" id="register-psc" name="register-psc" required maxlength="50")      
                         .form-group     
                             label(for="register-state") Stát
                             select(name="register-state" id="register-state" required)   

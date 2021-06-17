@@ -151,11 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
             onChange: () => {lazyload();},
         });
     
+        document.querySelector('.prev').addEventListener('click', () => thumbCarousel.prev());
+        document.querySelector('.next').addEventListener('click', () => thumbCarousel.next());
+
         // Add a function that generates pagination to prototype
         Siema.prototype.addPagination = function() {
             for (let i = 0; i < this.innerElements.length; i++) {
-            const thumb = document.getElementById("thumb" + i);
-            thumb.addEventListener('click', () => this.goTo(i));
+                const thumb = document.getElementById("thumb" + i);
+                thumb.addEventListener('click', () => this.goTo(i));
             }
         }
         
@@ -170,15 +173,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-var elements = document.querySelectorAll('.expandable .nav-link');
+var navitem = document.querySelectorAll('.expandable .nav-link');
 
-for (let loop = 0; loop < elements.length; loop++) {
+for (let loop = 0; loop < navitem.length; loop++) {
 
     document.getElementById('subToggle-'+ loop).addEventListener('click', function(e) {
         document.getElementById('sub-'+ loop).classList.toggle('--active');
-        
     });
 
-        
-    
 }
+
+
+

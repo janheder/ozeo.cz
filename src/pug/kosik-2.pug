@@ -35,16 +35,37 @@ html(lang=lang)
                         .col-12.col-md-8
                             .cart-table
 
-                                form.cart-content__form(method="post")
+                                form.cart-content__form(method="post" id="cart-form")
 
                                     .cart-table__title Způsob dopravy
                                     .cart-table-shipping
 
                                          label.cart-table-shipping-item(for="delivery-1")
-                                            input(type="radio" id="delivery-1" name="delivery-1")  
+                                            input(type="radio" id="delivery-1" name="delivery-1" required)  
                                             .cart-table-shipping-img
                                                 img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
                                             .cart-table-shipping-text Česká pošta - Balík do ruky #[small Doba dodání 2-4 dny]
+                                            .cart-table-shipping-price 99 Kč
+
+                                         label.cart-table-shipping-item(for="delivery-2")
+                                            input(type="radio" id="delivery-2" name="delivery-1" required)  
+                                            .cart-table-shipping-img
+                                                img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
+                                            .cart-table-shipping-text Česká pošta - Balík do ruky
+                                            .cart-table-shipping-price 99 Kč
+
+                                         label.cart-table-shipping-item(for="delivery-3")
+                                            input(type="radio" id="delivery-3" name="delivery-1" required)  
+                                            .cart-table-shipping-img
+                                                img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
+                                            .cart-table-shipping-text Česká pošta - Balík do ruky
+                                            .cart-table-shipping-price.--free 0 Kč
+
+                                         label.cart-table-shipping-item(for="delivery-4")
+                                            input(type="radio" id="delivery-4" name="delivery-1" required)  
+                                            .cart-table-shipping-img
+                                                img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
+                                            .cart-table-shipping-text Česká pošta - Balík do ruky 
                                             .cart-table-shipping-price 99 Kč
 
    
@@ -53,6 +74,14 @@ html(lang=lang)
 
                                     .cart-table__title Způsob platby
                                     .cart-table-shipping
+
+                                         label.cart-table-shipping-item(for="payment-1")
+                                            input(type="radio" id="payment-1" name="payment-1" required)  
+                                            .cart-table-shipping-text Dobírka
+                                            .cart-table-shipping-price 30 Kč
+
+
+
 
 
                                     .cart-table__footer
@@ -92,7 +121,7 @@ html(lang=lang)
                                         input(type="text" id="code" name="code" required)
                                         button.btn Použít
                                 
-                                button.btn.--cart(name="nextstep") Osobní údaje #[img(src="/icons/cheveron-white.svg" alt="Pokračovat")]
+                                button.btn.--cart(name="nextstep" form="cart-form") Osobní údaje #[img(src="/icons/cheveron-white.svg" alt="Pokračovat")]
 
 
 

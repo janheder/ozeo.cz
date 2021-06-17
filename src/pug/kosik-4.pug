@@ -1,0 +1,115 @@
+doctype html
+include template/_variables.pug  
+html(lang=lang)
+    - var slug = "registrace";
+    include template/_head.pug  
+    body
+        include components/_modal-login.pug
+
+        include components/_header.pug
+        main        
+            .container 
+                .page.--narrow
+                    
+                    section.page-heading
+                        h1 Souhrn objednávky
+
+                    .cart-summary
+                        form.cart-summary__form(method="post" id="cart-form")
+                            .cart-summary__item 
+                                .cart-summary__img
+                                    .cart-summary__item 
+                            table.cart-summary__price 
+                                tbody 
+                                    tr 
+                                        td Cena zboží
+                                        td 3 299 Kč
+                                    tr 
+                                        td Česká pošta Balík do ruky
+                                        td 99 Kč
+                                    tr 
+                                        td Online kartou - GoPay
+                                        td 0 Kč
+
+
+                            table.cart-summary__price-sum
+                                tbody 
+                                    tr 
+                                        td Celková cena objednávky
+                                        td 3 354 Kč
+
+                            table.cart-summary__table
+                                thead 
+                                    tr 
+                                        th Dodací adresa
+                                        th
+                                tbody 
+
+                                    tr  
+                                        td Jméno
+                                        td test
+                                    tr  
+                                        td Příjmení
+                                        td test
+                                    tr  
+                                        td Ulice, č. p.
+                                        td test 123
+                                    tr  
+                                        td Město
+                                        td test
+                                    tr  
+                                        td PSČ
+                                        td 190 00
+                                    tr  
+                                        td Telefon
+                                        td 123 456 789
+                                    tr  
+                                        td E-mail
+                                        td test@test.cz
+
+                            table.cart-summary__table
+                                thead 
+                                    tr
+                                        th Fakturační adresa
+                                        th
+                                tbody 
+                                    
+                                    tr  
+                                        td Jméno
+                                        td test
+                                    tr  
+                                        td Příjmení
+                                        td test
+                                    tr  
+                                        td Ulice, č. p.
+                                        td test 123
+                                    tr  
+                                        td Město
+                                        td test
+                                    tr  
+                                        td PSČ
+                                        td 190 00
+                                    tr  
+                                        td Telefon
+                                        td 123 456 789
+                                    tr  
+                                        td E-mail
+                                        td test@test.cz
+
+
+                            button.btn.--cart(name="finish-order") Odeslat objednávku
+
+                            .cart-table__footer
+                                a.cart-table__footer-link(href="/") 
+                                    .cart-table__footer-icon
+                                        img(src="/icons/cheveron.svg" alt="Krok zpět")
+                                    .cart-table__footer-text Krok zpět
+
+
+
+            include components/_contact-section.pug
+
+        
+        include components/_footer.pug
+
+        include template/_scripts.pug  

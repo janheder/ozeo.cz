@@ -14,6 +14,7 @@
     align-items: center;
     z-index: 1;
     white-space: normal;
+    transition: 0.2s ease background;
 
     &:hover, &:active, &:focus{
         color: $white;
@@ -31,6 +32,10 @@
 
 .btn.--green{
     background: $green-500;
+
+    &:hover, &:active, &:focus{
+        background: $black;
+    }
 }
 .btn.--green img{
     margin-left: 0px;
