@@ -98,7 +98,14 @@ header{
         width: 14px;
     }
 }
-
+#searchToggle{
+    height: 100%;
+    width: 52px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
 .search{
     display: flex;
     flex-grow: 1;
@@ -233,8 +240,8 @@ header{
         height: 28px;
         margin-left: 10px;
     }
-    #navToggle {
-        display: block;
+    #navToggle, #searchToggle{
+        display: flex;
         flex-shrink: 0;
     }
     .search{

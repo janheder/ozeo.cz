@@ -47,6 +47,10 @@ document.getElementById('darkBackdrop').onclick = function() {
     document.body.classList.toggle('--nav-active');
 }
 
+document.getElementById('searchToggle').onclick = function() {
+    document.body.classList.toggle('--search-active');
+}
+
 
 var inc = document.getElementsByClassName("stepper");
 
