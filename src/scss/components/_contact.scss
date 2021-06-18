@@ -6,6 +6,7 @@
     background: $gray-100;
     display: flex;
     padding: 50px 60px;
+
 }
 .contact__title{
     font-size: 30px;
@@ -38,4 +39,49 @@
 .contact__text small{
     font-size: 14px;
     font-weight: 400;
+    color: $gray-500;
 } 
+
+@media screen and (max-width: 991px){
+    .contact__content{
+        padding: 50px 40px;
+    }
+    .contact__title{
+        font-size: 24px;
+    }
+    .contact__wrap{
+        padding-left: 20px;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+}
+@media screen and (max-width: 575px){
+    .contact__content{
+        padding: 50px 40px;
+        flex-wrap: wrap;
+    }
+    .contact__title{
+        font-size: 22px;
+    }
+    .contact__wrap{
+        padding-left: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+    .contact__item{
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width: 500px){
+    .contact__title{
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    .contact__content{
+        padding: 30px 20px;
+    }
+    .contact__wrap{
+        flex-direction: column;
+    }
+}

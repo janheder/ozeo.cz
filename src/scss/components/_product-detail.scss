@@ -9,12 +9,9 @@
     position: relative;
 }
 .product-detail__photos .prev, .product-detail__photos .next{
-    border: 0;
-    background: rgba($black,0.6);
+    display: none;
 }
-.product-detail__photos .prev img {
-    transform: rotate(180deg);
-}
+
 .product-detail__carouselItem{
     position: relative;
     padding-bottom: 80%;
@@ -45,7 +42,7 @@
     flex-wrap: wrap;
 }
 .product-detail__thumb{
-
+    cursor: pointer;
     position: relative;
     padding-bottom: 140px;
 }
@@ -65,15 +62,19 @@
 .product-detail__thumbs img{
     max-height: 100%;
 }
-.product-detail__info{
 
-}
 .product-detail__title{
     font-size: 36px;
+    padding-bottom: 20px;
 }
 .product-detail__info{
     font-size: 14px;
     line-height: 1;
+    color: $gray-500;
+    padding-bottom: 30px;
+}
+.product-detail__info a{
+    margin-left: 20px;
     color: $gray-500;
 }
 .product-detail__text{
@@ -81,6 +82,10 @@
     line-height: 1.5;
     color: $gray-500;
     padding-bottom: 40px;
+    margin: 0;
+}
+.product-detail__text a{
+    color: $green-500;
 }
 .product-detail form{
 
@@ -139,12 +144,16 @@
     display: flex;
 }
 .product-detail__qty.stepper{
-    height: 62px;
+    height: 62px;   
+    width: 140px;
+
     span, input{
         height: 62px;
     }
 }
-
+.product-detail__qty.stepper span{
+    width: 54px;
+}
 .product-detail__button{
     margin-left: 10px;
 }
@@ -205,6 +214,32 @@
     .product-detail__thumbWrap {
         padding: 5px;
         width: 25%;
+    }
+    .product-detail__photos .prev, .product-detail__photos .next{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        border: 0;
+        background: rgba($white,0.3);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .product-detail__photos .prev img, .product-detail__photos .next img{
+        width: 10px;
+    }
+    .product-detail__photos .prev{
+        left: 0;
+        right: auto;
+    }
+    .product-detail__photos .next img{
+        transform: rotate(-90deg);
+    }
+    .product-detail__photos .prev img {
+        transform: rotate(90deg);
     }
     .product-detail__title{
         font-size: 24px;

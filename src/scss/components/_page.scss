@@ -21,3 +21,24 @@
     font-size: 14px;
 }
 
+@media screen and (max-width: 991px){
+    .page.--narrow{
+        width: 100%;
+        max-width: 100%;
+        padding: 80px 60px 60px 60px;
+
+    }
+}
+@media screen and (max-width: 767px){
+    .page.--narrow{
+        padding: 40px 20px 40px 20px;
+
+    }
+}
+@media screen and (max-width: 575px){
+    .page.--narrow{
+        padding: 0;
+        border: 0;
+        margin-bottom: 0;
+    }
+}

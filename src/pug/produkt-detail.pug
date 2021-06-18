@@ -27,9 +27,9 @@ html(lang=lang)
                                             img(src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum")
 
                                 button.prev(aria-label="Zpět")
-                                    img(src="/icons/cheveron-white.svg" alt="Zpět")
+                                    img(src="/icons/cheveron.svg" alt="Zpět")
                                 button.next(aria-label="Vpřed")
-                                    img(src="/icons/cheveron-white.svg" alt="Vpřed")
+                                    img(src="/icons/cheveron.svg" alt="Vpřed")
 
                                 .lightbox(id="lightbox")
 
@@ -55,8 +55,11 @@ html(lang=lang)
                         .col-12.col-lg-5
                             .product-detail__info
                                 h1.product-detail__title Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
-                                span.product-detail__info
-                                p.product-detail__text Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního... Číst více
+                                .product-detail__info
+                                    span Kód produktu: 12-AE6
+                                    a(href="#") #[img(src="/icons/share.svg" alt="Sdílet")] Sdílet
+                                    
+                                p.product-detail__text Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního... #[a(href="#productDescription") Číst více]
                                 form.product-detail__form(method="post")
                                     .variants
                                         .variants__title Výběr varianty
@@ -79,7 +82,7 @@ html(lang=lang)
 
 
                         .col-12.col-lg-7
-                            .product-detail__description 
+                            .product-detail__description(id="productDescription")
                                 h2 Popis produktu
                                 p Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního tlustého lana, která je praktická a snadno přepravitelná.
 

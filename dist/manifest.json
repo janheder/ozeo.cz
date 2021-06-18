@@ -1,8 +1,8 @@
 {
     "name": "OZEO.cz",
     "short_name" : "OZEO.cz",
-    "start_url": "https://wonderful-almeida-03b438.netlify.app/",
-    "scope" : "https://wonderful-almeida-03b438.netlify.app/",
+    "start_url": "https://ozeo.pages.dev/",
+    "scope" : "https://ozeo.pages.dev/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",

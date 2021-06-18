@@ -8,6 +8,7 @@ input, select{
     display: flex;
     border: 1px solid $gray-300;
     font-size: 16px;
+    background-color: $white;
 }
 select{
     appearance: none;
@@ -17,12 +18,14 @@ select{
     background-size: auto;
     background-repeat: no-repeat;
     padding: 0 50px 0 20px;
+    background-color: $white;
 }
 textarea{
     padding: 20px;
     display: flex;
     border: 1px solid $gray-300; 
     font-size: 16px;
+    background-color: $white;
 }
 button{
     font-size: 16px;
@@ -108,4 +111,10 @@ input.show-password{
 .form-group.--checkbox > input:checked + .form-collapse{
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 575px){
+    .form-spacer{
+        height: 20px;
+    }
 }
