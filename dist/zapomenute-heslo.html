@@ -11,7 +11,7 @@
     <meta content="Eline.cz" name="author">
     <link rel="preload" href="/fonts/CerebriSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/CerebriSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="canonical" href="https://ozeo.pages.dev/blog-detail">
+    <link rel="canonical" href="https://ozeo.pages.dev/registrace">
     <meta property="og:locale" content="cs_CZ">
     <meta property="og:type" content="website">
     <meta property="og:title" content="OZEO.cz">
@@ -103,6 +103,24 @@
               x.type = "password";
           }
       }
+    </script>
+    <div class="modal micromodal-slide" id="modal-info" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-info-title">
+          <div class="modal__content" id="modal-info-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-info-title">Přihlášení</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <h2>info</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          MicroModal.show('modal-info'); 
+      });
     </script>
     <header>
       <div class="header-top">
@@ -510,51 +528,36 @@
       <div class="breadcrumbs">
         <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">Dřevěná bedna na 2 vína CARMEN VI</span></div>
       </div>
-      <div class="container">
-        <article> 
-          <div class="article-header">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <div class="article-info">
-              <div class="article-info__date">Zveřejněno 8. 6. 2021</div><a class="article-info__social" href="#"><img src="/icons/share.svg"> Sdílet</a>
+      <div class="container"> 
+        <div class="page --narrow">
+          <section class="page-heading">
+            <h1>Zapomenuté heslo</h1>
+            <p>Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.</p>
+          </section>
+          <form method="post" id="password-form">
+            <div class="form-group">    
+              <label for="password-email">Email</label>
+              <input type="email" id="register-email" name="password-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})">
+            </div>
+            <div class="form-group"> 
+              <button class="btn --fullWidth" name="password-submit" id="password-submit">Poslat nové heslo <img src="/icons/cheveron-white.svg"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <section class="contact"> 
+        <div class="container"> 
+          <div class="contact__content">
+            <h1 class="contact__title">Máte dotazy nebo potřebujete poradit s výběrem?</h1>
+            <div class="contact__wrap"> 
+              <div class="contact__item"> <img src="/icons/envelope.svg" alt="info@ozeo.cz">
+                <div class="contact__text">info@ozeo.cz</div>
+              </div>
+              <div class="contact__item"> <img src="/icons/phone-big.svg" alt="+420 123 456 789">
+                <div class="contact__text">+420 123 456 789 <small>PO - PÁ 8:30 – 17:30</small></div>
+              </div>
             </div>
           </div>
-          <div class="article-thumb"><img src="/img/news-thumb-large.jpg" alt="Lorem ipsum dolor sit amet" title="Lorem ipsum dolor sit amet"></div>
-          <div class="article-content"> 
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean placerat. Nulla quis diam. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Integer imperdiet lectus quis justo. Etiam dictum tincidunt diam. Integer vulputate sem a nibh rutrum consequat. </p>
-            <p>Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Sed convallis magna eu sem. Proin mattis lacinia justo. </p>
-            <q>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q>
-            <p>Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Aliquam ante. </p>
-            <p>Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Curabitur sagittis hendrerit ante. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Maecenas aliquet accumsan leo. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus.</p>
-          </div>
-        </article>
-      </div>
-      <section class="section-news">
-        <div class="container">
-          <h1 class="section-news__title">Co je u nás v OZEO nového </h1>
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-4"><a class="news-single" href="/blog-detail.html">
-                <div class="news-single__top">
-                  <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-medium.jpg" alt="#" title="#">
-                </div>
-                <div class="news-single__bottom">
-                  <p class="news-single__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div></a></div>
-            <div class="col-12 col-sm-12 col-md-4"><a class="news-single" href="/blog-detail.html">
-                <div class="news-single__top">
-                  <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-medium.jpg" alt="#" title="#">
-                </div>
-                <div class="news-single__bottom">
-                  <p class="news-single__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div></a></div>
-            <div class="col-12 col-sm-12 col-md-4"><a class="news-single" href="/blog-detail.html">
-                <div class="news-single__top">
-                  <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-medium.jpg" alt="#" title="#">
-                </div>
-                <div class="news-single__bottom">
-                  <p class="news-single__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div></a></div>
-          </div>
-          <div class="section-news__btnWrap"> <a class="btn" href="/blog-vypis.html">Starší aktuality</a></div>
         </div>
       </section>
       <section class="social">
@@ -575,21 +578,6 @@
               <div class="social-single"><a class="social-single__link" href="https://www.instagram.com/ozeo.cz/">
                   <div class="social-single__img"><img src="/icons/instagram-big.svg" alt="Instagram"></div>
                   <div class="social-single__text">Sledujte nás na Instagramu</div></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="contact"> 
-        <div class="container"> 
-          <div class="contact__content">
-            <h1 class="contact__title">Máte dotazy nebo potřebujete poradit s výběrem?</h1>
-            <div class="contact__wrap"> 
-              <div class="contact__item"> <img src="/icons/envelope.svg" alt="info@ozeo.cz">
-                <div class="contact__text">info@ozeo.cz</div>
-              </div>
-              <div class="contact__item"> <img src="/icons/phone-big.svg" alt="+420 123 456 789">
-                <div class="contact__text">+420 123 456 789 <small>PO - PÁ 8:30 – 17:30</small></div>
-              </div>
             </div>
           </div>
         </div>

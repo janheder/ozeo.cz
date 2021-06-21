@@ -1,0 +1,23 @@
+.modal.micromodal-slide(id="modal-info" aria-hidden="true")
+
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+
+
+    .modal__container(role="dialog" aria-modal="true" aria-labelledby="modal-info-title")
+
+        .modal__content(id="modal-info-content")
+
+            .modal__header
+                h2.modal__title(id="modal-info-title") Přihlášení
+
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+
+
+            
+            h2 info
+
+
+script.
+    document.addEventListener("DOMContentLoaded", () => {
+        MicroModal.show('modal-info'); 
+    });

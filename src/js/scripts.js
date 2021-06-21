@@ -35,7 +35,7 @@ MicroModal.init({
     awaitOpenAnimation: true,
     awaitCloseAnimation: true, 
     debugMode: false 
-  });
+});
       
 
 
@@ -188,4 +188,37 @@ for (let loop = 0; loop < navitem.length; loop++) {
 }
 
 
+var variants = document.getElementById('variants');
 
+if (variants){
+
+    document.querySelector('.variants__list').addEventListener('click', function (e) {
+
+        this.classList.toggle('--active');
+        
+        var target = e.target;
+
+        e.currentTarget.querySelector('.--active').classList.remove('--active');
+        var input = target.querySelector('input').checked = true;
+
+
+        target.classList.add('--active');
+
+        var code = target.dataset.code;
+        var stock = target.dataset.stock;
+        var priceold = target.dataset.priceold;
+        var price = target.dataset.price;
+        var pricevat = target.dataset.pricevat;
+
+        document.getElementById('product-code').innerHTML = code;
+        document.getElementById('stock').innerHTML = stock;
+        if(priceold == null) {
+            
+            document.getElementById('price-old').innerHTML = "";           
+        }else{
+            document.getElementById('price-old').innerHTML = priceold;  
+        }
+        document.getElementById('price-main').innerHTML = price;
+        document.getElementById('price-vat').innerHTML = pricevat;
+    });
+}
