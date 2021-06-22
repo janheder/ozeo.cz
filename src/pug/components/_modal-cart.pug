@@ -1,0 +1,23 @@
+.modal.micromodal-slide(id="modal-cart" aria-hidden="true")
+
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+
+
+    .modal__container(role="dialog" aria-modal="true" aria-labelledby="modal-cart-title")
+
+        .modal__content(id="modal-cart-content")
+
+            .modal__header
+                h2.modal__title(id="modal-cart-title") Přihlášení
+
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+
+
+            
+            h2 info
+
+
+script.
+    document.addEventListener("DOMContentLoaded", () => {
+        MicroModal.show('modal-cart'); 
+    });
