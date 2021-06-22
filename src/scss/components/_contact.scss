@@ -3,10 +3,12 @@
     padding-bottom: 60px;
 }
 .contact__content{
-    background: $gray-100;
+    background-color: $gray-100;
     display: flex;
-    padding: 50px 60px;
-
+    padding: 60px 60px;
+    background-image: url("../img/contact-bg.svg");
+    background-position: right top;
+    background-repeat: no-repeat;
 }
 .contact__title{
     font-size: 30px;
