@@ -63,9 +63,3 @@
 .autoComplete_wrapper>ul>li[aria-selected=true] {
     background-color: rgba(255, 122, 122, .15)
 }
-
-@media only screen and (max-width:600px) {
-    .autoComplete_wrapper>input {
-        width: 18rem
-    }
-}

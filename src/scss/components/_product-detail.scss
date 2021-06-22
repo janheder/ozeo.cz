@@ -111,7 +111,7 @@
 .variants__list-wrap{
     position: relative;
     height: 54px;
-    z-index: 2;
+    z-index: 1;
 }
 .variants__list{
     display: flex;
@@ -230,6 +230,7 @@
 }
 .product-detail__button{
     margin-left: 10px;
+    z-index: 0;
 }
 .product-detail__button button{
     min-height: 62px;
