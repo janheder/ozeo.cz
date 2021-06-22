@@ -77,19 +77,83 @@ if (inc.length > 0){
     }
 
     function stepperInput(id, s, m) {
+        var event = new Event('change');
         var el = document.getElementById(id);
         if (s > 0) {
             if (parseInt(el.value) < m) {
             el.value = parseInt(el.value) + s;
+            el.dispatchEvent(event);
             }
         } else {
             if (parseInt(el.value) > m) {
             el.value = parseInt(el.value) + s;
+            el.dispatchEvent(event);
             }
         }
     }
-
 }
+
+/* CART 1 */
+
+function addInputListener(input) {
+
+    let row = input.parentElement.parentElement.parentElement;
+    let overallPriceElement = row.querySelector('.cart-item-price span');
+    let price = parseInt(row.querySelector('.cart-item-price-pc span').innerText);        
+    
+    let calcEvent = function() {
+
+        if (this.value > 0) {
+            overallPriceElement.innerText = (price * this.value).toString();
+        } else {
+            overallPriceElement.innerText = "0";
+        }
+
+        
+        const pricegoods = document.querySelectorAll('.cart-item-price span');
+        const result = Array.from(pricegoods).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
+        document.getElementById('goodsprice').innerText = result;
+
+        const pricesum = document.querySelectorAll('.cart-item-price span, #delprice');
+        const result2 = Array.from(pricesum).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
+        document.getElementById('sumprice').innerText = result2;
+
+    };
+    
+
+    input.addEventListener('change', calcEvent);
+    calcEvent.call(input); 
+}
+
+let inputs = document.querySelectorAll('.stepper input');
+
+
+for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i];
+    addInputListener(input);
+}
+
+
+
+/* CART 2 */
+
+var elms = document.querySelectorAll('.cart-table-shipping-item');
+
+var cart2 = function() {
+    const pricedel = document.querySelectorAll('.cart-table-shipping-item input:checked ~ .cart-table-shipping-price span');
+    const deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
+    document.getElementById('delprice').innerText = deliveryprice;
+
+    var productprice = document.getElementById('goodsprice').textContent;
+
+    document.getElementById('sumprice').innerText = deliveryprice +  parseInt(productprice);
+
+};
+
+for (var ia = 0; ia < elms.length; ia++) {
+    elms[ia].addEventListener('click', cart2, false);
+}
+
 
 
 
@@ -222,3 +286,7 @@ if (variants){
         document.getElementById('price-vat').innerHTML = pricevat;
     });
 }
+
+
+
+

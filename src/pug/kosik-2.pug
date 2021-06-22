@@ -45,28 +45,28 @@ html(lang=lang)
                                             .cart-table-shipping-img
                                                 img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
                                             .cart-table-shipping-text Česká pošta - Balík do ruky #[small Doba dodání 2-4 dny]
-                                            .cart-table-shipping-price 99 Kč
+                                            .cart-table-shipping-price #[span 99] Kč
 
                                          label.cart-table-shipping-item(for="delivery-2")
                                             input(type="radio" id="delivery-2" name="delivery-1" required)  
                                             .cart-table-shipping-img
                                                 img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
                                             .cart-table-shipping-text Česká pošta - Balík do ruky
-                                            .cart-table-shipping-price 99 Kč
+                                            .cart-table-shipping-price #[span 99] Kč
 
                                          label.cart-table-shipping-item(for="delivery-3")
                                             input(type="radio" id="delivery-3" name="delivery-1" required)  
                                             .cart-table-shipping-img
                                                 img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
                                             .cart-table-shipping-text Česká pošta - Balík do ruky
-                                            .cart-table-shipping-price.--free 0 Kč
+                                            .cart-table-shipping-price.--free #[span 0] Kč
 
                                          label.cart-table-shipping-item(for="delivery-4")
                                             input(type="radio" id="delivery-4" name="delivery-1" required)  
                                             .cart-table-shipping-img
                                                 img(src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky")
                                             .cart-table-shipping-text Česká pošta - Balík do ruky 
-                                            .cart-table-shipping-price 99 Kč
+                                            .cart-table-shipping-price #[span 99] Kč
 
    
 
@@ -78,8 +78,12 @@ html(lang=lang)
                                          label.cart-table-shipping-item(for="payment-1")
                                             input(type="radio" id="payment-1" name="payment-1" required)  
                                             .cart-table-shipping-text Dobírka
-                                            .cart-table-shipping-price 30 Kč
+                                            .cart-table-shipping-price #[span 30 ] Kč
 
+                                         label.cart-table-shipping-item(for="payment-2")
+                                            input(type="radio" id="payment-2" name="payment-1" required)  
+                                            .cart-table-shipping-text Kartou
+                                            .cart-table-shipping-price #[span 0 ] Kč
 
 
 
@@ -99,13 +103,15 @@ html(lang=lang)
                                 .cart-aside__table 
                                     .cart-aside__row 
                                         .cart-aside__table-th Cena zboží
-                                        .cart-aside__table-td 3 299 Kč
+                                        .cart-aside__table-td #[span(id="goodsprice") 3299] Kč
                                     .cart-aside__row 
                                         .cart-aside__table-th Doprava a platba
-                                        .cart-aside__table-td Nevybráno
+                                        .cart-aside__table-td #[span(id="delprice") 10] Kč
                                     .cart-aside__row.--main 
                                         .cart-aside__table-th Celková cena
-                                        .cart-aside__table-td 3 354 Kč #[small 2 830 Kč bez DPH]
+                                        .cart-aside__table-td 
+                                            div #[span(id="sumprice") 3299] Kč 
+                                            small 2830 Kč bez DPH
 
 
                                 .cart-aside__free-shipping Nakupte ještě za 6 237 Kč a máte dopravu zdarma

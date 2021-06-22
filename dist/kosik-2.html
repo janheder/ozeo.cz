@@ -175,25 +175,25 @@
                       <input type="radio" id="delivery-1" name="delivery-1" required>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
                       <div class="cart-table-shipping-text">Česká pošta - Balík do ruky <small>Doba dodání 2-4 dny</small></div>
-                      <div class="cart-table-shipping-price">99 Kč</div>
+                      <div class="cart-table-shipping-price"><span>99</span> Kč</div>
                     </label>
                     <label class="cart-table-shipping-item" for="delivery-2">
                       <input type="radio" id="delivery-2" name="delivery-1" required>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
                       <div class="cart-table-shipping-text">Česká pošta - Balík do ruky</div>
-                      <div class="cart-table-shipping-price">99 Kč</div>
+                      <div class="cart-table-shipping-price"><span>99</span> Kč</div>
                     </label>
                     <label class="cart-table-shipping-item" for="delivery-3">
                       <input type="radio" id="delivery-3" name="delivery-1" required>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
                       <div class="cart-table-shipping-text">Česká pošta - Balík do ruky</div>
-                      <div class="cart-table-shipping-price --free">0 Kč</div>
+                      <div class="cart-table-shipping-price --free"><span>0</span> Kč</div>
                     </label>
                     <label class="cart-table-shipping-item" for="delivery-4">
                       <input type="radio" id="delivery-4" name="delivery-1" required>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
                       <div class="cart-table-shipping-text">Česká pošta - Balík do ruky </div>
-                      <div class="cart-table-shipping-price">99 Kč</div>
+                      <div class="cart-table-shipping-price"><span>99</span> Kč</div>
                     </label>
                   </div>
                   <div class="cart-table__title">Způsob platby</div>
@@ -201,7 +201,12 @@
                     <label class="cart-table-shipping-item" for="payment-1">
                       <input type="radio" id="payment-1" name="payment-1" required>
                       <div class="cart-table-shipping-text">Dobírka</div>
-                      <div class="cart-table-shipping-price">30 Kč</div>
+                      <div class="cart-table-shipping-price"><span>30 </span> Kč</div>
+                    </label>
+                    <label class="cart-table-shipping-item" for="payment-2">
+                      <input type="radio" id="payment-2" name="payment-1" required>
+                      <div class="cart-table-shipping-text">Kartou</div>
+                      <div class="cart-table-shipping-price"><span>0 </span> Kč</div>
                     </label>
                   </div>
                   <div class="cart-table__footer"><a class="cart-table__footer-link" href="/"> 
@@ -216,15 +221,17 @@
                 <div class="cart-aside__table"> 
                   <div class="cart-aside__row"> 
                     <div class="cart-aside__table-th">Cena zboží</div>
-                    <div class="cart-aside__table-td">3 299 Kč</div>
+                    <div class="cart-aside__table-td"><span id="goodsprice">3299</span> Kč</div>
                   </div>
                   <div class="cart-aside__row"> 
                     <div class="cart-aside__table-th">Doprava a platba</div>
-                    <div class="cart-aside__table-td">Nevybráno</div>
+                    <div class="cart-aside__table-td"><span id="delprice">10</span> Kč</div>
                   </div>
                   <div class="cart-aside__row --main"> 
                     <div class="cart-aside__table-th">Celková cena</div>
-                    <div class="cart-aside__table-td">3 354 Kč <small>2 830 Kč bez DPH</small></div>
+                    <div class="cart-aside__table-td"> 
+                      <div><span id="sumprice">3299</span> Kč </div><small>2830 Kč bez DPH</small>
+                    </div>
                   </div>
                 </div>
                 <div class="cart-aside__free-shipping">Nakupte ještě za 6 237 Kč a máte dopravu zdarma</div>
