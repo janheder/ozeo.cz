@@ -27,13 +27,23 @@
     top: calc(100% + 15px);
     width: 460px;
     background: $white;
-    padding: 40px;
     border: 1px solid $gray-300;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     opacity: 0;
     pointer-events: none;
 }
-
+.filter__content::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    display: inline-flex;
+    background: $white;
+    border-top: 1px solid $gray-300;
+    border-right: 1px solid $gray-300;
+    position: relative;
+    transform: translateY(-12px) rotate(-45deg);
+    margin-left: 100px;
+}
 .filter.--active{
     .filter__button{
         background: $gray-900;
@@ -43,7 +53,9 @@
         pointer-events: auto;
     }
 }
-
+.filter__form{
+    padding: 30px 20px 40px 20px;
+}
 .filter__title{
     margin-top: 40px;
     font-size: 18px;
@@ -57,9 +69,17 @@
 @media screen and (max-width: 575px){
     .filter{
         margin-bottom: 20px;
+
     }
     .filter__content{
         width: 100%;
+    }
+    .filter__content::before {
+        transform: translateY(-12px) translateX(-50%) rotate(-45deg);
+        margin-left: 50%;
+    }
+    .filter__form{
+        padding: 0px 20px 20px 20px;
     }
     .filter__button{
         height: 48px;

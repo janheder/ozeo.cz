@@ -113,14 +113,15 @@
 }
 .product-card__priceOld{
     text-decoration: line-through;
-    margin-right: 10px;
+    margin: 0 10px;
     line-height: 1;
 }
 .product-card__priceMain{
     color: $red-500;
     line-height: 1;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 500;    
+    margin: 0 10px;
 }
 
 .product-card__btn{

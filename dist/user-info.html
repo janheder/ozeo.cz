@@ -106,25 +106,6 @@
           }
       }
     </script>
-    <div class="modal micromodal-slide" id="modal-info" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-info-title">
-          <div class="modal__header-img"> <img src="/img/news-thumb-large.jpg" alt="Lorem ipsum dolor"></div>
-          <div class="modal__content" id="modal-info-content">
-            <div class="modal__header">
-              <h2 class="modal__title" id="modal-info-title">Lorem ipsum dolor</h2>
-              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean placerat. Nulla quis diam. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Integer imperdiet lectus quis justo. Etiam dictum tincidunt diam. Integer vulputate sem a nibh rutrum consequat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          MicroModal.show('modal-info'); 
-      });
-    </script>
     <header>
       <div class="header-top">
         <div class="container"> 
@@ -532,20 +513,12 @@
         <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">Dřevěná bedna na 2 vína CARMEN VI</span></div>
       </div>
       <div class="container"> 
-        <div class="page --narrow">
-          <section class="page-heading">
-            <h1>Zapomenuté heslo</h1>
-            <p>Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.</p>
-          </section>
-          <form method="post" id="password-form">
-            <div class="form-group">    
-              <label for="password-email">Email</label>
-              <input type="email" id="register-email" name="password-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})">
-            </div>
-            <div class="form-group"> 
-              <button class="btn --fullWidth" name="password-submit" id="password-submit">Poslat nové heslo <img src="/icons/cheveron-white.svg"></button>
-            </div>
-          </form>
+        <div class="page">  
+          <div class="cart-empty">
+            <div class="cart-empty__img"> <img src="/img/user-complete.svg" alt="Vaše heslo bylo úspěšně obnoveno"></div>
+            <h1 class="cart-empty__title">Vaše heslo bylo úspěšně obnoveno</h1>
+            <p class="cart-empty__text">Na váš email jsme zaslali pokyny pro změnu hesla. Poté se budete moct znovu přihlásit</p><a class="btn --green" href="/">Zpět do obchodu</a>
+          </div>
         </div>
       </div>
       <section class="contact"> 
@@ -559,38 +532,6 @@
               <div class="contact__item"> <img src="/icons/phone-big.svg" alt="+420 123 456 789">
                 <div class="contact__text">+420 123 456 789 <small>PO - PÁ 8:30 – 17:30</small></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="social">
-        <div class="container">
-          <h1>Z našeho Instagramu</h1>
-          <div class="instagram-wrap">
-            <div class="row"> 
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/instagram/ig1.jpg" alt="#"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/instagram/ig2.jpg" alt="#"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/instagram/ig3.jpg" alt="#"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/instagram/ig4.jpg" alt="#"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/instagram/ig5.jpg" alt="#"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/instagram/ig6.jpg" alt="#"></a></div>
-            </div>
-          </div>
-          <div class="row"> 
-            <div class="col-12 col-md-4">
-              <div class="social-single"><a class="social-single__link" href="https://facebook.com/ozeo.cz">
-                  <div class="social-single__img"><img src="/icons/facebook-big.svg" alt="Facebook"></div>
-                  <div class="social-single__text">Jsme také na Facebooku</div></a></div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="social-single"><a class="social-single__link" href="https://youtube.com/channel/UC7EiBmqyRqSsxFQOrATcuUw">
-                  <div class="social-single__img"><img src="/icons/youtube-big.svg" alt="Youtube"></div>
-                  <div class="social-single__text">Sledujte nás na Youtube</div></a></div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="social-single"><a class="social-single__link" href="https://www.instagram.com/ozeo.cz/">
-                  <div class="social-single__img"><img src="/icons/instagram-big.svg" alt="Instagram"></div>
-                  <div class="social-single__text">Sledujte nás na Instagramu</div></a></div>
             </div>
           </div>
         </div>
