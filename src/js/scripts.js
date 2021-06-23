@@ -119,6 +119,8 @@ if (cart.length>0){
             const pricesum = document.querySelectorAll('.cart-item-price span, #delprice');
             const result2 = Array.from(pricesum).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
             document.getElementById('sumprice').innerText = result2;
+            var dph = document.getElementById('dphprice').dataset.dph;
+            document.getElementById('dphprice').innerText = Math.round(result2 * (1 - dph));
 
         };
         
@@ -147,8 +149,11 @@ if (cart.length>0){
         document.getElementById('delprice').innerText = deliveryprice;
 
         var productprice = document.getElementById('goodsprice').textContent;
+        var pricecart2 = deliveryprice +  parseInt(productprice)
+        document.getElementById('sumprice').innerText = pricecart2;
 
-        document.getElementById('sumprice').innerText = deliveryprice +  parseInt(productprice);
+        var dph = document.getElementById('dphprice').dataset.dph;
+        document.getElementById('dphprice').innerText = Math.round(pricecart2 * (1 - dph));
 
     };
 

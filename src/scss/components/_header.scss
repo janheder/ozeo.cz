@@ -57,10 +57,12 @@ header{
     align-items: center;
 }
 .logo{
-    height: 40px;
+
 }
 .logo img{
     height: 100%;
+    height: 40px;
+    width: 150px;
 }
 #navToggle{
     height: 100%;
@@ -163,6 +165,11 @@ header{
     align-items: center;
     margin-right: 15px;
 }
+.header-nav .user__icon img{
+    height: 20px;
+    width: 16px;
+}
+
 .header-nav .user img{
 
 }

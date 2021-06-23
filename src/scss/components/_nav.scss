@@ -35,6 +35,8 @@ nav .container{
 }
 .nav-link img, .nav-linkDesktop img{
     margin-left: 10px;
+    width: 8px;
+    height: 5px;
 }
 .nav-linkDesktop + .nav-link{
     display: none;

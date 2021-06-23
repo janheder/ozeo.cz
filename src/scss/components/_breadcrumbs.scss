@@ -16,6 +16,8 @@
 }
 .breadcrumbs__separator{
     transform: rotate(-90deg);
+    height: 5px;
+    width: 8px;
 }
 
 @media screen and (max-width: 575px){
