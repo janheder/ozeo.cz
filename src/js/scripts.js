@@ -22,10 +22,11 @@ var cookiebar = new Cookiebar({
 lazyload();
 
 
-MicroModal.init({
+MicroModal.init({ 
+    /*
     onShow: modal => console.info(`${modal.id} is shown`),
     onClose: modal => console.info(`${modal.id} is hidden`), 
-    /*
+   
     openTrigger: 'data-custom-open', //
     closeTrigger: 'data-custom-close', // 
     */

@@ -122,7 +122,14 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-          MicroModal.show('modal-cart'); 
+          MicroModal.show('modal-cart',{
+              openClass: 'is-open', 
+              disableScroll: true, 
+              disableFocus: true, 
+              awaitOpenAnimation: true,
+              awaitCloseAnimation: true, 
+              debugMode: false 
+          }); 
       });
     </script>
     <header>

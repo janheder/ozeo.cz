@@ -13,6 +13,7 @@
             .modal__header
                 h2.modal__title(id="modal-cart-title") Přidáno do košíku
                 button.modal__close(aria-label="Close modal" data-micromodal-close)
+                
             p.modal__cart-title Dřevěná bedna na 2 vína CARMEN VI lorem ipsum dolor sit amet
             span.modal__cart-variant Varianta: Černý lak + prosklená dvířka
             span.modal__cart-price 1 118 Kč
@@ -28,5 +29,12 @@
 
 script.
     document.addEventListener("DOMContentLoaded", () => {
-        MicroModal.show('modal-cart'); 
+        MicroModal.show('modal-cart',{
+            openClass: 'is-open', 
+            disableScroll: true, 
+            disableFocus: true, 
+            awaitOpenAnimation: true,
+            awaitCloseAnimation: true, 
+            debugMode: false 
+        }); 
     });
