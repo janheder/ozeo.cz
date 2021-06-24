@@ -148,61 +148,102 @@
   margin-top: 40px;
 }
 
-  @media screen and (max-width: 767px){
+@media screen and (max-width: 767px){
+
+  .modal__container.--cart{
+    flex-direction: column;
+
+    .modal__image{
+      padding: 40px 0;
+    }
+    .modal__image img {
+      height: 180px;
+    }
+    .modal__content {
+      padding: 20px 20px 20px 20px;
+      align-items: flex-start;
+    }
+    .modal__title{
+      font-size: 22px;
+    }
+    .modal__cart-title{
+      font-size: 16px;
+    
+    }
+    .modal__cart-variant{
+      font-size: 14px;
+    }
+    .btn{
+      margin-top: 30px;
+      width: 100%;
+    }
+
+  }
+
   .modal__side{
     display: none;
   }
 }
 
-  /**************************\
-    Demo Animation Style
-  \**************************/
-  @keyframes mmfadeIn {
-      from { opacity: 0; }
-        to { opacity: 1; }
-  }
-  
-  @keyframes mmfadeOut {
-      from { opacity: 1; }
-        to { opacity: 0; }
-  }
-  
-  @keyframes mmslideIn {
-    from { transform: translateY(15%); }
-      to { transform: translateY(0); }
-  }
-  
-  @keyframes mmslideOut {
-      from { transform: translateY(0); }
-      to { transform: translateY(-10%); }
-  }
-  
-  .micromodal-slide {
-    display: none;
-  }
-  
-  .micromodal-slide.is-open {
-    display: block;
-  }
-  
-  .micromodal-slide[aria-hidden="false"] .modal__overlay {
-    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-  }
-  
-  .micromodal-slide[aria-hidden="false"] .modal__container {
-    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-  }
-  
-  .micromodal-slide[aria-hidden="true"] .modal__overlay {
-    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-  }
-  
-  .micromodal-slide[aria-hidden="true"] .modal__container {
-    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
-  }
-  
-  .micromodal-slide .modal__container,
-  .micromodal-slide .modal__overlay {
-    will-change: transform;
-  }
-  
+
+.modal__close {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+/**************************\
+Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+display: none;
+}
+
+.micromodal-slide.is-open {
+display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+will-change: transform;
+}
