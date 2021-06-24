@@ -23,9 +23,12 @@ header
             .search 
                 .search-wrapper     
                     form.search-form(method="post") 
-                        input.search__input(type="text" id="autoComplete" autocomplete="off")
+                        input.search__input(type="text" id="searchinput" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ")
                         button.search__button
                             img(src="/icons/search.svg" alt="Vyhledávání")
+                        include _searchAutocomplete.pug
+
+
 
             div(id="searchToggle")
                 img(src="/icons/search-big.svg" alt="Vyhledávání")

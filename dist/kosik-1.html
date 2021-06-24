@@ -119,8 +119,22 @@
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" method="post"> 
-                <input class="search__input" type="text" id="autoComplete" autocomplete="off">
+                <input class="search__input" type="text" id="searchinput" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ">
                 <button class="search__button"><img src="/icons/search.svg" alt="Vyhledávání"></button>
+                <div class="searchAutocomplete" id="searchAutocomplete">
+                  <div class="searchAutocomplete__section"> 
+                    <div class="searchAutocomplete__title">Produkty</div>
+                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-detail.html">Dřevěná bedna na 2 vína CARMEN VI</a></div>
+                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-detail.html">Dřevěná bedna na 2 vína CARMEN VI</a></div>
+                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-detail.html">Dřevěná bedna na 2 vína CARMEN VI</a></div>
+                  </div>
+                  <div class="searchAutocomplete__section"> 
+                    <div class="searchAutocomplete__title">Kategorie</div>
+                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-vypis.html">Dřevěné krabičky</a></div>
+                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-vypis.html">Dřevěné krabičky</a></div>
+                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-vypis.html">Dřevěné krabičky</a></div>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
@@ -183,7 +197,7 @@
                         </div>
                         <div class="cart-item-bottom">
                           <div class="cart-item-stepper stepper"> <span class="minus">–</span>
-                            <input id="qty-stepper-input-1" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek"><span class="plus">+</span>
+                            <input id="qty-stepper-input-1" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
                           </div><a class="cart-item-remove" href="#">  
                             <div class="cart-item-remove-icon"><img src="/icons/cross-alt.svg" alt="Odstranit z košíku"></div>
                             <div class="cart-item-remove-text">Odstranit z košíku</div></a>
@@ -202,7 +216,7 @@
                         </div>
                         <div class="cart-item-bottom">
                           <div class="cart-item-stepper stepper"><span class="minus">–</span>
-                            <input id="qty-stepper-input-2" type="number" value="2" min="1" max="100" step="1" aria-label="Počet položek"><span class="plus">+</span>
+                            <input id="qty-stepper-input-2" type="number" value="2" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
                           </div><a class="cart-item-remove" href="#">  
                             <div class="cart-item-remove-icon"><img src="/icons/cross-alt.svg" alt="Odstranit z košíku"></div>
                             <div class="cart-item-remove-text">Odstranit z košíku</div></a>
@@ -312,24 +326,26 @@
     <script src="/js/siema.min.js"></script>
     <script src="/js/scripts.min.js"></script>
     <script>
-      const autoCompleteJS = new autoComplete({
-          placeHolder: "Hledejte název produktu, značku nebo typ",
-          data: {
-              src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
-              cache: true,
-          },
-          resultItem: {
-              highlight: true
-          },
-          events: {
-              input: {
-                  selection: (event) => {
-                      const selection = event.detail.selection.value;
-                      autoCompleteJS.input.value = selection;
+      /*
+          const autoCompleteJS = new autoComplete({
+              placeHolder: "Hledejte název produktu, značku nebo typ",
+              data: {
+                  src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+                  cache: true,
+              },
+              resultItem: {
+                  highlight: true
+              },
+              events: {
+                  input: {
+                      selection: (event) => {
+                          const selection = event.detail.selection.value;
+                          autoCompleteJS.input.value = selection;
+                      }
                   }
               }
-          }
-      });
+          });
+          */
     </script>
   </body>
 </html>
