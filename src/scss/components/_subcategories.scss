@@ -19,8 +19,13 @@
     }
 }
 .subcategories__img{
-    height: 46px;
-    width: 46px;
+ 
+
+    img{
+        object-fit: contain;
+        height: 46px;
+        width: 46px;
+    }
 }
 .subcategories__link img{
 
