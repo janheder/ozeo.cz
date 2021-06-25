@@ -78,6 +78,14 @@
 .product-detail__code a{
     margin-left: 20px;
     color: $gray-500;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
 }
 .product-detail__text{
     font-size: 14px;
@@ -305,6 +313,7 @@
     }
     .product-detail__photos .prev img, .product-detail__photos .next img{
         width: 10px;
+        height: 6px;
     }
     .product-detail__photos .prev{
         left: 0;
