@@ -38,7 +38,6 @@ function buildhtml() {
 function scripts() {
     return gulp.src('./src/js/*.js')
     .pipe(sourcemaps.init())
-    .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./dist/js'))

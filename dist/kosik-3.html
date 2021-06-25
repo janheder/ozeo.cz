@@ -301,25 +301,6 @@
                       <label for="register-agree1">Chci odebírat newsletter a souhlasím se <a href="#">zpracováním osobních údajů</a> za účelem zasílání informací o novinkách a slevách.</label>
                       <input type="checkbox" name="register-agree1" id="register-agree1">
                     </div>
-                    <script>
-                      document.getElementById('faToggle').onclick = function() {
-                          document.getElementById("cart-fa-company").toggleAttribute("required");
-                          document.getElementById("cart-fa-ico").toggleAttribute("required");
-                          document.getElementById("cart-fa-street").toggleAttribute("required");
-                          document.getElementById("cart-fa-city").toggleAttribute("required");
-                          document.getElementById("cart-fa-psc").toggleAttribute("required");
-                          document.getElementById("cart-fa-state").toggleAttribute("required");
-                      }
-                      document.getElementById('daToggle').onclick = function() {
-                          document.getElementById("cart-da-name").toggleAttribute("required");
-                          document.getElementById("cart-da-street").toggleAttribute("required");
-                          document.getElementById("cart-da-city").toggleAttribute("required");
-                          document.getElementById("cart-da-psc").toggleAttribute("required");
-                          document.getElementById("cart-fa-state").toggleAttribute("required");
-                      }
-                      
-                      
-                    </script>
                   </div>
                   <div class="cart-table__footer"><a class="cart-table__footer-link" href="/"> 
                       <div class="cart-table__footer-icon"><img src="/icons/cheveron.svg" alt="Krok zpět"></div>
@@ -411,34 +392,12 @@
       </section>
     </footer>
     <!-- Custom js plugins and scripts-->
-    <script src="/js/autoComplete.min.js"></script>
     <script src="/js/micromodal.min.js"></script>
     <script src="/js/cookiebar.min.js"></script>
     <script src="/js/lazyload.min.js"></script>
     <script src="/js/instant.page.min.js"></script>
     <script src="/js/siema.min.js"></script>
-    <script src="/js/scripts.min.js"></script>
-    <script>
-      /*
-          const autoCompleteJS = new autoComplete({
-              placeHolder: "Hledejte název produktu, značku nebo typ",
-              data: {
-                  src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
-                  cache: true,
-              },
-              resultItem: {
-                  highlight: true
-              },
-              events: {
-                  input: {
-                      selection: (event) => {
-                          const selection = event.detail.selection.value;
-                          autoCompleteJS.input.value = selection;
-                      }
-                  }
-              }
-          });
-          */
-    </script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/cart.js"></script>
   </body>
 </html>

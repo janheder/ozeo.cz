@@ -220,11 +220,12 @@ from { transform: translateY(15%); }
 }
 
 .micromodal-slide {
-display: none;
+
+content-visibility: hidden;
 }
 
 .micromodal-slide.is-open {
-display: block;
+    content-visibility: visible;
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
