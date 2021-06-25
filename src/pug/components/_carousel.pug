@@ -1,7 +1,7 @@
 section.carousel
     .container
         .carousel-wrapper
-            .carousel-inner
+            .carousel-inner(id="homecarousel")
                 .item
                     picture 
                         source(media="(max-width:575px)" width="575" height="540" srcset="/img/carousel/banner1-575.png")
@@ -27,24 +27,3 @@ section.carousel
                 img(src="/icons/cheveron-white.svg" alt="Vpřed")
 
 
-script.
-    document.addEventListener('DOMContentLoaded', function() {
-
-        const indexCarousel = new Siema({
-            selector: '.carousel-inner',
-            duration: 200,
-            easing: 'ease-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: true,
-            multipleDrag: true,
-            threshold: 20,
-            loop: true,
-            rtl: false,
-            onInit: () => {},
-            onChange: () => {lazyload();},
-        });
-        document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
-        document.querySelector('.next').addEventListener('click', () => indexCarousel.next());
-
-    });

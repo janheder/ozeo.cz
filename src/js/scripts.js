@@ -1,7 +1,7 @@
-
 // -----------------------------------------------------------------------------
 // COOKIEBAR
 // -----------------------------------------------------------------------------
+
 
 var cookiebar = new Cookiebar({
     id: "cookiebar",
@@ -27,12 +27,14 @@ var cookiebar = new Cookiebar({
 // LAZYLAOD INIT
 // -----------------------------------------------------------------------------
 
+
 lazyload();
 
 
 // -----------------------------------------------------------------------------
 // MODAL INIT
 // -----------------------------------------------------------------------------
+
 
 MicroModal.init({ 
     /*
@@ -49,8 +51,6 @@ MicroModal.init({
     awaitCloseAnimation: true, 
     debugMode: false 
 });
-      
-
 
 
 // -----------------------------------------------------------------------------
@@ -73,6 +73,7 @@ document.getElementById('searchToggle').onclick = function() {
 // -----------------------------------------------------------------------------
 // NUMBER STEPPER
 // -----------------------------------------------------------------------------
+
 
 var inc = document.getElementsByClassName("stepper");
 
@@ -117,12 +118,40 @@ if (inc.length > 0){
 
 
 // -----------------------------------------------------------------------------
+// HOMEPAGE CARUSEL
+// -----------------------------------------------------------------------------
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var homecarousel = document.getElementById('homecarousel');
+
+    if (homecarousel){
+        const indexCarousel = new Siema({
+            selector: '#homecarousel',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: true,
+            rtl: false,
+            onInit: () => {},
+            onChange: () => {lazyload();},
+        });
+        document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
+        document.querySelector('.next').addEventListener('click', () => indexCarousel.next());
+    }
+});
+
+
+// -----------------------------------------------------------------------------
 // PRODUCT DETAIL CARUSEL
 // -----------------------------------------------------------------------------
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
 
     var carousel = document.getElementsByClassName('product-detail__carousel');
 
@@ -218,6 +247,7 @@ for (let loop = 0; loop < navitem.length; loop++) {
 // PRODUCT DETAIL VARIANTS
 // -----------------------------------------------------------------------------
 
+
 var variants = document.getElementById('variants');
 
 if (variants){
@@ -252,7 +282,6 @@ if (variants){
         document.getElementById('price-vat').innerHTML = pricevat;
     });
 }
-
 
 
 // -----------------------------------------------------------------------------

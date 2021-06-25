@@ -69,20 +69,24 @@ if (cart.length>0){
     }
 
     /* CART 3 */
-    document.getElementById('faToggle').onclick = function() {
-        document.getElementById("cart-fa-company").toggleAttribute("required");
-        document.getElementById("cart-fa-ico").toggleAttribute("required");
-        document.getElementById("cart-fa-street").toggleAttribute("required");
-        document.getElementById("cart-fa-city").toggleAttribute("required");
-        document.getElementById("cart-fa-psc").toggleAttribute("required");
-        document.getElementById("cart-fa-state").toggleAttribute("required");
-    }
-    document.getElementById('daToggle').onclick = function() {
-        document.getElementById("cart-da-name").toggleAttribute("required");
-        document.getElementById("cart-da-street").toggleAttribute("required");
-        document.getElementById("cart-da-city").toggleAttribute("required");
-        document.getElementById("cart-da-psc").toggleAttribute("required");
-        document.getElementById("cart-fa-state").toggleAttribute("required");
+    if(document.getElementById('faToggle')){
+        
+        document.getElementById('faToggle').onclick = function() {
+            document.getElementById("cart-fa-company").toggleAttribute("required");
+            document.getElementById("cart-fa-ico").toggleAttribute("required");
+            document.getElementById("cart-fa-street").toggleAttribute("required");
+            document.getElementById("cart-fa-city").toggleAttribute("required");
+            document.getElementById("cart-fa-psc").toggleAttribute("required");
+            document.getElementById("cart-fa-state").toggleAttribute("required");
+        }
+        document.getElementById('daToggle').onclick = function() {
+            document.getElementById("cart-da-name").toggleAttribute("required");
+            document.getElementById("cart-da-street").toggleAttribute("required");
+            document.getElementById("cart-da-city").toggleAttribute("required");
+            document.getElementById("cart-da-psc").toggleAttribute("required");
+            document.getElementById("cart-fa-state").toggleAttribute("required");
+        }
+    
     }
 
 
