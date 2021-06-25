@@ -115,26 +115,12 @@
       </div>
       <div class="header-main"> 
         <div class="container"> 
-          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz" width="150" height="40"></a>
+          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz"></a>
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" method="post"> 
-                <input class="search__input" type="text" id="searchinput" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ">
+                <input class="search__input" type="text" id="autoComplete" autocomplete="off">
                 <button class="search__button"><img src="/icons/search.svg" alt="Vyhledávání"></button>
-                <div class="searchAutocomplete" id="searchAutocomplete">
-                  <div class="searchAutocomplete__section"> 
-                    <div class="searchAutocomplete__title">Produkty</div>
-                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-detail.html">Dřevěná bedna na 2 vína CARMEN VI</a></div>
-                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-detail.html">Dřevěná bedna na 2 vína CARMEN VI</a></div>
-                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-detail.html">Dřevěná bedna na 2 vína CARMEN VI</a></div>
-                  </div>
-                  <div class="searchAutocomplete__section"> 
-                    <div class="searchAutocomplete__title">Kategorie</div>
-                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-vypis.html">Dřevěné krabičky</a></div>
-                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-vypis.html">Dřevěné krabičky</a></div>
-                    <div class="searchAutocomplete__item"> <a class="searchAutocomplete__link" href="/produkt-vypis.html">Dřevěné krabičky</a></div>
-                  </div>
-                </div>
               </form>
             </div>
           </div>
@@ -527,164 +513,15 @@
         <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">Dřevěná bedna na 2 vína CARMEN VI</span></div>
       </div>
       <div class="container"> 
-        <div class="page --narrow">
-          <section class="page-heading">
-            <h1>Registrace</h1>
-            <p>Registrovaný uživatel získává slevu 1% na zboží, které není aktuálně ve slevě. Po odeslání registrace Vám bude neprodleně doručen na e-mailovou adresu uvedenou v registračním formuláři aktivační e-mail.</p>
-          </section>
-          <form method="post" id="register-form">
-            <div class="form-group">    
-              <label for="register-name">Jméno</label>
-              <input type="text" id="register-name" name="register-name" required minlength="2" maxlength="45">
+        <div class="page">  
+          <div class="cart-empty">
+            <div class="cart-empty__img"> <img src="/img/cart-complete.svg" alt="Objednávka byla úspěšná"></div>
+            <h1 class="cart-empty__title">Objednávka byla úspěšná</h1>
+            <p class="cart-empty__text">Rekapitulace objednávky a platební pokyny byly odeslány na Váš email.</p><a class="btn --green" href="/">Zpět do obchodu</a>
+            <div class="cart-empty__alert"> <img src="/icons/info.svg" alt="Informace">
+              <div class="cart-empty__alert-text">Pokud máte problém s objednávkou, kontaktujte nás na email@email.cz nebo na telefonním čísle 111 222 333</div>
             </div>
-            <div class="form-group">    
-              <label for="register-surname">Příjmení</label>
-              <input type="text" id="register-surname" name="register-surname" required minlength="2" maxlength="45">
-            </div>
-            <div class="form-group">    
-              <label for="register-email">Email</label>
-              <input type="email" id="register-email" name="register-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})">
-            </div>
-            <div class="form-group">    
-              <label for="register-tel">Telefon </label>
-              <input type="tel" id="register-tel" name="register-tel" required pattern="d{1,15}">
-            </div>
-            <div class="form-group">    
-              <label for="register-username">Uživatelské jméno</label>
-              <input type="text" id="register-username" name="register-username" required>
-            </div>
-            <div class="form-group">    
-              <label for="register-password">Heslo</label>
-              <input type="password" id="register-password" name="register-password" required>
-            </div>
-            <div class="form-spacer"> </div>
-            <div class="form-group">    
-              <label for="register-street">Ulice a Číslo popisné</label>
-              <input type="text" id="register-street" name="register-street" required maxlength="50">
-            </div>
-            <div class="form-group">    
-              <label for="register-city">Město/obec</label>
-              <input type="text" id="register-city" name="register-city" required maxlength="50">
-            </div>
-            <div class="form-group">    
-              <label for="register-psc">PSČ</label>
-              <input type="text" id="register-psc" name="register-psc" required maxlength="50">
-            </div>
-            <div class="form-group">    
-              <label for="register-state">Stát</label>
-              <select name="register-state" id="register-state" required>  
-                <option value="cz">Česká republika</option>
-                <option value="sk">Slovensko</option>
-              </select>
-            </div>
-            <div class="form-spacer"> </div>
-            <div class="form-group --checkbox">
-              <label for="register-fa-address" id="faToggle">Vyplnit fakturační adresu</label>
-              <input type="checkbox" name="register-fa-address" id="register-fa-address">
-              <div class="form-collapse">
-                <div class="form-group">    
-                  <label for="register-fa-name">Jméno a příjmení (nepovinné)</label>
-                  <input type="text" id="register-fa-name" name="register-fa-name">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-company">Název firmy</label>
-                  <input type="text" id="register-fa-company" name="register-fa-company">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-ico">IČO</label>
-                  <input type="text" id="register-fa-ico" name="register-fa-ico">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-dic">DIČ (nepovinné)</label>
-                  <input type="text" id="register-fa-dic" name="register-fa-dic">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-street">Ulice a číslo popisné</label>
-                  <input type="text" id="register-fa-street" name="register-fa-street">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-city">Město/obec</label>
-                  <input type="text" id="register-fa-city" name="register-fa-city">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-psc">PSČ</label>
-                  <input type="text" id="register-fa-psc" name="register-fa-psc">
-                </div>
-                <div class="form-group">    
-                  <label for="register-fa-state">Stát</label>
-                  <select name="register-fa-state" id="register-fa-state">  
-                    <option value="cz">Česká republika</option>
-                    <option value="sk">Slovensko</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="form-group --checkbox">
-              <label for="register-da-address" id="daToggle">Jiná dodací adresa</label>
-              <input type="checkbox" name="register-da-address" id="register-da-address">
-              <div class="form-collapse">
-                <div class="form-group">    
-                  <label for="register-da-name">Jméno a příjmení </label>
-                  <input type="text" id="register-da-name" name="register-da-name">
-                </div>
-                <div class="form-group">    
-                  <label for="register-da-company">Název firmy (nepovinné)</label>
-                  <input type="text" id="register-da-company" name="register-da-company">
-                </div>
-                <div class="form-group">    
-                  <label for="register-da-street">Ulice a číslo popisné</label>
-                  <input type="text" id="register-da-street" name="register-da-street">
-                </div>
-                <div class="form-group">    
-                  <label for="register-da-city">Město/obec</label>
-                  <input type="text" id="register-da-city" name="register-da-city">
-                </div>
-                <div class="form-group">    
-                  <label for="register-da-psc">PSČ</label>
-                  <input type="text" id="register-da-psc" name="register-da-psc">
-                </div>
-                <div class="form-group">    
-                  <label for="register-da-state">Stát</label>
-                  <select name="register-da-state" id="register-da-state">  
-                    <option value="cz">Česká republika</option>
-                    <option value="sk">Slovensko</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="form-spacer"> </div>
-            <div class="form-group --checkbox">
-              <label for="register-agree1">Chci odebírat newsletter a souhlasím se <a href="#">zpracováním osobních údajů</a> za účelem zasílání informací o novinkách a slevách.</label>
-              <input type="checkbox" name="register-agree1" id="register-agree1">
-            </div>
-            <div class="form-group --checkbox">
-              <label for="register-agree2">Souhlasím se <a href="#">zpracováním osobních údajů</a> za účelem registrace.</label>
-              <input type="checkbox" name="register-agree2" id="register-agree2" required>
-            </div>
-            <div class="form-group"> 
-              <button class="btn --fullWidth" name="register-submit" id="register-submit">Vytvořit účet <img src="/icons/cheveron-white.svg"></button>
-            </div>
-          </form>
-          <script>
-            document.getElementById('faToggle').onclick = function() {
-                document.getElementById("register-fa-company").toggleAttribute("required");
-                document.getElementById("register-fa-ico").toggleAttribute("required");
-                document.getElementById("register-fa-street").toggleAttribute("required");
-                document.getElementById("register-fa-city").toggleAttribute("required");
-                document.getElementById("register-fa-psc").toggleAttribute("required");
-                document.getElementById("register-fa-state").toggleAttribute("required");
-            }
-            document.getElementById('daToggle').onclick = function() {
-                document.getElementById("register-da-name").toggleAttribute("required");
-                document.getElementById("register-da-street").toggleAttribute("required");
-                document.getElementById("register-da-city").toggleAttribute("required");
-                document.getElementById("register-da-psc").toggleAttribute("required");
-                document.getElementById("register-fa-state").toggleAttribute("required");
-            }
-            
-            
-            
-          </script>
+          </div>
         </div>
       </div>
       <section class="contact"> 
@@ -692,44 +529,12 @@
           <div class="contact__content">
             <h1 class="contact__title">Máte dotazy nebo potřebujete poradit s výběrem?</h1>
             <div class="contact__wrap"> 
-              <div class="contact__item"> <img src="/icons/envelope.svg" alt="info@ozeo.cz" width="25" height="20">
+              <div class="contact__item"> <img src="/icons/envelope.svg" alt="info@ozeo.cz">
                 <div class="contact__text">info@ozeo.cz</div>
               </div>
-              <div class="contact__item"> <img src="/icons/phone-big.svg" alt="+420 123 456 789" width="24" height="24">
+              <div class="contact__item"> <img src="/icons/phone-big.svg" alt="+420 123 456 789">
                 <div class="contact__text">+420 123 456 789 <small>PO - PÁ 8:30 – 17:30</small></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="social">
-        <div class="container">
-          <h1>Z našeho Instagramu</h1>
-          <div class="instagram-wrap">
-            <div class="row"> 
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/load-symbol.svg" data-src="/img/instagram/ig1.jpg" alt="#" width="220" height="220"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/load-symbol.svg" data-src="/img/instagram/ig2.jpg" alt="#" width="220" height="220"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/load-symbol.svg" data-src="/img/instagram/ig3.jpg" alt="#" width="220" height="220"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/load-symbol.svg" data-src="/img/instagram/ig4.jpg" alt="#" width="220" height="220"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/load-symbol.svg" data-src="/img/instagram/ig5.jpg" alt="#" width="220" height="220"></a></div>
-              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img src="/img/load-symbol.svg" data-src="/img/instagram/ig6.jpg" alt="#" width="220" height="220"></a></div>
-            </div>
-          </div>
-          <div class="row"> 
-            <div class="col-12 col-md-4">
-              <div class="social-single"><a class="social-single__link" href="https://facebook.com/ozeo.cz">
-                  <div class="social-single__img"><img src="/icons/facebook-big.svg" alt="Facebook" width="40" height="40"></div>
-                  <div class="social-single__text">Jsme také na Facebooku</div></a></div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="social-single"><a class="social-single__link" href="https://youtube.com/channel/UC7EiBmqyRqSsxFQOrATcuUw">
-                  <div class="social-single__img"><img src="/icons/youtube-big.svg" alt="Youtube" width="40" height="40"></div>
-                  <div class="social-single__text">Sledujte nás na Youtube</div></a></div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="social-single"><a class="social-single__link" href="https://www.instagram.com/ozeo.cz/">
-                  <div class="social-single__img"><img src="/icons/instagram-big.svg" alt="Instagram" width="40" height="40"></div>
-                  <div class="social-single__text">Sledujte nás na Instagramu</div></a></div>
             </div>
           </div>
         </div>
@@ -773,26 +578,24 @@
     <script src="/js/siema.min.js"></script>
     <script src="/js/scripts.min.js"></script>
     <script>
-      /*
-          const autoCompleteJS = new autoComplete({
-              placeHolder: "Hledejte název produktu, značku nebo typ",
-              data: {
-                  src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
-                  cache: true,
-              },
-              resultItem: {
-                  highlight: true
-              },
-              events: {
-                  input: {
-                      selection: (event) => {
-                          const selection = event.detail.selection.value;
-                          autoCompleteJS.input.value = selection;
-                      }
+      const autoCompleteJS = new autoComplete({
+          placeHolder: "Hledejte název produktu, značku nebo typ",
+          data: {
+              src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+              cache: true,
+          },
+          resultItem: {
+              highlight: true
+          },
+          events: {
+              input: {
+                  selection: (event) => {
+                      const selection = event.detail.selection.value;
+                      autoCompleteJS.input.value = selection;
                   }
               }
-          });
-          */
+          }
+      });
     </script>
   </body>
 </html>

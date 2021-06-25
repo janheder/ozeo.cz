@@ -6,10 +6,13 @@
     align-items: center;
 }
 .points-single__icon {
-
+    content-visibility: auto;
+    contain-intrinsic-size: 90px 90px;
 }
 .points-single__icon img{
-    width: 100%;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
 }
 .points-single__content{
     display: flex;

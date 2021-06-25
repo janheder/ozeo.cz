@@ -1,19 +1,31 @@
 .carousel{
     padding-top: 20px;
     position: relative;
+    content-visibility: auto;
+
 }
 .carousel-wrapper{
     position: relative;
 }
+.carousel-inner{
+   
+}
+.carousel-inner > .item{
+    display: none;
+}
+.carousel-inner > .item:first-child{
+    display: block;
+}
 .carousel .item{
     position: relative;
+    will-change: auto;
 }
 .carousel .item img{
-    width: 100%;
+
 }
 .carousel .item a{
     width: 100%;
-    height: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;

@@ -109,6 +109,11 @@ header{
     display: none;
     align-items: center;
     justify-content: center;
+
+    img{
+        height: 18px;
+        width: 18px;
+    }
 }
 .search{
     display: flex;
@@ -193,6 +198,10 @@ header{
     margin-right: 15px;
     position: relative;
 }  
+.header-nav .cart__icon img{
+    width: 18px;
+    height: 20px;
+}
 .header-nav .cart__number{
     position: absolute;
     background: $green-500;

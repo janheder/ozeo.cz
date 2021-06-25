@@ -299,3 +299,11 @@ if (variants){
 
 
 
+document.getElementById('searchinput').addEventListener('keyup', function (e) {
+    if(this.value.length >=3){
+        document.getElementById('searchAutocomplete').classList.add('--active');
+    }else{
+        document.getElementById('searchAutocomplete').classList.remove('--active');
+    }
+
+});

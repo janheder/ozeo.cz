@@ -89,8 +89,12 @@ nav .container{
     .nav-item:hover .nav-link, .nav-item:hover .nav-linkDesktop {
         background: $white;
     }
+    .nav-submenu{
+        content-visibility: hidden;
+    }
     .nav-item:hover .nav-submenu{
         display: flex;
+        content-visibility: visible;
     }
 }
 @media screen and (max-width: 991px){
@@ -109,12 +113,14 @@ nav .container{
         flex-direction: column;
         overflow-x: hidden;
         overflow-y: auto;
+        content-visibility: hidden;
     }
     body.--nav-active{
         overflow-y: hidden;
     }
     body.--nav-active nav{
         transform: translateX(0%);
+        content-visibility: visible;
     }
     nav .container{
         display: flex;
