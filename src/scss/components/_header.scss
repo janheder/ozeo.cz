@@ -279,7 +279,8 @@ header{
         width: 100%;
         max-width: 100%;
         box-shadow: 0px 10px 8px -8px rgba(0,0,0,0.05);
-        border: 10px solid white;
+        border: 10px solid $white;
+        background: $white;
         border-top: 0;
 
         .search-form{
