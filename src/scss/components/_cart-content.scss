@@ -1,6 +1,11 @@
 .cart-content{
     padding: 60px 0;
 }
+@media screen and (max-width:575px){
+    .cart-content{
+        padding: 40px 0;
+    }  
+}
 .cart-table{
 
 }
@@ -142,11 +147,18 @@
 }
 
 @media screen and (max-width: 575px){
+    .cart-item {
+        padding: 20px 0;
+    }
     .cart-item-price-pc {
         display: none;
     }
     .cart-item-remove-text{
         display: none;
+    }
+    .cart-item-thumb-wrap{
+        width: 80px;
+        height: 80px;
     }
 }
 

@@ -23,3 +23,14 @@
 .tag.--top{
     background: $gray-900;
 }
+
+
+@media screen and (max-width:575px){
+    .tag{
+        font-size: 12px;
+        font-weight: 400;
+        height: 22px;
+        padding: 0 6px;
+        margin-bottom: 2px;
+    }
+}

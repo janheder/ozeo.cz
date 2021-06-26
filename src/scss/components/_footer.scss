@@ -63,7 +63,12 @@ footer{
     .footer__link,.footer__text{
         font-size: 14px;
     }
-    .copyright a{
+    .copyright{
         font-size: 14px;
+    }
+    .copyright__author img {
+        width: 50px;
+        height: 20px;
+        margin-top: -10px;
     }
 }

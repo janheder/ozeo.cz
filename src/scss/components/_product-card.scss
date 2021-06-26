@@ -167,4 +167,30 @@
      .product-card{
         padding: 5px;
     }
+    .product-card__title{
+        font-size: 16px;
+        line-height: 1.25;
+        text-align: left;
+        padding: 20px 10px 10px 10px;
+    }
+    .product-card__bottom{
+        padding: 0 10px 20px 10px;
+    }
+    .product-card__delivery{
+        display: none;
+    }  
+    .product-card__price{
+        padding-top: 0;
+        justify-content: flex-start;
+    }
+    .product-card__priceOld{
+        margin: 0;
+        margin-right: 10px;
+        font-size: 14px;
+        padding-bottom: 2px;
+    }
+    .product-card__priceMain{
+        margin: 0;
+        font-size: 16px;
+    }
 }
