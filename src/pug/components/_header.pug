@@ -38,6 +38,29 @@ header
                     .user__icon
                         img(src="/icons/user.svg" alt="Přihlášení")
                     div.user__title Přihlášení
+
+                // PUG
+                    a.user.--active(href="/uzivatelsky-ucet.html")
+                        .user__icon
+                            img(src="/icons/user.svg" alt="Přihlášení")
+                        .user__wrap
+                            .user__text Přihlášen jako
+                            .user__title Petr Novák
+
+                // HTML
+                    <a class="user --active" href="/uzivatelsky-ucet.html">
+                        <div class="user__icon">
+                            <img src="/icons/user.svg" alt="Přihlášení">
+                        </div>
+                        <div class="user__wrap">
+                            <div class="user__text">Přihlášen jako</div>
+                            <div class="user__title">Petr Novák</div>
+                        </div>
+                    </a>
+
+
+                            
+
                 a.cart.--active(href="/kosik-1.html")
                     .cart__icon            
                         img(src="/icons/cart.svg" alt="Košík")
@@ -45,5 +68,24 @@ header
                     .cart-wrap
                         .cart-title Nákupní košík
                         .cart-price 2 599 Kč
+
+                // PUG
+                    a.cart(href="/kosik-prazdny.html")
+                        .cart__icon            
+                            img(src="/icons/cart.svg" alt="Košík")
+                        .cart-wrap
+                            .cart-title Nákupní košík
+
+                // HTML
+                    <a class="cart" href="/kosik-prazdny.html">
+                        <div class="cart__icon">
+                            <img src="/icons/cart.svg" alt="Košík">
+                        </div>
+                        <div class="cart-wrap">
+                            <div class="cart-title">Nákupní košík</div>
+                        </div>
+                    </a>
+
+
 
 #darkBackdrop

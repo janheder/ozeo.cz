@@ -11,6 +11,7 @@
 }
 .categories-single img{
     mix-blend-mode: multiply;
+    object-fit: contain;
 }
 .categories-single__link{
     font-size:  18px;
@@ -27,5 +28,19 @@
 @media screen and (max-width: 767px){
     .categories-single{
         border-bottom: 2px solid $white;
+    }
+    .categories-single img{
+        height: 140px;
+    }
+}
+@media screen and (max-width: 575px){
+    .categories-single{
+        padding: 30px 20px 30px 20px;
+    }
+    .categories-single img{
+        height: 100px;;
+    }
+    .categories-single__text{
+        font-size: 14px;
     }
 }

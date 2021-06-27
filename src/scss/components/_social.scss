@@ -13,6 +13,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease opacity;
+
+    &:hover, &:active, &:focus{
+        opacity: 0.8;
+    }
 }
 .instagram-single img{
     width: 100%;
@@ -26,7 +31,12 @@
     align-items: center;
     border: 1px solid $gray-300;
     padding: 30px 20px;
-    color: $gray-900;
+    color: $gray-900;    
+    transition: 0.2s ease box-shadow;
+
+    &:hover, &:active, &:focus{
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
+    }
 }
 .social-single__img{
     height: 40px;

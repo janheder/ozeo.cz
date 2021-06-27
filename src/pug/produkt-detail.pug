@@ -69,28 +69,28 @@ html(lang=lang)
                                         .variants__list-wrap
                                             .variants__list
 
-                                                .variants__item.default.--active(data-code="Zvolte variantu" data-stock="Zvolte variantu" data-priceold="od 1 500 Kč" data-price="od 1 200 Kč" data-pricevat="od 923 Kč") 
+                                                .variants__item.default.--active(data-code="Zvolte variantu" data-stockstatus="default" data-stock="Zvolte variantu" data-priceold="od 1 500 Kč" data-price="od 1 200 Kč" data-pricevat="od 923 Kč") 
                                                     input(type="radio" name="variant-empty" id="variantId" value="123" aria-label="Zvolte variantu" required)
                                                     .variants__item-text Zvolte variantu
 
-                                                .variants__item(data-code="12-AE6" data-stock="Skladem 10ks" data-priceold="1 500 Kč" data-price="1 200 Kč" data-pricevat="923 Kč") 
+                                                .variants__item(data-code="12-AE6" data-stockstatus="active" data-stock="Skladem 10ks" data-priceold="1 500 Kč" data-price="1 200 Kč" data-pricevat="923 Kč") 
                                                     input(type="radio" name="variant" id="variantId1" value="123" aria-label="Černý lak + prosklená dvířka" required)
                                                     img(src="/img/product-thumb-small.jpg" alt="Černý lak + prosklená dvířka")
                                                     .variants__item-text Černý lak + prosklená dvířka
 
-                                                .variants__item(data-code="25-AE6" data-stock="Nedostupné" data-priceold="150 Kč" data-price="100 Kč" data-pricevat="80 Kč") 
+                                                .variants__item(data-code="25-AE6" data-stockstatus="disabled" data-stock="Nedostupné" data-priceold="150 Kč" data-price="100 Kč" data-pricevat="80 Kč") 
                                                     input(type="radio" name="variant" id="variantId2" value="123" aria-label="Zelená barva s neprůhlednými dvířky" required)
                                                     img(src="/img/product-thumb-small.jpg" alt="Zelená barva s neprůhlednými dvířky")
                                                     .variants__item-text Zelená barva s neprůhlednými dvířky
 
 
-                                                .variants__item(data-code="60-AE6" data-stock="Nedostupné"  data-price="1000 Kč" data-pricevat="800 Kč") 
+                                                .variants__item(data-code="60-AE6" data-stockstatus="disabled" data-stock="Nedostupné"  data-price="1000 Kč" data-pricevat="800 Kč") 
                                                     input(type="radio" name="variant" id="variantId3" value="123" aria-label="Zelená barva" required)
                                                     img(src="/img/product-thumb-small.jpg" alt="Zelená barva")
                                                     .variants__item-text Zelená barva
 
 
-                                    .product-detail__stock.--available(id="stock") Zvolte variantu
+                                    .product-detail__stock(id="stock" data-status="default") Zvolte variantu
 
                                     .product-detail__price 
                                         .product-detail__priceMain #[span(id="price-old") od 1 200 Kč] #[span(id="price-main") od 1 118 Kč]

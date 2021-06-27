@@ -92,7 +92,7 @@
               </div><span class="register">Nemáte u nás účet? <a href="/registrace.html">Zaregistrujte se</a></span>
             </form>
           </div>
-          <div class="modal__side" id="modal-login-side"><img src="/img/login-modal.png"></div>
+          <div class="modal__side" id="modal-login-side"><img src="/img/login-modal.png" width="288" height="544"></div>
         </div>
       </div>
     </div>
@@ -169,7 +169,31 @@
             <div class="user" data-micromodal-trigger="modal-login">
               <div class="user__icon"><img src="/icons/user.svg" alt="Přihlášení"></div>
               <div class="user__title">Přihlášení</div>
-            </div><a class="cart --active" href="/kosik-1.html">
+            </div>
+            <!-- PUG
+            a.user.--active(href="/uzivatelsky-ucet.html")
+                .user__icon
+                    img(src="/icons/user.svg" alt="Přihlášení")
+                .user__wrap
+                    .user__text Přihlášen jako
+                    .user__title Petr Novák
+            
+            -->
+            <!-- HTML
+            <a class="user --active" href="/uzivatelsky-ucet.html">
+                <div class="user__icon">
+                    <img src="/icons/user.svg" alt="Přihlášení">
+                </div>
+                <div class="user__wrap">
+                    <div class="user__text">Přihlášen jako</div>
+                    <div class="user__title">Petr Novák</div>
+                </div>
+            </a>
+            
+            
+                    
+            
+            --><a class="cart --active" href="/kosik-1.html">
               <div class="cart__icon">           <img src="/icons/cart.svg" alt="Košík">
                 <div class="cart__number">2</div>
               </div>
@@ -177,6 +201,27 @@
                 <div class="cart-title">Nákupní košík</div>
                 <div class="cart-price">2 599 Kč</div>
               </div></a>
+            <!-- PUG
+            a.cart(href="/kosik-prazdny.html")
+                .cart__icon            
+                    img(src="/icons/cart.svg" alt="Košík")
+                .cart-wrap
+                    .cart-title Nákupní košík
+            
+            -->
+            <!-- HTML
+            <a class="cart" href="/kosik-prazdny.html">
+                <div class="cart__icon">
+                    <img src="/icons/cart.svg" alt="Košík">
+                </div>
+                <div class="cart-wrap">
+                    <div class="cart-title">Nákupní košík</div>
+                </div>
+            </a>
+            
+            
+            
+            -->
           </div>
         </div>
       </div>

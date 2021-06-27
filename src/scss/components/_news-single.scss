@@ -24,7 +24,7 @@
 }
 .news-single__img{
     z-index: 0;
-    transition: 0.5s ease all;
+    transition: 0.5s ease opacity;
     object-fit: cover;
     position: absolute;
     top: 0px;
@@ -72,7 +72,7 @@
         margin: 5px 0;
     } 
     .news-single__top{
-        width: 100px;
+        width: 140px;
         min-height: 100px;
         flex-shrink: 0;
     }
@@ -94,7 +94,7 @@
 }
 @media screen and (max-width: 575px){
     .news-single__top{
-        width: 80px;
+        width: 120px;
         min-height: 80px;
         flex-shrink: 0;
     }

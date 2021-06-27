@@ -266,11 +266,13 @@ if (variants){
 
         var code = target.dataset.code;
         var stock = target.dataset.stock;
+        var stockstatus = target.dataset.stockstatus;
         var priceold = target.dataset.priceold;
         var price = target.dataset.price;
         var pricevat = target.dataset.pricevat;
 
         document.getElementById('product-code').innerHTML = code;
+        document.getElementById('stock').dataset.status = stockstatus;
         document.getElementById('stock').innerHTML = stock;
         if(priceold == null) {
             
