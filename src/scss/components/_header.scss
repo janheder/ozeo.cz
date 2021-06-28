@@ -228,6 +228,9 @@ header{
     text-align: center;
     top: 24px;
     left: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header-nav .cart img{
     
@@ -329,5 +332,10 @@ header{
     }
     .header-nav .cart-wrap{
         display: none;
+    }
+    .header-nav .cart__number{ 
+        border: 2px solid $white;
+        top: 25px;
+        left: 24px;
     }
 }
