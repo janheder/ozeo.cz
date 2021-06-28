@@ -262,12 +262,14 @@
 }
 .product-detail__description h2{
     padding-bottom: 20px;
+    margin-bottom: 0;
 }
 .product-detail__parameters{
     padding: 60px 0 0 0;
 }
 .product-detail__parameters h2{
     padding-bottom: 20px;
+    margin-bottom: 0;
 }
 .product-detail__parameters table{ 
     width: 100%;
@@ -338,7 +340,7 @@
     }
     .product-detail__title{
         font-size: 24px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
     .product-detail__text{
         display: none;
@@ -347,7 +349,7 @@
         padding-bottom: 30px;
     }
     .product-detail__stock{
-        padding-bottom: 20px;
+       margin-bottom: 30px;
     }
     .product-detail__price{
         padding-bottom: 30px;
