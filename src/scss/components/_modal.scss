@@ -148,6 +148,11 @@
   margin-top: 40px;
 }
 
+#modal-login-content .modal__close{
+    background: $white;
+    border-radius: 50%;
+}
+
 @media screen and (max-width: 767px){
     .modal__content {
         padding: 30px;
@@ -226,12 +231,13 @@ from { transform: translateY(15%); }
 }
 
 .micromodal-slide {
-
-content-visibility: hidden;
+opacity: 0;
+pointer-events: none;
 }
 
 .micromodal-slide.is-open {
-    content-visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
@@ -254,3 +260,5 @@ animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
 .micromodal-slide .modal__overlay {
 will-change: transform;
 }
+
+
