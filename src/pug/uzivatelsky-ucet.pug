@@ -11,7 +11,7 @@ html(lang=lang)
         main
             include components/_breadcrumbs.pug
             .page
-                section.page-heading
+                section.page-heading.--inline
                     .container
                         h1 Přihlášen jako: Petr Novák
                         .logout-wrap 
@@ -19,7 +19,7 @@ html(lang=lang)
                 section.page-content
                     .container 
                         .row 
-                            .col-12.col-lg-5
+                            .col-12.col-lg-4
 
 
                                 h2 Úprava osobních údajů
@@ -138,12 +138,64 @@ html(lang=lang)
 
 
                                     .form-group 
-                                        button.btn.--fullWidth(name="register-submit" id="register-submit") Vytvořit účet #[img(src="/icons/cheveron-white.svg")]
+                                        button.btn.--fullWidth(name="register-submit" id="register-submit") Aktualizovat údaje #[img(src="/icons/cheveron-white.svg")]
 
 
                             .col-12.col-lg-1
-                            .col-12.col-lg-6
+                            .col-12.col-lg-7
                                 h2 Historie objednávek
+
+                                table.order-history 
+                                    thead 
+                                        th Číslo nákupu
+                                        th Datum 
+                                        th Cena 
+                                        th(colspan="2") Stav objednávky
+
+                               
+                                    tbody
+                                        tr.order-history__item(id="detail-1") 
+                                            td 1598879
+                                            td 1. 1. 1970
+                                            td 16 999 Kč
+                                            td.--finished Dokončeno
+                                            td #[a(href="#detail-1") Detail]
+
+                                            
+                                        tr.order-history__item-detail
+                                            td(colspan="2") 
+                                                span Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                                span Dřevěná bedna na 2 vína
+                                            td 
+                                                span 1 ks
+                                                span 2 ks
+                                            td
+                                                span Skladem
+                                                span Skladem
+                                            td 
+                                                span 5 999 Kč
+                                                span 2 299 Kč
+
+                       
+
+
+
+                            
+                                        tr.order-history__item(id="detail-2") 
+                                            td 1598879
+                                            td 1. 1. 1970
+                                            td 16 999 Kč
+                                            td.--finished Dokončeno
+                                            td #[a(href="#detail-2") Detail]
+
+                                            
+                                        tr.order-history__item-detail
+                                            td(colspan="2") Dřevěná bedna na 2 vína CARMEN VI lorem ipsum
+                                            td 1 ks
+                                            td Skladem
+                                            td 5 999 Kč
+
+
 
 
             include components/_points-section.pug

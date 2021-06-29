@@ -1,6 +1,10 @@
 .page-heading{
     padding: 60px 0;
 }
+.page-heading.--inline .container{
+    display: flex;
+    align-items: center;
+}
 .page-heading h1{
     padding: 0;
     margin: 0;

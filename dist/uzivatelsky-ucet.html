@@ -562,7 +562,7 @@
         <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">Dřevěná bedna na 2 vína CARMEN VI</span></div>
       </div>
       <div class="page">
-        <section class="page-heading">
+        <section class="page-heading --inline">
           <div class="container">
             <h1>Přihlášen jako: Petr Novák</h1>
             <div class="logout-wrap"> <a class="btn" href="#">Odhlásit se</a></div>
@@ -571,7 +571,7 @@
         <section class="page-content">
           <div class="container"> 
             <div class="row"> 
-              <div class="col-12 col-lg-5">
+              <div class="col-12 col-lg-4">
                 <h2>Úprava osobních údajů</h2>
                 <form method="post" id="register-form">
                   <div class="form-group">    
@@ -703,13 +703,49 @@
                     <input type="checkbox" name="register-agree2" id="register-agree2" required>
                   </div>
                   <div class="form-group"> 
-                    <button class="btn --fullWidth" name="register-submit" id="register-submit">Vytvořit účet <img src="/icons/cheveron-white.svg"></button>
+                    <button class="btn --fullWidth" name="register-submit" id="register-submit">Aktualizovat údaje <img src="/icons/cheveron-white.svg"></button>
                   </div>
                 </form>
               </div>
               <div class="col-12 col-lg-1"></div>
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-7">
                 <h2>Historie objednávek</h2>
+                <table class="order-history"> 
+                  <thead> 
+                    <th>Číslo nákupu</th>
+                    <th>Datum </th>
+                    <th>Cena </th>
+                    <th colspan="2">Stav objednávky</th>
+                  </thead>
+                  <tbody>
+                    <tr class="order-history__item" id="detail-1"> 
+                      <td>1598879</td>
+                      <td>1. 1. 1970</td>
+                      <td>16 999 Kč</td>
+                      <td class="--finished">Dokončeno</td>
+                      <td><a href="#detail-1">Detail</a></td>
+                    </tr>
+                    <tr class="order-history__item-detail">
+                      <td colspan="2"> <span>Dřevěná bedna na 2 vína CARMEN VI lorem ipsum</span><span>Dřevěná bedna na 2 vína</span></td>
+                      <td> <span>1 ks</span><span>2 ks</span></td>
+                      <td><span>Skladem</span><span>Skladem</span></td>
+                      <td> <span>5 999 Kč</span><span>2 299 Kč</span></td>
+                    </tr>
+                    <tr class="order-history__item" id="detail-2"> 
+                      <td>1598879</td>
+                      <td>1. 1. 1970</td>
+                      <td>16 999 Kč</td>
+                      <td class="--finished">Dokončeno</td>
+                      <td><a href="#detail-2">Detail</a></td>
+                    </tr>
+                    <tr class="order-history__item-detail">
+                      <td colspan="2">Dřevěná bedna na 2 vína CARMEN VI lorem ipsum</td>
+                      <td>1 ks</td>
+                      <td>Skladem</td>
+                      <td>5 999 Kč</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
