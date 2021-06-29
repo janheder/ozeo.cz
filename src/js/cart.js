@@ -69,7 +69,7 @@ if (cart.length>0){
     }
 
     /* CART 3 */
-    if(document.getElementById('cart-form')){
+    if(document.getElementById('cart-form-user')){
 
         document.getElementById('faToggle').onclick = function() {
             document.getElementById("cart-fa-company").toggleAttribute("required");

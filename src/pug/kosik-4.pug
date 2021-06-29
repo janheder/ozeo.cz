@@ -7,7 +7,28 @@ html(lang=lang)
         include components/_modal-login.pug
 
         include components/_header.pug
-        main        
+        main   
+
+            section.cart-heading
+                .container
+                    .cart-heading__item.--complete
+                        .cart-heading__icon
+                            img(src="/icons/cart-big.svg" alt="1. Nákupní košík")
+                        .cart-heading__title 1. Nákupní košík
+                    .cart-heading__item.--complete
+                        .cart-heading__icon
+                            img(src="/icons/car.svg" alt="2. Doprava a platba")
+                        .cart-heading__title 2. Doprava a platba
+                    .cart-heading__item.--complete
+                        .cart-heading__icon
+                            img(src="/icons/personal-data.svg" alt="3. Osobní údaje")
+                        .cart-heading__title 3. Osobní údaje
+                    .cart-heading__item.--active
+                        .cart-heading__icon
+                            img(src="/icons/summary.svg" alt="4. Shrnutí objednávky")
+                        .cart-heading__title 4. Shrnutí objednávky
+
+
             .container 
                 .page.--narrow
                     
