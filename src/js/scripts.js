@@ -37,13 +37,6 @@ lazyload();
 
 
 MicroModal.init({ 
-    /*
-    onShow: modal => console.info(`${modal.id} is shown`),
-    onClose: modal => console.info(`${modal.id} is hidden`), 
-   
-    openTrigger: 'data-custom-open', //
-    closeTrigger: 'data-custom-close', // 
-    */
     openClass: 'is-open', 
     disableScroll: true, 
     disableFocus: true, 
@@ -320,5 +313,21 @@ if(document.getElementById('register-form')){
         document.getElementById("register-da-city").toggleAttribute("required");
         document.getElementById("register-da-psc").toggleAttribute("required");
         document.getElementById("register-fa-state").toggleAttribute("required");
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// PASSWORD SHOW
+// -----------------------------------------------------------------------------
+
+if(document.getElementById('showLoginPassword')){
+    document.getElementById('showLoginPassword').onclick = function() {
+        var x = document.getElementById('login-password');
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
 }
