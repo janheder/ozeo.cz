@@ -1,11 +1,10 @@
 doctype html
 include template/_variables.pug  
 html(lang=lang)
-    - var slug = "zapomenute-heslo";
+    - var slug = "nove-heslo";
     include template/_head.pug  
     body
         include components/_modal-login.pug
-        include components/_modal-info.pug
         
         include components/_header.pug
         include components/_nav.pug
@@ -14,18 +13,18 @@ html(lang=lang)
             .container 
                 .page.--narrow
                     section.page-heading
-                        h1 Zapomenuté heslo
-                        p Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
+                        h1 Obnovení hesla
+                        p Zadejte své nové heslo
                     
                     form(method="post" id="password-form")
 
                         .form-group     
-                            label(for="password-email") Email
-                            input(type="email" id="register-email" name="password-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})")
+                            label(for="new-password") Heslo
+                            input(type="password" id="new-password" name="new-password" required)
                       
 
                         .form-group 
-                            button.btn.--fullWidth(name="password-submit" id="password-submit") Poslat nové heslo #[img(src="/icons/cheveron-white.svg")]
+                            button.btn.--fullWidth(name="new-password-submit" id="new-password-submit") Potvrdit měnu hesla #[img(src="/icons/cheveron-white.svg")]
 
 
 

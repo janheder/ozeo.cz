@@ -1,6 +1,7 @@
 doctype html
 include template/_variables.pug  
 html(lang=lang)
+    - var slug = "kosik-3";
     include template/_head.pug  
     body.cart
         include components/_modal-login.pug
@@ -70,6 +71,7 @@ html(lang=lang)
                                                 option(value="cz") Česká republika
                                                 option(value="sk") Slovensko
 
+
                                         .form-spacer 
 
 
@@ -134,8 +136,34 @@ html(lang=lang)
                                                         option(value="sk") Slovensko
 
 
+                                        .form-spacer 
+
+
+                                        .form-group.--checkbox
+                                            label(for="cart-register" id="regToggle") S těmito údaji se chci zaregistrovat
+                                            input(type="checkbox" name="cart-register" id="cart-register")
+
+                                            .form-collapse
+
+                                                .form-group     
+                                                    label(for="cart-register-username") Uživatelské jméno
+                                                    input(type="text" id="cart-register-username" name="cart-register-username")
+
+                                                .form-group     
+                                                    label(for="cart-register-password") Heslo
+                                                    input(type="password" id="cart-register-password" name="cart-register-password")
+
+                                                .form-group     
+                                                    label(for="cart-register-password-r") Heslo znovu
+                                                    input(type="password" id="cart-register-password-r" name="cart-register-password-r")
+
+
 
                                         .form-spacer 
+
+                                        .form-group
+                                            label Vložením údajů beru na vědomí #[a(href="#") zpracování osobních údajů]
+                          
 
                                         .form-group.--checkbox
                                             label(for="register-agree1") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.

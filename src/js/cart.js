@@ -71,6 +71,11 @@ if (cart.length>0){
     /* CART 3 */
     if(document.getElementById('cart-form-user')){
 
+        document.getElementById('regToggle').onclick = function() {
+            document.getElementById("cart-register-username").toggleAttribute("required");
+            document.getElementById("cart-register-password").toggleAttribute("required");
+            document.getElementById("cart-register-password-r").toggleAttribute("required");
+        }
         document.getElementById('faToggle').onclick = function() {
             document.getElementById("cart-fa-company").toggleAttribute("required");
             document.getElementById("cart-fa-ico").toggleAttribute("required");
