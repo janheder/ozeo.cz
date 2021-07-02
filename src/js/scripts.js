@@ -51,16 +51,24 @@ MicroModal.init({
 // -----------------------------------------------------------------------------
 
 
-document.getElementById('navToggle').onclick = function() {
+document.getElementById('navToggle').addEventListener('click', function() {
     document.body.classList.toggle('--nav-active');
-}
-document.getElementById('darkBackdrop').onclick = function() {
-    document.body.classList.toggle('--nav-active');
+});
+
+document.getElementById('searchToggle').addEventListener('click', function() {
+    document.body.classList.toggle('--search-active');
+});
+
+var filter = document.getElementById('filterContent');
+if (filter){
+    document.getElementById('filterToggle').addEventListener('click', function() {
+        document.body.classList.toggle('--filter-active');
+    });
 }
 
-document.getElementById('searchToggle').onclick = function() {
-    document.body.classList.toggle('--search-active');
-}
+document.getElementById('darkBackdrop').addEventListener('click', function() {
+    document.body.classList.remove('--nav-active','--search-active','--filter-active');
+});
 
 
 // -----------------------------------------------------------------------------
@@ -298,6 +306,7 @@ document.getElementById('searchinput').addEventListener('keyup', function (e) {
 // REGISTER TOGGLE 
 // -----------------------------------------------------------------------------
 
+
 if(document.getElementById('register-form')){
     document.getElementById('faToggle').onclick = function() {
         document.getElementById("register-fa-company").toggleAttribute("required");
@@ -320,6 +329,7 @@ if(document.getElementById('register-form')){
 // -----------------------------------------------------------------------------
 // PASSWORD SHOW
 // -----------------------------------------------------------------------------
+
 
 if(document.getElementById('showLoginPassword')){
     document.getElementById('showLoginPassword').onclick = function() {

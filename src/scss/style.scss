@@ -136,6 +136,14 @@ section.products h1{
         opacity: 1;
         pointer-events: auto;
     }
+    body.--search-active #darkBackdrop{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    body.--filter-active #darkBackdrop{
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 

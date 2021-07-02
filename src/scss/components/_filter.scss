@@ -44,7 +44,7 @@
     transform: translateY(-12px) rotate(-45deg);
     margin-left: 100px;
 }
-.filter.--active{
+body.--filter-active{
     .filter__button{
         background: $gray-900;
     }
@@ -67,21 +67,38 @@
 }
 
 @media screen and (max-width: 575px){
+    .filter__content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        z-index: 15;
+        overflow-y: scroll;
+        left: auto;
+        height: 100%;
+        border: 0;
+        transform: translateX(100%);
+        transition: 0.2s ease transform;
+        opacity: 1;
+        content-visibility: hidden;
+    }
+    body.--filter-active .filter__content {
+        transform: translateX(0%);
+        content-visibility: visible;
+    }
     .filter{
         margin-bottom: 20px;
-
-    }
-    .filter__content{
-        width: 100%;
     }
     .filter__content::before {
-        transform: translateY(-12px) translateX(-50%) rotate(-45deg);
-        margin-left: 50%;
+        content: none;
     }
     .filter__form{
-        padding: 0px 20px 20px 20px;
+        padding: 20px;
     }
     .filter__button{
         height: 48px;
+    }
+    body.--filter-active{
+        overflow-y: hidden;
     }
 }

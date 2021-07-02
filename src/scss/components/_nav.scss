@@ -108,7 +108,7 @@ nav .container{
         overflow-y: auto;
         width: 260px;
         transform: translateX(-100%);
-        transition: 0.3s ease transform;
+        transition: 0.2s ease transform;
         height: 100%;
         flex-direction: column;
         overflow-x: hidden;
@@ -119,7 +119,7 @@ nav .container{
         overflow-y: hidden;
     }
     body.--nav-active nav{
-        transform: translateX(0%);
+        transform: translateX(0%);  
         content-visibility: visible;
     }
     nav .container{

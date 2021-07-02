@@ -9,6 +9,17 @@ input, select{
     border: 1px solid $gray-300;
     font-size: 16px;
     background-color: $white;
+
+}
+.form-group input{
+    &:required:valid{
+        border-color: $green-500;
+    }
+    /*
+    &:required:invalid:not(:placeholder-shown){
+        border-color: $red-500;
+    }
+    */
 }
 select{
     appearance: none;

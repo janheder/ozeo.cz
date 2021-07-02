@@ -285,6 +285,13 @@ header{
     }
     .search-wrapper{
         display: none;
+        
+    }
+    body.--search-active{
+        overflow-y: hidden;
+    }
+    body.--search-active .header-main{
+        z-index: 15;
     }
     body.--search-active  .search-wrapper{
         display: flex;
