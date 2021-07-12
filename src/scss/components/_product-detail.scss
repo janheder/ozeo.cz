@@ -2,7 +2,7 @@
     padding: 60px 0;
 }
 .product-detail__photos{
-    padding-right: 60px;
+    margin-right: 60px;
     position: relative;
 }
 .product-detail__carousel{
@@ -286,7 +286,7 @@
 
 @media screen and (max-width: 991px){
     .product-detail__photos{
-        padding: 0;
+        margin: 0;
     }
     .product-detail__info{
         padding-top: 40px;
@@ -302,7 +302,22 @@
     .product-detail__photos{
         padding: 0;
         margin: 0 -10px;
+        display: flex;
+        flex-direction: column;
+
+        .product-card__tags{
+            position: relative;
+            display: flex;
+            order: 9;
+            margin-top: 10px;
+            margin-bottom: -10px;
+            
+            .product-card__tagSingle{
+                margin-right: 5px;
+            }
+        }
     }
+    
     .product-detail__thumbs {
         margin: 0;
         display: none;
