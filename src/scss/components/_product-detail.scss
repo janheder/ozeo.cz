@@ -134,7 +134,7 @@
     content: "";
     height: 8px;
     width: 8px;
-    background-image: url("../icons/cheveron.svg");
+    background-image: url("../img/icons/cheveron.svg");
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -199,14 +199,14 @@
 }
 .product-detail__stock[data-status="disabled"]{
     padding-left: 22px;
-    background-image: url("../icons/cross.svg");
+    background-image: url("../img/icons/cross.svg");
     background-repeat: no-repeat;
     background-position: left center;
 }
 .product-detail__stock[data-status="active"]{
     color: $green-500;
     padding-left: 22px;
-    background-image: url("../icons/check.svg");
+    background-image: url("../img/icons/check.svg");
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -311,7 +311,7 @@
             order: 9;
             margin-top: 10px;
             margin-bottom: -10px;
-            
+
             .product-card__tagSingle{
                 margin-right: 5px;
             }

@@ -24,7 +24,7 @@ input, select{
 select{
     appearance: none;
     position: relative;
-    background-image: url("../icons/cheveron.svg");
+    background-image: url("../img/icons/cheveron.svg");
     background-position: right 20px center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@ input.show-password{
     top: 25px;
     cursor: pointer;
     appearance: none;
-    background: url("../icons/show.svg");
+    background: url("../img/icons/show.svg");
     background-position: center center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -108,7 +108,7 @@ input.show-password{
 }
 .form-group.--checkbox > input:checked{
     background-color: $gray-900;
-    background-image: url("../icons/check-white.svg");
+    background-image: url("../img/icons/check-white.svg");
     background-position: center center;
     background-size: auto;
     background-repeat: no-repeat;
