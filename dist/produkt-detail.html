@@ -121,7 +121,7 @@
       </div>
       <div class="header-main"> 
         <div class="container"> 
-          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz" width="150" height="40"></a>
+          <div id="navToggle"><span></span></div><a class="logo" href="/"><img src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz" width="150" height="50"></a>
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" method="post"> 
@@ -146,34 +146,22 @@
           </div>
           <div id="searchToggle"><img src="/img/icons/search-big.svg" alt="Vyhledávání"></div>
           <div class="header-nav">
-            <div class="user" data-micromodal-trigger="modal-login">
-              <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
-              <div class="user__title">Přihlášení</div>
-            </div>
-            <!-- PUG
-            a.user.--active(href="/uzivatelsky-ucet.html")
+            <!--
+            .user(data-micromodal-trigger="modal-login")
                 .user__icon
                     img(src="/img/icons/user.svg" alt="Přihlášení")
-                .user__wrap
-                    .user__text Přihlášen jako
-                    .user__title Petr Novák
+                div.user__title Přihlášení
+            
             
             -->
-            <!-- HTML
-            <a class="user --active" href="/uzivatelsky-ucet.html">
-                <div class="user__icon">
-                    <img src="/img/icons/user.svg" alt="Přihlášení">
-                </div>
-                <div class="user__wrap">
-                    <div class="user__text">Přihlášen jako</div>
-                    <div class="user__title">Petr Novák</div>
-                </div>
-            </a>
-            
-            
-                    
-            
-            --><a class="cart --active" href="/kosik-1.html">
+            <div class="user --active" id="userToggle">
+              <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
+              <div class="user__wrap">
+                <div class="user__text">Přihlášen jako</div>
+                <div class="user__title">Petr Novák</div>
+              </div>
+              <div class="user__dropdown" id="userDropdown"><a href="/uzivatelsky-ucet.html">Uživatelský účet</a><a href="/">Odhlásit</a></div>
+            </div><a class="cart --active" href="/kosik-1.html">
               <div class="cart__icon">           <img src="/img/icons/cart.svg" alt="Košík">
                 <div class="cart__number">2</div>
               </div>

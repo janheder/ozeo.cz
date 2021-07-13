@@ -18,7 +18,7 @@ header
                 span
 
             a.logo(href="/")
-                img(src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz" width="150" height="40")
+                img(src="/img/logo.svg" alt="ozeo.cz" title="ozeo.cz" width="150" height="50")
 
             .search 
                 .search-wrapper     
@@ -34,29 +34,23 @@ header
                 img(src="/img/icons/search-big.svg" alt="Vyhledávání")
 
             .header-nav
-                .user(data-micromodal-trigger="modal-login")
-                    .user__icon
-                        img(src="/img/icons/user.svg" alt="Přihlášení")
-                    div.user__title Přihlášení
 
-                // PUG
-                    a.user.--active(href="/uzivatelsky-ucet.html")
+                //
+                    .user(data-micromodal-trigger="modal-login")
                         .user__icon
                             img(src="/img/icons/user.svg" alt="Přihlášení")
-                        .user__wrap
-                            .user__text Přihlášen jako
-                            .user__title Petr Novák
+                        div.user__title Přihlášení
 
-                // HTML
-                    <a class="user --active" href="/uzivatelsky-ucet.html">
-                        <div class="user__icon">
-                            <img src="/img/icons/user.svg" alt="Přihlášení">
-                        </div>
-                        <div class="user__wrap">
-                            <div class="user__text">Přihlášen jako</div>
-                            <div class="user__title">Petr Novák</div>
-                        </div>
-                    </a>
+   
+                .user.--active(id="userToggle")
+                    .user__icon
+                        img(src="/img/icons/user.svg" alt="Přihlášení")
+                    .user__wrap
+                        .user__text Přihlášen jako
+                        .user__title Petr Novák
+                    .user__dropdown(id="userDropdown")
+                        a(href="/uzivatelsky-ucet.html") Uživatelský účet
+                        a(href="/") Odhlásit
 
 
                             

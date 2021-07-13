@@ -71,6 +71,10 @@ document.getElementById('darkBackdrop').addEventListener('click', function() {
 });
 
 
+document.getElementById('userToggle').addEventListener('click', function() {
+    document.body.classList.toggle('--user-active');
+});
+
 // -----------------------------------------------------------------------------
 // NUMBER STEPPER
 // -----------------------------------------------------------------------------
