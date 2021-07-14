@@ -42,7 +42,9 @@ nav .container{
     background: $white;    
     padding: 20px 0;
 }
-
+.nav-submenu .row{
+    flex-grow: 1;
+}
 .nav-submenu__single{
     display: flex;
     flex-direction: row;
