@@ -22,8 +22,10 @@
                         .tag.--free-delivery Doprava zdarma
 
 
-                .product-card__imgWrap
-                    img.lazyload.product-card__img(src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt=ProductName title=ProductName height="240" width="188")
+                picture.product-card__imgWrap
+                    source(data-srcset="/img/product-thumb-medium.avif" type="image/avif")
+                    source(data-srcset="/img/product-thumb-medium.webp" type="image/webp")
+                    img.lazyload.product-card__img(src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt=ProductName title=ProductName height="240" width="188" )
 
             .product-card__title #{ProductName}
 

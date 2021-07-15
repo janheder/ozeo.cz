@@ -27,9 +27,9 @@ var cookiebar = new Cookiebar({
 // LAZYLAOD INIT
 // -----------------------------------------------------------------------------
 
-
+/*
 lazyload();
-
+*/
 
 // -----------------------------------------------------------------------------
 // MODAL INIT
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             rtl: false,
             onInit: () => {},
-            onChange: () => {lazyload();},
+            onChange: () => {},
         });
         document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
         document.querySelector('.next').addEventListener('click', () => indexCarousel.next());

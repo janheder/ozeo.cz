@@ -31,6 +31,9 @@
                 span.register Nemáte u nás účet? #[a(href="/registrace.html") Zaregistrujte se]
                 
         .modal__side(id="modal-login-side")
-            img.lazyload(src="/img/load-symbol.svg" data-src="/img/login-modal.png" width="288" height="544")
+            picture
+                source(data-srcset="/img/login-modal.avif" type="image/avif")
+                source(data-srcset="/img/login-modal.webp" type="image/webp")
+                img.lazyload(src="/img/load-symbol.svg" data-src="/img/login-modal.jpg" width="288" height="544")
 
 

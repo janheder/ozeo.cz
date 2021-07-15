@@ -82,7 +82,12 @@
               </div><span class="register">Nemáte u nás účet? <a href="/registrace.html">Zaregistrujte se</a></span>
             </form>
           </div>
-          <div class="modal__side" id="modal-login-side"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/login-modal.png" width="288" height="544"></div>
+          <div class="modal__side" id="modal-login-side">
+            <picture>
+              <source data-srcset="/img/login-modal.avif" type="image/avif">
+              <source data-srcset="/img/login-modal.webp" type="image/webp"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/login-modal.jpg" width="288" height="544">
+            </picture>
+          </div>
         </div>
       </div>
     </div>
@@ -549,7 +554,7 @@
     <!-- Custom js plugins and scripts-->
     <script src="/js/micromodal.min.js"></script>
     <script src="/js/cookiebar.min.js"></script>
-    <script src="/js/lazyload.min.js"></script>
+    <script src="/js/lazysizes.min.js"></script>
     <script src="/js/instant.page.min.js"></script>
     <script src="/js/siema.min.js"></script>
     <script src="/js/scripts.js"></script>
