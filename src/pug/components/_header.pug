@@ -35,22 +35,22 @@ header
 
             .header-nav
 
-                //
-                    .user(data-micromodal-trigger="modal-login")
-                        .user__icon
-                            img(src="/img/icons/user.svg" alt="Přihlášení")
-                        div.user__title Přihlášení
 
-   
-                .user.--active(id="userToggle")
+                .user(data-micromodal-trigger="modal-login")
                     .user__icon
                         img(src="/img/icons/user.svg" alt="Přihlášení")
-                    .user__wrap
-                        .user__text Přihlášen jako
-                        .user__title Petr Novák
-                    .user__dropdown(id="userDropdown")
-                        a(href="/uzivatelsky-ucet.html") Uživatelský účet
-                        a(href="/") Odhlásit
+                    div.user__title Přihlášení
+
+                //   
+                    .user.--active(id="userToggle")
+                        .user__icon
+                            img(src="/img/icons/user.svg" alt="Přihlášení")
+                        .user__wrap
+                            .user__text Přihlášen jako
+                            .user__title Petr Novák
+                        .user__dropdown(id="userDropdown")
+                            a(href="/uzivatelsky-ucet.html") Uživatelský účet
+                            a(href="/") Odhlásit
 
 
                             

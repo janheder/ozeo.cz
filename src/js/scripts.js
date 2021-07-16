@@ -30,6 +30,10 @@ var cookiebar = new Cookiebar({
 /*
 lazyload();
 */
+window.lazySizesConfig = window.lazySizesConfig || {};
+lazySizesConfig.loadHidden = false;
+
+
 
 // -----------------------------------------------------------------------------
 // MODAL INIT
@@ -70,10 +74,13 @@ document.getElementById('darkBackdrop').addEventListener('click', function() {
     document.body.classList.remove('--nav-active','--search-active','--filter-active');
 });
 
+var userToggle = document.getElementById('userToggle');
+if (userToggle){
+    userToggle.addEventListener('click', function() {
+        document.body.classList.toggle('--user-active');
+    });
+}
 
-document.getElementById('userToggle').addEventListener('click', function() {
-    document.body.classList.toggle('--user-active');
-});
 
 // -----------------------------------------------------------------------------
 // NUMBER STEPPER

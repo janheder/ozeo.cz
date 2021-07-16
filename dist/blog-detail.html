@@ -125,22 +125,25 @@
           </div>
           <div id="searchToggle"><img src="/img/icons/search-big.svg" alt="Vyhledávání"></div>
           <div class="header-nav">
-            <!--
-            .user(data-micromodal-trigger="modal-login")
+            <div class="user" data-micromodal-trigger="modal-login">
+              <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
+              <div class="user__title">Přihlášení</div>
+            </div>
+            <!--   
+            .user.--active(id="userToggle")
                 .user__icon
                     img(src="/img/icons/user.svg" alt="Přihlášení")
-                div.user__title Přihlášení
+                .user__wrap
+                    .user__text Přihlášen jako
+                    .user__title Petr Novák
+                .user__dropdown(id="userDropdown")
+                    a(href="/uzivatelsky-ucet.html") Uživatelský účet
+                    a(href="/") Odhlásit
             
             
-            -->
-            <div class="user --active" id="userToggle">
-              <div class="user__icon"><img src="/img/icons/user.svg" alt="Přihlášení"></div>
-              <div class="user__wrap">
-                <div class="user__text">Přihlášen jako</div>
-                <div class="user__title">Petr Novák</div>
-              </div>
-              <div class="user__dropdown" id="userDropdown"><a href="/uzivatelsky-ucet.html">Uživatelský účet</a><a href="/">Odhlásit</a></div>
-            </div><a class="cart --active" href="/kosik-1.html">
+                    
+            
+            --><a class="cart --active" href="/kosik-1.html">
               <div class="cart__icon">           <img src="/img/icons/cart.svg" alt="Košík">
                 <div class="cart__number">2</div>
               </div>
@@ -499,7 +502,7 @@
           <div class="article-header">
             <h1>Lorem ipsum dolor sit amet</h1>
             <div class="article-info">
-              <div class="article-info__date">Zveřejněno 8. 6. 2021</div><a class="article-info__social" href="#"><img src="/img/icons/share.svg"> Sdílet</a>
+              <div class="article-info__date">Zveřejněno 8. 6. 2021</div><a class="article-info__social" href="#" alt=""><img src="/img/icons/share.svg"> Sdílet</a>
             </div>
           </div>
           <div class="article-thumb"><img src="/img/news-thumb-large.jpg" alt="Lorem ipsum dolor sit amet" title="Lorem ipsum dolor sit amet"></div>
@@ -520,7 +523,7 @@
                 <div class="news-single__top">
                   <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div>
                   <picture>
-                    <source data-srcset="/img/carousel/banner2.webp" type="image/webp"><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-large.jpg" alt="#" title="#">
+                    <source data-srcset="/img/news-thumb-large.jpg" type="image/jpg"><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-large.jpg" alt="#" title="#">
                   </picture>
                 </div>
                 <div class="news-single__bottom">
@@ -530,7 +533,7 @@
                 <div class="news-single__top">
                   <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div>
                   <picture>
-                    <source data-srcset="/img/carousel/banner2.webp" type="image/webp"><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-large.jpg" alt="#" title="#">
+                    <source data-srcset="/img/news-thumb-large.jpg" type="image/jpg"><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-large.jpg" alt="#" title="#">
                   </picture>
                 </div>
                 <div class="news-single__bottom">
@@ -540,7 +543,7 @@
                 <div class="news-single__top">
                   <div class="news-single__dateWrap"><span class="news-single__date">1. 1. 1970</span></div>
                   <picture>
-                    <source data-srcset="/img/carousel/banner2.webp" type="image/webp"><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-large.jpg" alt="#" title="#">
+                    <source data-srcset="/img/news-thumb-large.jpg" type="image/jpg"><img class="lazyload news-single__img" src="/img/load-symbol.svg" data-src="/img/news-thumb-large.jpg" alt="#" title="#">
                   </picture>
                 </div>
                 <div class="news-single__bottom">

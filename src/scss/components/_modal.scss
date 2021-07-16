@@ -234,11 +234,13 @@ from { transform: translateY(15%); }
 .micromodal-slide {
 opacity: 0;
 pointer-events: none;
+visibility: hidden;
 }
 
 .micromodal-slide.is-open {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
