@@ -61,6 +61,7 @@ document.getElementById('navToggle').addEventListener('click', function() {
 
 document.getElementById('searchToggle').addEventListener('click', function() {
     document.body.classList.toggle('--search-active');
+    document.getElementById('searchinput').focus();
 });
 
 var filter = document.getElementById('filterContent');
@@ -219,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loop: true,
             rtl: false,
             onInit: () => {},
-            onChange: () => {lazyload();},
+            onChange: () => {},
         });
     
         document.querySelector('.prev').addEventListener('click', () => thumbCarousel.prev());
