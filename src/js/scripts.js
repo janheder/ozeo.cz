@@ -82,6 +82,14 @@ if (userToggle){
     });
 }
 
+document.body.addEventListener('click', function(e) {
+    if (!e.target.classList.contains('search__input')) {
+        if (document.getElementById('searchAutocomplete').classList.contains('--active')){
+            document.getElementById('searchAutocomplete').classList.remove('--active');
+        };
+    }
+});
+
 
 // -----------------------------------------------------------------------------
 // NUMBER STEPPER

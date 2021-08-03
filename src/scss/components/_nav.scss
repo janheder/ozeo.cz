@@ -100,14 +100,12 @@ nav .container{
     .nav-submenu{
         opacity: 0;
         pointer-events: none;
-        transition: 0.2s ease opacity, 0s ease visibility;
+        transition: 0.2s ease opacity;
         transition-delay: 0.3s;
-        visibility: hidden;
     }
     .nav-item.expandable:hover .nav-submenu{
         opacity: 1;
         pointer-events: auto;
-        visibility: visible;
     }
 }
 @media screen and (max-width: 991px){
