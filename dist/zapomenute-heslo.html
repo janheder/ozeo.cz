@@ -531,8 +531,7 @@
           </section>
           <form method="post" id="password-form">
             <div class="form-group">    
-              <label for="password-email">Email</label>
-              <input type="email" id="register-email" name="password-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+[a-zA-Z]{2,9})">
+              <label for="password-email">Email</label><input type="email" id="register-email" name="password-email" required minlength="6" maxlength="255" pattern="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})">
             </div>
             <div class="form-group"> 
               <button class="btn --fullWidth" name="password-submit" id="password-submit">Poslat nové heslo <img src="/img/icons/cheveron-white.svg"></button>

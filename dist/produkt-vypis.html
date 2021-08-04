@@ -500,11 +500,14 @@
       <section class="page-heading">
         <div class="container">
           <h1>Dřevěné krabice</h1>
-          <p id="pageDescription">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný... <span class="read-more" id="readMore">Číst více</span></p>
-          <p id="pageDescriptionFull">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný</p>
+          <p id="pageDescription">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný...<span class="read-more" id="readMore">Číst více</span></p>
+          <p id="pageDescriptionFull">Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný<span class="read-more --less" id="readLess">Skrýt popis</span></p>
         </div>
         <script>
           document.getElementById('readMore').onclick = function() {
+              document.getElementById('pageDescription').classList.toggle('--active');
+          }
+          document.getElementById('readLess').onclick = function() {
               document.getElementById('pageDescription').classList.toggle('--active');
           }
           
