@@ -559,21 +559,21 @@
       <section class="products">
         <div class="container">
           <div class="products-sort">
-            <form method="post"> 
+            <form method="get"> 
               <div class="products-sort__single">
-                <input type="radio" id="sort-1" name="sort-products" checked required>
+                <input type="radio" id="sort-1" name="sort-products" checked required onchange="this.form.submit()" value="1">
                 <label for="sort-1">Nejprodávanější</label>
               </div>
               <div class="products-sort__single">
-                <input type="radio" id="sort-2" name="sort-products" required>
+                <input type="radio" id="sort-2" name="sort-products" required onchange="this.form.submit()" value="2">
                 <label for="sort-2">Od nejnovějšího</label>
               </div>
               <div class="products-sort__single">
-                <input type="radio" id="sort-3" name="sort-products" required>
+                <input type="radio" id="sort-3" name="sort-products" required onchange="this.form.submit()" value="3">
                 <label for="sort-3">Od nejlevnějšího</label>
               </div>
               <div class="products-sort__single">
-                <input type="radio" id="sort-4" name="sort-products" required>
+                <input type="radio" id="sort-4" name="sort-products" required onchange="this.form.submit()" value="4">
                 <label for="sort-4">Od nejdražšího</label>
               </div>
             </form>
