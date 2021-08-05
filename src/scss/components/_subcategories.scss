@@ -41,16 +41,23 @@
 @media screen and (max-width: 575px){
     .subcategories{
         overflow-x: auto;
+        padding: 0;
     }
     .subcategories .row{
         flex-wrap: nowrap;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+        overflow-x: scroll;
+    }
+    .subcategories .row::-webkit-scrollbar { 
+        display: none;
     }
     .subcategories__single{
         padding: 0;
     }
     .subcategories__link{
         padding: 0 10px;
-        height: 60px;
+        height: 56px;
     }
     .subcategories__title{
         padding-left: 10px;

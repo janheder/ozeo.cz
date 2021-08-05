@@ -4,6 +4,11 @@
     margin-bottom: 20px;
     overflow: hidden;
     overflow-x: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+.products-sort::-webkit-scrollbar { 
+    display: none;
 }
 .products-sort form{
     display: flex;

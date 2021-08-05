@@ -324,13 +324,6 @@ if(document.getElementById('register-form')){
         document.getElementById("register-fa-psc").toggleAttribute("required");
         document.getElementById("register-fa-state").toggleAttribute("required");
     }
-    document.getElementById('daToggle').onclick = function() {
-        document.getElementById("register-da-name").toggleAttribute("required");
-        document.getElementById("register-da-street").toggleAttribute("required");
-        document.getElementById("register-da-city").toggleAttribute("required");
-        document.getElementById("register-da-psc").toggleAttribute("required");
-        document.getElementById("register-fa-state").toggleAttribute("required");
-    }
 }
 
 

@@ -1,11 +1,17 @@
 .order-history{
     width: 100%;
     overflow: auto;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+.order-history::-webkit-scrollbar { 
+    display: none;
 }
 .order-history__item{
 
+}
+.order-history table{
+    width: 100%;
 }
 .order-history th{
     border-bottom: 1px solid $gray-300;

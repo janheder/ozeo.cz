@@ -39,9 +39,10 @@ html(lang=lang)
                                         | <input type="tel" id="register-tel" name="register-tel" required pattern="\d{1,15}">
                                     .form-group     
                                         label(for="register-password") Heslo
-                                        input(type="password" id="register-password" name="register-password" required)
+                                        input(type="password" id="register-password" name="register-password")
 
-                                    .form-spacer 
+
+                                    .form-subtitle Dodací údaje
 
                                     .form-group     
                                         label(for="register-street") Ulice
@@ -70,9 +71,6 @@ html(lang=lang)
                                         .form-collapse
 
                                             .form-group     
-                                                label(for="register-fa-name") Jméno a příjmení (nepovinné)
-                                                input(type="text" id="register-fa-name" name="register-fa-name")
-                                            .form-group     
                                                 label(for="register-fa-company") Název firmy
                                                 input(type="text" id="register-fa-company" name="register-fa-company" )
                                             .form-group     
@@ -99,35 +97,6 @@ html(lang=lang)
                                                     option(value="cz") Česká republika
                                                     option(value="sk") Slovensko
 
-                                    .form-group.--checkbox
-                                        label(for="register-da-address" id="daToggle") Jiná dodací adresa
-                                        input(type="checkbox" name="register-da-address" id="register-da-address")
-
-                                        .form-collapse
-
-                                            .form-group     
-                                                label(for="register-da-name") Jméno a příjmení 
-                                                input(type="text" id="register-da-name" name="register-da-name" )
-                                            .form-group     
-                                                label(for="register-da-company") Název firmy (nepovinné)
-                                                input(type="text" id="register-da-company" name="register-da-company")
-                                            .form-group     
-                                                label(for="register-da-street") Ulice
-                                                input(type="text" id="register-da-street" name="register-da-street" )
-                                            .form-group     
-                                                label(for="register-da-street-n") Číslo popisné
-                                                input(type="text" id="register-da-street-n" name="register-da-street-n" )
-                                            .form-group     
-                                                label(for="register-da-city") Město/obec
-                                                input(type="text" id="register-da-city" name="register-da-city" )
-                                            .form-group     
-                                                label(for="register-da-psc") PSČ
-                                                input(type="text" id="register-da-psc" name="register-da-psc" )
-                                            .form-group     
-                                                label(for="register-da-state") Stát
-                                                select(name="register-da-state" id="register-da-state" )   
-                                                    option(value="cz") Česká republika
-                                                    option(value="sk") Slovensko
 
 
                                     .form-spacer 
