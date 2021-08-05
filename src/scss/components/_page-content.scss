@@ -85,6 +85,7 @@
 .page-content table th, .page-content table td{
     border: 1px solid $gray-300;
     padding: 10px 20px;
+    white-space: nowrap;
 }
 
 .page-content__cell ul{

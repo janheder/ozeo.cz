@@ -1,5 +1,8 @@
 .order-history{
     width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 .order-history__item{
 

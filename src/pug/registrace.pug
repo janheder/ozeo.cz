@@ -30,17 +30,17 @@ html(lang=lang)
                             label(for="register-tel") Telefon 
                             | <input type="tel" id="register-tel" name="register-tel" required value="" pattern="\d{1,15}">
                         .form-group     
-                            label(for="register-username") Uživatelské jméno
-                            input(type="text" id="register-username" name="register-username" required)
-                        .form-group     
                             label(for="register-password") Heslo
                             | <input type="password" id="register-password" name="register-password" required pattrn="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
 
                         .form-spacer 
 
                         .form-group     
-                            label(for="register-street") Ulice a Číslo popisné
+                            label(for="register-street") Ulice
                             input(type="text" id="register-street" name="register-street" required maxlength="50")
+                        .form-group     
+                            label(for="register-street-n") Číslo popisné
+                            input(type="text" id="register-street-n" name="register-street-n" required maxlength="50")
                         .form-group     
                             label(for="register-city") Město/obec
                             input(type="text" id="register-city" name="register-city" required maxlength="50")      
@@ -74,8 +74,11 @@ html(lang=lang)
                                     label(for="register-fa-dic") DIČ (nepovinné)
                                     input(type="text" id="register-fa-dic" name="register-fa-dic")
                                 .form-group     
-                                    label(for="register-fa-street") Ulice a číslo popisné
+                                    label(for="register-fa-street") Ulice
                                     input(type="text" id="register-fa-street" name="register-fa-street" )
+                                .form-group     
+                                    label(for="register-fa-street-n") Číslo popisné
+                                    input(type="text" id="register-fa-street-n" name="register-fa-street-n" )
                                 .form-group     
                                     label(for="register-fa-city") Město/obec
                                     input(type="text" id="register-fa-city" name="register-fa-city" )
@@ -101,8 +104,11 @@ html(lang=lang)
                                     label(for="register-da-company") Název firmy (nepovinné)
                                     input(type="text" id="register-da-company" name="register-da-company")
                                 .form-group     
-                                    label(for="register-da-street") Ulice a číslo popisné
+                                    label(for="register-da-street") Ulice
                                     input(type="text" id="register-da-street" name="register-da-street" )
+                                .form-group     
+                                    label(for="register-da-street-n") Číslo popisné
+                                    input(type="text" id="register-da-street-n" name="register-da-street-n" )
                                 .form-group     
                                     label(for="register-da-city") Město/obec
                                     input(type="text" id="register-da-city" name="register-da-city" )
@@ -119,10 +125,6 @@ html(lang=lang)
 
 
                         .form-spacer 
-
-                        .form-group.--checkbox
-                            label(for="register-agree1") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.
-                            input(type="checkbox" name="register-agree1" id="register-agree1")
 
                         .form-group.--checkbox
                             label(for="register-agree2") Souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem registrace.

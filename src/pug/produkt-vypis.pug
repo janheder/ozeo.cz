@@ -13,9 +13,11 @@ html(lang=lang)
             section.page-heading
                 .container
                     h1 Dřevěné krabice
-                    p(id="pageDescription") Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný...
-                        span.read-more(id="readMore") Číst více
-                    p(id="pageDescriptionFull") Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný
+                    div(id="pageDescription") 
+                        p Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný... #[span.read-more(id="readMore") Číst více]
+                        
+                    div(id="pageDescriptionFull") 
+                        p Jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný jednoduchý, často velmi podceňovaný předmět, který však může spojit funkčnost s krásným vzhledem a být tak nejen velmi užitečný
                         span.read-more.--less(id="readLess") Skrýt popis
                 script.
                     document.getElementById('readMore').onclick = function() {
