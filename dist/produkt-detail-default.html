@@ -11,7 +11,7 @@
     <meta content="Eline.cz" name="author">
     <link rel="preload" href="/fonts/CerebriSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/CerebriSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="canonical" href="https://ozeo.pages.dev/uzivatel-info">
+    <link rel="canonical" href="https://ozeo.pages.dev/produkt-detail">
     <meta property="og:locale" content="cs_CZ">
     <meta property="og:type" content="website">
     <meta property="og:title" content="OZEO.cz">
@@ -90,6 +90,32 @@
         </div>
       </div>
     </div>
+    <div class="modal micromodal-slide" id="modal-cart">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container --cart" role="dialog" aria-labelledby="modal-cart-title">
+          <div class="modal__image"><img src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína"></div>
+          <div class="modal__content" id="modal-cart-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-cart-title">Přidáno do košíku</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <p class="modal__cart-title">Dřevěná bedna na 2 vína CARMEN VI lorem ipsum dolor sit amet</p><span class="modal__cart-variant">Varianta: Černý lak + prosklená dvířka</span><span class="modal__cart-price">1 118 Kč</span><span class="modal__cart-vat">od 923,97 Kč bez DPH</span><a class="btn --cart" href="/kosik-1.html">Pokračovat v objednávce <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          MicroModal.show('modal-cart',{
+              openClass: 'is-open', 
+              disableScroll: true, 
+              disableFocus: true, 
+              awaitOpenAnimation: true,
+              awaitCloseAnimation: true, 
+              debugMode: false 
+          }); 
+      });
+    </script>
     <header>
       <div class="header-top">
         <div class="container"> 
@@ -496,15 +522,511 @@
       <div class="breadcrumbs">
         <div class="container"><a class="breadcrumbs__item" href="/">Domů</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><a class="breadcrumbs__item" href="/">Dřevěné boxy</a><img class="breadcrumbs__separator" src="/img/icons/cheveron.svg" alt="&gt;"><span class="breadcrumbs__item --active">Dřevěná bedna na 2 vína CARMEN VI</span></div>
       </div>
-      <div class="container"> 
-        <div class="page">  
-          <div class="cart-empty">
-            <div class="cart-empty__img"> <img src="/img/user-complete.svg" alt="Vaše heslo bylo úspěšně obnoveno"></div>
-            <h1 class="cart-empty__title">Vaše heslo bylo úspěšně obnoveno</h1>
-            <p class="cart-empty__text">Na váš email jsme zaslali pokyny pro změnu hesla. Poté se budete moct znovu přihlásit</p><a class="btn --green" href="/">Zpět do obchodu</a>
+      <section class="product-detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <div class="product-detail__photos">
+                <div class="product-card__tags">
+                  <div class="product-card__tagSingle">
+                    <div class="tag --sale">Akce</div>
+                  </div>
+                  <div class="product-card__tagSingle">   
+                    <div class="tag --new">Novinka</div>
+                  </div>
+                  <div class="product-card__tagSingle"> 
+                    <div class="tag --recommended">Doporučené</div>
+                  </div>
+                  <div class="product-card__tagSingle"> 
+                    <div class="tag --top">Top</div>
+                  </div>
+                </div>
+                <div class="product-card__tagsRight">
+                  <div class="product-card__tagSingle"> 
+                    <div class="tag --circle">Doprodej</div>
+                  </div>
+                  <div class="product-card__tagSingle"> 
+                    <div class="tag --free-delivery">Doprava zdarma</div>
+                  </div>
+                </div>
+                <div class="product-detail__carousel" id="product-carousel">
+                  <div class="product-detail__carouselItem">
+                    <div class="product-detail__carouselLink"><img src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" loading="lazy"></div>
+                  </div>
+                  <div class="product-detail__carouselItem">
+                    <div class="product-detail__carouselLink"><img src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" loading="lazy"></div>
+                  </div>
+                  <div class="product-detail__carouselItem">
+                    <div class="product-detail__carouselLink"><img src="/img/product-thumb-large.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" title="Dřevěná bedna na 2 vína CARMEN VI lorem ipsum" loading="lazy"></div>
+                  </div>
+                </div>
+                <button class="prev" aria-label="Zpět"><img src="/img/icons/cheveron.svg" alt="Zpět"></button>
+                <button class="next" aria-label="Vpřed"><img src="/img/icons/cheveron.svg" alt="Vpřed"></button>
+                <div class="lightbox" id="lightbox"></div>
+                <div class="product-detail__thumbs"> 
+                  <div class="product-detail__thumbWrap">
+                    <div class="product-detail__thumb" id="thumb0">
+                      <div class="product-detail__thumbInner"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb1"></div>
+                    </div>
+                  </div>
+                  <div class="product-detail__thumbWrap">
+                    <div class="product-detail__thumb" id="thumb1">
+                      <div class="product-detail__thumbInner"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb2"></div>
+                    </div>
+                  </div>
+                  <div class="product-detail__thumbWrap">   
+                    <div class="product-detail__thumb" id="thumb2">
+                      <div class="product-detail__thumbInner"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="thumb3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="product-detail__info">
+                <h1 class="product-detail__title">Dřevěná bedna na 2 vína CARMEN VI lorem ipsum</h1>
+                <div class="product-detail__code">
+                  <div>Kód produktu: <span id="product-code">Zvolte variantu</span></div><a href="#"><img src="/img/icons/share.svg" alt="Sdílet"> Sdílet</a>
+                </div>
+                <p class="product-detail__text">Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního... <a href="#productDescription">Číst více</a></p>
+                <form class="product-detail__form" method="post">
+                  <div class="product-detail__stock" id="stock" data-status="active">Skladem</div>
+                  <div class="product-detail__price"> 
+                    <div class="product-detail__priceMain"><span id="price-old">1 200 Kč</span> <span id="price-main">1 118 Kč</span></div>
+                    <div class="product-detail__priceVAT"><span id="price-vat">923,97 Kč</span> bez DPH</div>
+                  </div>
+                  <div class="product-detail__cta"> 
+                    <div class="product-detail__qty stepper" id="qty-stepper"> <span class="minus">–</span>
+                      <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
+                    </div>
+                    <div class="product-detail__button"> 
+                      <button class="btn --green" name="add-to-cart"><img src="/img/icons/cart-white.svg" alt="Vložit do košíku"> Vložit do košíku</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="product-detail__description" id="productDescription">
+                <h2>Popis produktu</h2>
+                <p>Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního tlustého lana, která je praktická a snadno přepravitelná.</p>
+                <p>Přírodní odstín. Perfektní předmět pro jedinečný dárek, zajímavý dekorativní motiv - vnese do vašeho domova přirozený ekologický nádech.</p>
+                <p>Na přání je možné dokoupit dřevěnou vlnu (hobliny) a rytinu.</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-1"></div>
+            <div class="col-12 col-lg-4">
+              <div class="product-detail__parameters">
+                <h2>Parametry</h2>
+                <table> 
+                  <tbody> 
+                    <tr>
+                      <td>Šířka</td>
+                      <td>15cm</td>
+                    </tr>
+                    <tr>
+                      <td>Výška</td>
+                      <td>150cm</td>
+                    </tr>
+                    <tr>
+                      <td>Hloubka</td>
+                      <td>Lorem ipsum dolore</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="points">
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="points-single">
+                <div class="points-single__icon"> <img class="lazyload" src="/img/load-symbol.svg" data-src="/img/point1.svg" alt="Doprava zdarma"></div>
+                <div class="points-single__content"><strong>Doprava zdarma </strong><span>při nákupu nad 2 000 Kč</span></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="points-single">
+                <div class="points-single__icon"> <img class="lazyload" src="/img/load-symbol.svg" data-src="/img/point2.svg" alt="Záruka vrácení a výměny"></div>
+                <div class="points-single__content"><strong>Záruka vrácení a výměny</strong><span>zboží do 30 dní</span></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="points-single">
+                <div class="points-single__icon"> <img class="lazyload" src="/img/load-symbol.svg" data-src="/img/point3.svg" alt="Máme 10 000 produktů"></div>
+                <div class="points-single__content"><strong>Máme 10 000 produktů</strong><span>připravených skladem </span></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="points-single">
+                <div class="points-single__icon"> <img class="lazyload" src="/img/load-symbol.svg" data-src="/img/point4.svg" alt="Odesíláme ihned"></div>
+                <div class="points-single__content"><strong>Odesíláme ihned</strong><span>objednávky přijaté do 12:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container"> 
+          <h1>Příslušenství</h1>
+          <div class="products-grid">
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container"> 
+          <h1>Související</h1>
+          <div class="products-grid">
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+            <div class="product-card"> <a class="product-card__link" href="/produkt-detail.html">
+                <div class="product-card__top">    
+                  <div class="product-card__thumb">
+                    <div class="product-card__tags">
+                      <div class="product-card__tagSingle">
+                        <div class="tag --sale">Akce</div>
+                      </div>
+                      <div class="product-card__tagSingle">   
+                        <div class="tag --new">Novinka</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --recommended">Doporučené</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --top">Top</div>
+                      </div>
+                    </div>
+                    <div class="product-card__tagsRight">
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --circle">Doprodej</div>
+                      </div>
+                      <div class="product-card__tagSingle"> 
+                        <div class="tag --free-delivery">Doprava zdarma</div>
+                      </div>
+                    </div>
+                    <picture class="product-card__imgWrap">
+                      <source data-srcset="/img/product-thumb-medium.avif" type="image/avif">
+                      <source data-srcset="/img/product-thumb-medium.webp" type="image/webp"><img class="lazyload product-card__img" src="/img/load-symbol.svg" data-src="/img/product-thumb-medium.jpg" alt="Dřevěná bedna na 2 vína CARMEN VI" title="Dřevěná bedna na 2 vína CARMEN VI" height="240" width="188">
+                    </picture>
+                  </div>
+                  <div class="product-card__title">Dřevěná bedna na 2 vína CARMEN VI</div>
+                </div>
+                <div class="product-card__bottom">
+                  <div class="product-card__description">Originální krabička na víno a cukrovinky ze dřeva, ideální pro decoupage.</div>
+                  <div class="product-card__delivery"><img src="/img/icons/check.svg" alt="Skladem">
+                    <div class="product-card__deliveryText">Skladem 10 ks</div>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__priceOld">od 999 Kč</div>
+                    <div class="product-card__priceMain">od 899 Kč</div>
+                  </div>
+                  <div class="btn product-card__btn">Detail produktu</div>
+                </div></a></div>
+          </div>
+        </div>
+      </section>
       <section class="contact"> 
         <div class="container"> 
           <div class="contact__content">
@@ -518,6 +1040,38 @@
               </div>
             </div>
             <div class="contact__img"><img src="/img/contact-img.png" alt="" height="310" width="320"></div>
+          </div>
+        </div>
+      </section>
+      <section class="social">
+        <div class="container">
+          <h1>Z našeho Instagramu</h1>
+          <div class="instagram-wrap">
+            <div class="row"> 
+              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/instagram/ig1.jpg" alt="#" width="220" height="220"></a></div>
+              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/instagram/ig2.jpg" alt="#" width="220" height="220"></a></div>
+              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/instagram/ig3.jpg" alt="#" width="220" height="220"></a></div>
+              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/instagram/ig4.jpg" alt="#" width="220" height="220"></a></div>
+              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/instagram/ig5.jpg" alt="#" width="220" height="220"></a></div>
+              <div class="col-4 col-md-2"><a class="instagram-single" href="#"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/instagram/ig6.jpg" alt="#" width="220" height="220"></a></div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12 col-md-4">
+              <div class="social-single"><a class="social-single__link" href="https://facebook.com/ozeo.cz">
+                  <div class="social-single__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/icons/facebook-big.svg" alt="Facebook" width="40" height="40"></div>
+                  <div class="social-single__text">Jsme také na Facebooku</div></a></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="social-single"><a class="social-single__link" href="https://youtube.com/channel/UC7EiBmqyRqSsxFQOrATcuUw">
+                  <div class="social-single__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/icons/youtube-big.svg" alt="Youtube" width="40" height="40"></div>
+                  <div class="social-single__text">Sledujte nás na Youtube</div></a></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="social-single"><a class="social-single__link" href="https://www.instagram.com/ozeo.cz/">
+                  <div class="social-single__img"><img class="lazyload" src="/img/load-symbol.svg" data-src="/img/icons/instagram-big.svg" alt="Instagram" width="40" height="40"></div>
+                  <div class="social-single__text">Sledujte nás na Instagramu</div></a></div>
+            </div>
           </div>
         </div>
       </section>

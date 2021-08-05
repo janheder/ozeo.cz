@@ -332,9 +332,23 @@ if(document.getElementById('register-form')){
 // -----------------------------------------------------------------------------
 
 
-if(document.getElementById('showLoginPassword')){
+if(document.getElementById('showLoginPassword')
+){
     document.getElementById('showLoginPassword').onclick = function() {
         var x = document.getElementById('login-password');
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+}
+
+
+if(document.getElementById('showRegisterPassword')
+){
+    document.getElementById('showRegisterPassword').onclick = function() {
+        var x = document.getElementById('register-password');
         if (x.type === "password") {
             x.type = "text";
         } else {

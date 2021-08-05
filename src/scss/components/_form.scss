@@ -62,12 +62,11 @@ button{
     padding: 12px;
 }
 
-input.show-password{
+.show-password{
     position: absolute;
     right: 10px;
     top: 25px;
     cursor: pointer;
-    appearance: none;
     background: url("../img/icons/show.svg");
     background-position: center center;
     background-size: auto;
@@ -75,6 +74,10 @@ input.show-password{
     border: 0;
     opacity: 0.5;
     transition: 0.2s ease opacity;
+    height: 54px;
+    width: 54px;
+    bottom: 0;
+    right: 0;
 
     &:hover, &:active, &:focus{
         opacity: 1;

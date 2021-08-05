@@ -32,6 +32,7 @@ html(lang=lang)
                         .form-group     
                             label(for="register-password") Heslo
                             | <input type="password" id="register-password" name="register-password" required pattrn="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                            span.show-password(id="showRegisterPassword" aria-label="Zobrazit heslo")
 
                         .form-subtitle Dodací údaje
 
