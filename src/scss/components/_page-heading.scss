@@ -14,7 +14,6 @@
     color: $gray-500;
     font-size: 16px;
     margin: 0;
-    padding-top: 20px;
 }
 .page-heading p span{
     display: block;
@@ -34,6 +33,10 @@
 }
 #pageDescriptionFull{
     display: none;
+    padding-top: 20px;
+}
+#pageDescription{
+    padding-top: 20px;
 }
 #pageDescription.--active{
     display: none;
