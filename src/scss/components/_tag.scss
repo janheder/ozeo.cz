@@ -23,6 +23,15 @@
 .tag.--top{
     background: $gray-900;
 }
+.tag.--circleSale{
+    background: $red-500;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
 .tag.--circle{
     background: #f7e517;
     height: 60px;

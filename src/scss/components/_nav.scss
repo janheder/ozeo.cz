@@ -2,6 +2,9 @@ nav{
     background: $gray-100;
     position: relative;
 }
+nav.disabled .nav-item{
+    pointer-events: none;
+}
 nav .container{
     display: flex;
 }
@@ -51,6 +54,9 @@ nav .container{
     padding: 40px 0;
     align-items: flex-start;
 }
+.nav-submenu__single.--all{
+    display: none;
+}
 .nav-submenu__single img{
     width: 80px;
 }
@@ -93,6 +99,7 @@ nav .container{
     .nav-item.expandable:hover ~ .nav-item-backdrop{
         opacity: 1;
         pointer-events: auto;
+        animation: delay-pointer-events 0.5s linear;
     }
     .nav-item:hover .nav-link, .nav-item:hover .nav-linkDesktop {
         background: $white;
@@ -106,6 +113,12 @@ nav .container{
     .nav-item.expandable:hover .nav-submenu{
         opacity: 1;
         pointer-events: auto;
+        animation: delay-pointer-events 0.5s linear;
+    }
+    @keyframes delay-pointer-events {
+        0%, 99% {
+            pointer-events: none;  
+          }  
     }
 }
 @media screen and (max-width: 991px){
@@ -168,6 +181,12 @@ nav .container{
         padding: 0;
         flex-grow: 1;
         width: 100%;
+    }
+    .nav-submenu__single.--all{
+        display: flex;
+        .nav-submenu__title{
+            font-weight: 500;
+        }
     }
     .nav-submenu .row {
         margin-right: 0px;

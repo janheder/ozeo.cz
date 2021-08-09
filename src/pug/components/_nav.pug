@@ -1,4 +1,4 @@
-nav
+nav(id="mainNav")
     .container
         .nav-item 
             a.nav-link(href="produkt-vypis.html") Akční nabídka
@@ -8,6 +8,8 @@ nav
             a.nav-linkDesktop(href="produkt-vypis.html") Skříně #[img(src="/img/icons/cheveron.svg" alt="Rozbalit")]
             .nav-link(id="subToggle-0") Skříně #[img(src="/img/icons/cheveron.svg" alt="Rozbalit")]
             .nav-submenu(id="sub-0")
+                .nav-submenu__single.--all
+                    a(href="/produkt-vypis.html").nav-submenu__title Zobrazit vše
                 .container
                     .row 
                         - for (var i=0; i<8; i++)
