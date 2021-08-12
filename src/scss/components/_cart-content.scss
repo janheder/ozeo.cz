@@ -29,6 +29,14 @@
     padding: 40px 0;
     border-bottom: 1px solid $gray-300;
 }
+.cart-item.--code{
+    .cart-item-price-pc{
+        display: none;
+    }
+    .cart-item-remove{
+        margin: 0;
+    }
+}
 .cart-item-thumb-wrap{
     position: relative;
     width: 140px;
@@ -96,6 +104,9 @@
 }
 .cart-item-stepper{
 
+}
+.cart-item-stepper input[type="radio"]{
+    display: none;
 }
 .cart-item-remove{
     display: flex;

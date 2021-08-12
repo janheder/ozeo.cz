@@ -49,14 +49,12 @@ html(lang=lang)
                                                         a.cart-item-name(href="produkt-detail.html") Dřevěná bedna na 2 vína CARMEN VI
                                                             .cart-item-stock.--available #[img(src="/img/icons/check.svg" alt="Skladem 10 ks")]Skladem 10 ks
                                                         .cart-item-price-pc #[span 520] Kč/ks
-                                                        .cart-item-price-pc-vat #[span 300]
                                                         .cart-item-price #[span 520] Kč
-                                                        .cart-item-price-vat #[span 300]
 
                                                     .cart-item-bottom
                                                         .cart-item-stepper.stepper 
                                                             span.minus –
-                                                            input(id="qty-stepper-input-1" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required) 
+                                                            input(id="qty-stepper-input-1" class="num_items" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required) 
                                                             span.plus +
 
                                                         a.cart-item-remove(href="#")   
@@ -74,20 +72,45 @@ html(lang=lang)
                                                         a.cart-item-name(href="produkt-detail.html") Dřevěná bedna na 2 vína CARMEN VI
                                                             .cart-item-stock.--available #[img(src="/img/icons/check.svg" alt="Skladem 10 ks")]Skladem 10 ks
                                                         .cart-item-price-pc #[span 520] Kč/ks
-                                                        .cart-item-price-pc-vat #[span 400]
                                                         .cart-item-price #[span 1040] Kč
-                                                        .cart-item-price-vat #[span 800]
+
 
                                                     .cart-item-bottom
                                                         .cart-item-stepper.stepper
                                                             span.minus –
-                                                            input(id="qty-stepper-input-2" type="number" value="2" min="1" max="100" step="1" aria-label="Počet položek" required) 
+                                                            input(id="qty-stepper-input-2" class="num_items" type="number" value="2" min="1" max="100" step="1" aria-label="Počet položek" required) 
                                                             span.plus +
 
                                                         a.cart-item-remove(href="#")   
                                                             .cart-item-remove-icon
                                                                 img(src="/img/icons/cross-alt.svg" alt="Odstranit z košíku")
                                                             .cart-item-remove-text Odstranit z košíku
+
+
+                                            .cart-item.--code
+                                                .cart-item-thumb-wrap
+                                                    .cart-item-thumb
+                                                        img(src="/img/product-thumb-medium.jpg" alt="#" title="#")
+                                                .cart-item-content 
+                                                    .cart-item-main     
+                                                        a.cart-item-name(href="produkt-detail.html") Sleva
+       
+                                                        .cart-item-price-pc #[span -520,5] Kč/ks
+                                                        .cart-item-price #[span -520,5] Kč
+      
+
+                                                    .cart-item-bottom
+                                                        .cart-item-stepper
+                                                   
+                                                            input(id="qty-stepper-input-3" class="num_items" type="radio" value="1" min="1" max="1" step="1" aria-label="Sleva" required checked)
+                                         
+
+                                                        a.cart-item-remove(href="#")   
+                                                            .cart-item-remove-icon
+                                                                img(src="/img/icons/cross-alt.svg" alt="Odstranit z košíku")
+                                                            .cart-item-remove-text Odstranit z košíku
+
+
                                     .cart-table__footer
                                         a.cart-table__footer-link(href="/") 
                                             .cart-table__footer-icon
@@ -114,7 +137,7 @@ html(lang=lang)
                                         .cart-aside__table-th Celková cena
                                         .cart-aside__table-td 
                                             div #[span(id="sumprice") 1570] Kč 
-                                            small #[span(id="dphprice" data-dph="0.21") 1240] Kč bez DPH
+                                            small včetně DPH
 
 
                                 .cart-aside__free-shipping Nakupte ještě za 6 237 Kč a máte dopravu zdarma
