@@ -7,9 +7,14 @@ if (cart.length>0){
     function addInputListener(input) {
 
         let row = input.parentElement.parentElement.parentElement;
-        let overallPriceElement = row.querySelector('.cart-item-price span');
-        let price = parseInt(row.querySelector('.cart-item-price-pc span').innerText);        
         
+        let overallPriceElement = row.querySelector('.cart-item-price span');
+        let price = parseInt(row.querySelector('.cart-item-price-pc span').innerText); 
+        
+        let pricePc = row.querySelector('.cart-item-price-vat span');
+        let pricePcVat = parseInt(row.querySelector('.cart-item-price-pc-vat span').innerText);         
+        
+
         let calcEvent = function() {
 
             if (this.value > 0) {
@@ -18,16 +23,23 @@ if (cart.length>0){
                 overallPriceElement.innerText = "0";
             }
 
+            if (this.value > 0) {
+                pricePc.innerText = (pricePcVat * this.value).toString();
+            } else {
+                pricePc.innerText = "0";
+            }
             
-            const pricegoods = document.querySelectorAll('.cart-item-price span');
+            const pricegoods = document.querySelectorAll('.cart-item-price span ');
             const result = Array.from(pricegoods).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
             document.getElementById('goodsprice').innerText = result;
 
             const pricesum = document.querySelectorAll('.cart-item-price span, #delprice');
             const result2 = Array.from(pricesum).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
             document.getElementById('sumprice').innerText = result2;
-            var dph = document.getElementById('dphprice').dataset.dph;
-            document.getElementById('dphprice').innerText = Math.round(result2 * (1 - dph));
+            
+            const pricesumvat = document.querySelectorAll('.cart-item-price-vat span, #delprice');
+            const result3 = Array.from(pricesumvat).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
+            document.getElementById('dphprice').innerText = result3;
 
         };
         

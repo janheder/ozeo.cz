@@ -113,6 +113,8 @@
 
   img{
     height: 300px;
+    width: 240px;
+    object-fit: contain;
   }
 }
 .modal__container.--cart .modal__header{
