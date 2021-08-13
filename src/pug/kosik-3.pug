@@ -36,7 +36,7 @@ html(lang=lang)
                         .col-12.col-lg-8
                             .cart-table
 
-                                form.cart-content__form(method="post" id="cart-form-user")
+                                form.cart-content__form(method="post" id="cart-form")
 
                                     .cart-table__title Vyplňte osobní údaje
                                     .cart-table-personal
@@ -123,17 +123,11 @@ html(lang=lang)
                                             .form-collapse
 
                                                 .form-group     
-                                                    label(for="cart-register-username") Uživatelské jméno
-                                                    input(type="text" id="cart-register-username" name="cart-register-username")
-
-                                                .form-group     
-                                                    label(for="cart-register-password") Heslo
-                                                    | <input type="password" id="cart-register-password" name="cart-register-password" required pattrn="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
-
-                                                .form-group     
-                                                    label(for="cart-register-password-r") Heslo znovu
-                                                    | <input type="password" id="cart-register-password-r" name="cart-register-password-r" required pattrn="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
-
+                                                    label(for="cart-register-password") Heslo 
+                                                    | <input type="password" id="cart-register-password" name="cart-register-password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                                                    span.show-password(id="showCartRegisterPassword" aria-label="Zobrazit heslo")
+                                                    span.label-subtext (Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)
+        
 
                                         .form-spacer 
 
@@ -181,12 +175,7 @@ html(lang=lang)
                                     .cart-aside__login-content 
                                         .cart-aside__login-title Už máte svůj účet?
                                         .cart-aside__login-text Zaregistrujte se, nebo se přihlaste pro jednodušší nákup.
-                                form.cart-aside__code(method="post")
-                                    .form-group 
-                                        label(for="code") Mám slevový kód
-                                        input(type="text" id="code" name="code" required)
-                                        button.btn Použít
-                                
+
                                 button.btn.--cart(name="nextstep" form="cart-form") Souhrn objednávky #[img(src="/img/icons/cheveron-white.svg" alt="Pokračovat")]
 
 

@@ -75,9 +75,7 @@ if (cart.length>0){
     if(document.getElementById('cart-form-user')){
 
         document.getElementById('regToggle').onclick = function() {
-            document.getElementById("cart-register-username").toggleAttribute("required");
             document.getElementById("cart-register-password").toggleAttribute("required");
-            document.getElementById("cart-register-password-r").toggleAttribute("required");
         }
         document.getElementById('faToggle').onclick = function() {
             document.getElementById("cart-fa-company").toggleAttribute("required");
@@ -85,13 +83,6 @@ if (cart.length>0){
             document.getElementById("cart-fa-street").toggleAttribute("required");
             document.getElementById("cart-fa-city").toggleAttribute("required");
             document.getElementById("cart-fa-psc").toggleAttribute("required");
-            document.getElementById("cart-fa-state").toggleAttribute("required");
-        }
-        document.getElementById('daToggle').onclick = function() {
-            document.getElementById("cart-da-name").toggleAttribute("required");
-            document.getElementById("cart-da-street").toggleAttribute("required");
-            document.getElementById("cart-da-city").toggleAttribute("required");
-            document.getElementById("cart-da-psc").toggleAttribute("required");
             document.getElementById("cart-fa-state").toggleAttribute("required");
         }
     

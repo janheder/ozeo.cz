@@ -356,3 +356,16 @@ if(document.getElementById('showRegisterPassword')
         }
     }
 }
+
+if(document.getElementById('showCartRegisterPassword')
+){
+    document.getElementById('showCartRegisterPassword').onclick = function() {
+        var x = document.getElementById('cart-register-password');
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+}
+

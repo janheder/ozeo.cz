@@ -202,7 +202,7 @@
           <div class="row"> 
             <div class="col-12 col-lg-8">
               <div class="cart-table">
-                <form class="cart-content__form" method="post" id="cart-form-user">
+                <form class="cart-content__form" method="post" id="cart-form">
                   <div class="cart-table__title">Vyplňte osobní údaje</div>
                   <div class="cart-table-personal">
                     <div class="form-group">    
@@ -291,14 +291,7 @@
                       <input type="checkbox" name="cart-register" id="cart-register">
                       <div class="form-collapse">
                         <div class="form-group">    
-                          <label for="cart-register-username">Uživatelské jméno</label>
-                          <input type="text" id="cart-register-username" name="cart-register-username">
-                        </div>
-                        <div class="form-group">    
-                          <label for="cart-register-password">Heslo</label><input type="password" id="cart-register-password" name="cart-register-password" required pattrn="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
-                        </div>
-                        <div class="form-group">    
-                          <label for="cart-register-password-r">Heslo znovu</label><input type="password" id="cart-register-password-r" name="cart-register-password-r" required pattrn="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                          <label for="cart-register-password">Heslo </label><input type="password" id="cart-register-password" name="cart-register-password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"><span class="show-password" id="showCartRegisterPassword" aria-label="Zobrazit heslo"></span><span class="label-subtext">(Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)</span>
                         </div>
                       </div>
                     </div>
@@ -342,13 +335,6 @@
                     <div class="cart-aside__login-text">Zaregistrujte se, nebo se přihlaste pro jednodušší nákup.</div>
                   </div>
                 </div>
-                <form class="cart-aside__code" method="post">
-                  <div class="form-group"> 
-                    <label for="code">Mám slevový kód</label>
-                    <input type="text" id="code" name="code" required>
-                    <button class="btn">Použít</button>
-                  </div>
-                </form>
                 <button class="btn --cart" name="nextstep" form="cart-form">Souhrn objednávky <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></button>
               </aside>
             </div>
