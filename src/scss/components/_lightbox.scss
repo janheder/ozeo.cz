@@ -22,6 +22,10 @@
 
 .lightbox img{
     max-width: 90%;
+    width: 1000px;
+    height: 600px;
+    max-height: 90%;
+    object-fit: contain;
 }
 
 /* Close lightbox "x" icon */
