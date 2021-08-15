@@ -8,6 +8,7 @@
     bottom: 0;
     z-index: -1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.15s ease-in;
@@ -23,11 +24,20 @@
 .lightbox img{
     max-width: 90%;
     width: 1000px;
-    height: 600px;
+    height: auto;
     max-height: 90%;
     object-fit: contain;
+    background: $white;
 }
-
+.lightbox span{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    color: $white;
+    max-width: 90%;
+    width: 1000px;
+    padding-top: 10px;
+}
 /* Close lightbox "x" icon */
 
 .lightbox .close-lightbox{

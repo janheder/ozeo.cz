@@ -31,6 +31,9 @@
 .product-detail__carouselLink img{
     max-height: 100%;
 }
+.product-detail__carouselLink span{
+    display: none;
+}
 .product-detail__thumbs{
     display: flex;
     margin: 0 -10px;

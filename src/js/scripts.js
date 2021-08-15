@@ -197,8 +197,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const imageWrapper = e.target.closest('.product-detail__carouselLink');
                 if (imageWrapper) {
                     const image = imageWrapper.querySelector('img');
+                    const imagetitle = imageWrapper.querySelector('span');
                     if (image) {
-                        $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML;
+                        $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML + imagetitle.outerHTML;
                         $lightbox.classList.add('show');
                     }
                 }
