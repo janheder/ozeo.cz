@@ -141,13 +141,13 @@ html(lang=lang)
                                             small včetně DPH
 
 
-                                .cart-aside__free-shipping Nakupte ještě za 6 237 Kč a máte dopravu zdarma
+                                .cart-aside__free-shipping(id="cartFreeShipping" data-price="5000") Nakupte ještě za 3000 Kč a máte dopravu zdarma
                                 .cart-aside__login 
                                     .cart-aside__login-icon 
                                         img(src="/img/icons/user.svg" alt="Už máte svůj účet?")
                                     .cart-aside__login-content 
                                         .cart-aside__login-title Už máte svůj účet?
-                                        .cart-aside__login-text Zaregistrujte se, nebo se přihlaste pro jednodušší nákup.
+                                        .cart-aside__login-text #[a(href="#") Zaregistrujte se], nebo #[a(href="#" data-micromodal-trigger="modal-login") se přihlaste] pro jednodušší nákup.
                                 form.cart-aside__code(method="post")
                                     .form-group 
                                         label(for="code") Mám slevový kód

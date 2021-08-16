@@ -12,6 +12,8 @@ if (cart.length>0){
         let price = parseFloat(row.querySelector('.cart-item-price-pc span').innerText.replace(/,/g, '.')); 
 
 
+
+
         let calcEvent = function() {
 
             if (this.value > 0) {
@@ -32,6 +34,17 @@ if (cart.length>0){
             document.getElementById('sumprice').innerText = result2_f;
             
 
+            let shipping = document.getElementById('cartFreeShipping');
+            let shippingTreshold = parseFloat(shipping.dataset.price);
+            let goodsPrice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
+            let shippingLeft = shippingTreshold - goodsPrice;
+            if(shippingLeft <= 0){
+                shipping.innerHTML = "Dopravu máte zdarma";
+            }else{
+                shipping.innerHTML = "Nakupte ještě za " + shippingLeft + " Kč a máte dopravu zdarma";
+            }
+        
+
         };
         
 
@@ -41,11 +54,14 @@ if (cart.length>0){
 
     let inputs = document.querySelectorAll('.cart-item-stepper .num_items');
 
-
     for (let i = 0; i < inputs.length; i++) {
         let input = inputs[i];
         addInputListener(input);
     }
+
+
+
+
 
 
 
