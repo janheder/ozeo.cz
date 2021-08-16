@@ -83,8 +83,7 @@ if (cart.length>0){
         var pricecart2 = deliveryprice +  parseInt(productprice)
         document.getElementById('sumprice').innerText = pricecart2;
 
-        var dph = document.getElementById('dphprice').dataset.dph;
-        document.getElementById('dphprice').innerText = Math.round(pricecart2 * (1 - dph));
+
 
     };
 
