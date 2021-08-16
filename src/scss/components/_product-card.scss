@@ -111,6 +111,9 @@
     text-transform: uppercase;
     padding-left: 6px;
 }
+.product-card__deliveryText.--unavailable{
+    color: $gray-500;
+}
 .product-card__price{
     display: flex;
     flex-direction: row;
