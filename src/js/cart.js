@@ -52,12 +52,17 @@ if (cart.length>0){
         calcEvent.call(input); 
     }
 
-    let inputs = document.querySelectorAll('.cart-item-stepper .num_items');
+    function recountCart(){
+        let inputs = document.querySelectorAll('.cart-item-stepper .num_items');
 
-    for (let i = 0; i < inputs.length; i++) {
-        let input = inputs[i];
-        addInputListener(input);
+        for (let i = 0; i < inputs.length; i++) {
+            let input = inputs[i];
+            addInputListener(input);
+        }
+    
     }
+    recountCart();
+
 
 
 
