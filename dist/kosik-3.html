@@ -202,7 +202,7 @@
           <div class="row"> 
             <div class="col-12 col-lg-8">
               <div class="cart-table">
-                <form class="cart-content__form" method="post" id="cart-form">
+                <form class="cart-content__form" method="post" id="cart-form-user">
                   <div class="cart-table__title">Vyplňte osobní údaje</div>
                   <div class="cart-table-personal">
                     <div class="form-group">    
@@ -291,7 +291,7 @@
                       <input type="checkbox" name="cart-register" id="cart-register">
                       <div class="form-collapse">
                         <div class="form-group">    
-                          <label for="cart-register-password">Heslo </label><input type="password" id="cart-register-password" name="cart-register-password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"><span class="show-password" id="showCartRegisterPassword" aria-label="Zobrazit heslo"></span><span class="label-subtext">(Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)</span>
+                          <label for="cart-register-password">Heslo </label><input type="password" id="cart-register-password" name="cart-register-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"><span class="show-password" id="showCartRegisterPassword" aria-label="Zobrazit heslo"></span><span class="label-subtext">(Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)</span>
                         </div>
                       </div>
                     </div>
@@ -335,7 +335,7 @@
                     <div class="cart-aside__login-text"><a href="#">Zaregistrujte se</a>, nebo <a href="#" data-micromodal-trigger="modal-login">se přihlaste</a> pro jednodušší nákup.</div>
                   </div>
                 </div>
-                <button class="btn --cart" name="nextstep" form="cart-form">Souhrn objednávky <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></button>
+                <button class="btn --cart" name="nextstep" form="cart-form-user">Souhrn objednávky <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></button>
               </aside>
             </div>
           </div>

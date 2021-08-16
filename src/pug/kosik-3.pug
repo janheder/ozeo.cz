@@ -36,7 +36,7 @@ html(lang=lang)
                         .col-12.col-lg-8
                             .cart-table
 
-                                form.cart-content__form(method="post" id="cart-form")
+                                form.cart-content__form(method="post" id="cart-form-user")
 
                                     .cart-table__title Vyplňte osobní údaje
                                     .cart-table-personal
@@ -124,7 +124,7 @@ html(lang=lang)
 
                                                 .form-group     
                                                     label(for="cart-register-password") Heslo 
-                                                    | <input type="password" id="cart-register-password" name="cart-register-password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                                                    | <input type="password" id="cart-register-password" name="cart-register-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
                                                     span.show-password(id="showCartRegisterPassword" aria-label="Zobrazit heslo")
                                                     span.label-subtext (Minimum 8 znaků, musí obsahovat velké a malé písmena a alespoň 1 číslo)
         
@@ -176,7 +176,7 @@ html(lang=lang)
                                         .cart-aside__login-title Už máte svůj účet?
                                         .cart-aside__login-text #[a(href="#") Zaregistrujte se], nebo #[a(href="#" data-micromodal-trigger="modal-login") se přihlaste] pro jednodušší nákup.
 
-                                button.btn.--cart(name="nextstep" form="cart-form") Souhrn objednávky #[img(src="/img/icons/cheveron-white.svg" alt="Pokračovat")]
+                                button.btn.--cart(name="nextstep" form="cart-form-user") Souhrn objednávky #[img(src="/img/icons/cheveron-white.svg" alt="Pokračovat")]
 
 
 

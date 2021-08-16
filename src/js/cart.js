@@ -23,15 +23,44 @@ if (cart.length>0){
             }
 
 
+            var codePriceN = 0;
+
+            const codePrice =  parseFloat(document.getElementById('codePrice').innerText);
+
+            if (codePrice){
+              codePriceN = codePrice;
+            }else{
+               codePriceN = 0;
+            }
+
+
             const pricegoods = document.querySelectorAll('.cart-item-price span ');
             const result = Array.from(pricegoods).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
-            const result_f = result.toString().replace(/\./g, ',');
-            document.getElementById('goodsprice').innerText = result_f;
+
+            if (document.getElementById('codePriceWrap').innerHTML.indexOf("%") != -1) { 
+                codePriceNN = codePriceN*(-0.01);
+                const result_f = (result-(result*codePriceNN)).toString().replace(/\./g, ',');
+                document.getElementById('goodsprice').innerText = result_f;
+            }else{
+                const result_f = (result+codePriceN).toString().replace(/\./g, ',');
+                document.getElementById('goodsprice').innerText = result_f;
+            }
+            
+            
 
             const pricesum = document.querySelectorAll('.cart-item-price span, #delprice');
             const result2 = Array.from(pricesum).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
-            const result2_f = result2.toString().replace(/\./g, ',');
-            document.getElementById('sumprice').innerText = result2_f;
+
+            if (document.getElementById('codePriceWrap').innerHTML.indexOf("%") != -1) { 
+                codePriceNN = codePriceN*(-0.01);
+                const result2_f = (result2-(result*codePriceNN)).toString().replace(/\./g, ',');
+                document.getElementById('sumprice').innerText = result2_f;
+            }else{
+                const result2_f = (result2+codePriceN).toString().replace(/\./g, ',');
+                document.getElementById('sumprice').innerText = result2_f;
+            }
+
+     
             
 
             let shipping = document.getElementById('cartFreeShipping');
@@ -71,10 +100,10 @@ if (cart.length>0){
 
 
     /* CART 2 */
-
+    function recountDeliveryCart(){
     var elms = document.querySelectorAll('.cart-table-shipping-item');
 
-    var cart2 = function() {
+    function deliveryCart() {
         const pricedel = document.querySelectorAll('.cart-table-shipping-item input:checked ~ .cart-table-shipping-price span');
         const deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
         document.getElementById('delprice').innerText = deliveryprice;
@@ -88,8 +117,11 @@ if (cart.length>0){
     };
 
     for (var ia = 0; ia < elms.length; ia++) {
-        elms[ia].addEventListener('click', cart2, false);
+        elms[ia].addEventListener('click', deliveryCart, false);
     }
+    }
+    recountDeliveryCart();
+
 
     /* CART 3 */
     if(document.getElementById('cart-form-user')){
@@ -107,6 +139,11 @@ if (cart.length>0){
         }
     
     }
+
+
+
+
+
 
 
 
