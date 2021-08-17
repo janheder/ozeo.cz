@@ -64,11 +64,11 @@ if (cart.length>0){
                 }else{
                    
                     const salePer = document.getElementById('codePrice').dataset.percentage;
-                    document.getElementById('codePrice').innerHTML = result2*salePer;
+                    document.getElementById('codePrice').innerHTML = parseInt(result2*salePer);
 
                     const x = result2 - (result2*salePer);
               
-                    const result2_f = (x).toString().replace(/\./g, ',');
+                    const result2_f = parseInt(x);
                     document.getElementById('sumprice').innerText = result2_f;
 
                 }
