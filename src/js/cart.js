@@ -56,8 +56,23 @@ if (cart.length>0){
                 const result2_f = (result2-(result*codePriceNN)).toString().replace(/\./g, ',');
                 document.getElementById('sumprice').innerText = result2_f;
             }else{
-                const result2_f = (result2+codePriceN).toString().replace(/\./g, ',');
-                document.getElementById('sumprice').innerText = result2_f;
+                if(document.getElementById('codePrice').getAttribute("data-percentage") === null){
+               
+                    const result2_f = (result2+codePriceN).toString().replace(/\./g, ',');
+                    document.getElementById('sumprice').innerText = result2_f;
+
+                }else{
+                   
+                    const salePer = document.getElementById('codePrice').dataset.percentage;
+                    document.getElementById('codePrice').innerHTML = result2*salePer;
+
+                    const x = result2 - (result2*salePer);
+              
+                    const result2_f = (x).toString().replace(/\./g, ',');
+                    document.getElementById('sumprice').innerText = result2_f;
+
+                }
+
             }
 
      
