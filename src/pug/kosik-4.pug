@@ -80,7 +80,7 @@ html(lang=lang)
                             table.cart-summary__table
                                 thead 
                                     tr 
-                                        th Dodací adresa
+                                        th Osobní údaje
                                         th
                                 tbody 
 
@@ -91,15 +91,6 @@ html(lang=lang)
                                         td Příjmení
                                         td test
                                     tr  
-                                        td Ulice, č. p.
-                                        td test 123
-                                    tr  
-                                        td Město
-                                        td test
-                                    tr  
-                                        td PSČ
-                                        td 190 00
-                                    tr  
                                         td Telefon
                                         td 123 456 789
                                     tr  
@@ -109,7 +100,7 @@ html(lang=lang)
                             table.cart-summary__table
                                 thead 
                                     tr
-                                        th Fakturační adresa
+                                        th Dodací adresa
                                         th
                                 tbody 
                                     
@@ -128,13 +119,35 @@ html(lang=lang)
                                     tr  
                                         td PSČ
                                         td 190 00
-                                    tr  
-                                        td Telefon
-                                        td 123 456 789
-                                    tr  
-                                        td E-mail   
-                                        td test@test.cz
 
+
+                            table.cart-summary__table
+                                thead 
+                                    tr
+                                        th Fakturační adresa
+                                        th
+                                tbody 
+                                    
+                                    tr  
+                                        td Název firmy
+                                        td test
+                                    tr  
+                                        td IČO
+                                        td test
+                                    tr  
+                                        td DIČ
+                                        td test
+                                    tr  
+                                        td Ulice, č. p.
+                                        td test 123
+                                    tr  
+                                        td Město
+                                        td test
+                                    tr  
+                                        td PSČ
+                                        td 190 00
+
+                                        
                             .form-group     
                                 label(for="order-text") Poznámka k objednávce
                                 textarea(type="text" id="order-text" name="order-text" rows="4" required)
