@@ -42,9 +42,9 @@ if (cart.length>0){
 
             if (document.getElementById('codePrice')){
 
-                if(document.getElementById('codePrice').getAttribute("data-percentage") === null){
+                if(document.getElementById('codePrice').getAttribute("data-percentage") == undefined){
                
-                    const result_f = (result+codePriceN).toString().replace(/\./g, ',');
+                    const result_f = (result-codePriceN).toString().replace(/\./g, ',');
                     document.getElementById('goodsprice').innerText = result_f;
 
                 }else{
@@ -73,7 +73,7 @@ if (cart.length>0){
             if (document.getElementById('codePrice')){
                 if(document.getElementById('codePrice').getAttribute("data-percentage") === null){
                
-                    const result2_f = (result2+codePriceN).toString().replace(/\./g, ',');
+                    const result2_f = (result2-codePriceN).toString().replace(/\./g, ',');
                     document.getElementById('sumprice').innerText = result2_f;
 
                 }else{
