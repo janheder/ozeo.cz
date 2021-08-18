@@ -162,6 +162,7 @@ if (cart.length>0){
 
         document.getElementById('regToggle').onclick = function() {
             document.getElementById("cart-register-password").toggleAttribute("required");
+            document.getElementById("cart-register-password").toggleAttribute("disabled");
         }
         document.getElementById('faToggle').onclick = function() {
             document.getElementById("cart-fa-company").toggleAttribute("required");
