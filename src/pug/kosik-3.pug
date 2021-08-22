@@ -5,6 +5,7 @@ html(lang=lang)
     include template/_head.pug  
     body.cart
         include components/_modal-login.pug
+        include components/_modal-personal.pug
 
         include components/_header.pug
 
@@ -132,11 +133,11 @@ html(lang=lang)
                                         .form-spacer 
 
                                         .form-group
-                                            label Vložením údajů beru na vědomí #[a(href="#") zpracování osobních údajů]
+                                            label Vložením údajů beru na vědomí #[a(data-micromodal-trigger="modal-personal") zpracování osobních údajů]
                           
 
                                         .form-group.--checkbox
-                                            label(for="register-agree1") Chci odebírat newsletter a souhlasím se #[a(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.
+                                            label(for="register-agree1") Chci odebírat newsletter a souhlasím se #[a(data-micromodal-trigger="modal-personal") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.
                                             input(type="checkbox" name="register-agree1" id="register-agree1")
 
 

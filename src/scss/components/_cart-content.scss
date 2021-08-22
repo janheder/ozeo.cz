@@ -244,6 +244,16 @@
 }
 .cart-table-shipping-img{
     padding-left: 30px;
+    height: 24px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        max-height: 100%;
+        width: auto;
+    }
 }
 .cart-table-shipping-text{
     flex-grow: 1;
@@ -531,6 +541,7 @@
 }
 .cart-empty__title{
     padding: 40px 0 5px 0;
+    text-align: center;
 }
 .cart-empty__text{
     max-width: 380px;

@@ -52,6 +52,10 @@ button{
 .form-group label{
     padding-bottom: 2px;
 }
+.form-group label a[data-micromodal-trigger]{
+    color: $green-500;
+    cursor: pointer;
+}
 .form-group .label-subtext{
     font-size: 14px;
     color: $gray-500;

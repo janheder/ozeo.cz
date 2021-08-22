@@ -159,18 +159,16 @@ if (cart.length>0){
 
     /* CART 3 */
     if(document.getElementById('cart-form-user')){
-
-        document.getElementById('regToggle').onclick = function() {
-            document.getElementById("cart-register-password").toggleAttribute("required");
-            document.getElementById("cart-register-password").toggleAttribute("disabled");
+        function toggleReg() {
+            document.getElementById("cart-register-password").toggleAttribute("required"),
+            document.getElementById("cart-register-password").toggleAttribute("disabled")
         }
-        document.getElementById('faToggle').onclick = function() {
-            document.getElementById("cart-fa-company").toggleAttribute("required");
-            document.getElementById("cart-fa-ico").toggleAttribute("required");
-            document.getElementById("cart-fa-street").toggleAttribute("required");
-            document.getElementById("cart-fa-city").toggleAttribute("required");
-            document.getElementById("cart-fa-psc").toggleAttribute("required");
-            document.getElementById("cart-fa-state").toggleAttribute("required");
+        document.getElementById("cart-register").onclick = function() {
+            toggleReg();
+        }
+        document.getElementById("cart-fa-address").onclick = function() {
+            for (var e = document.querySelectorAll("#cart-fa-address + div input:not(#dic, #fakturacni_jmeno)"), t = 0; t < e.length; ++t)
+                e[t].toggleAttribute("required")
         }
     
     }
