@@ -172,81 +172,88 @@ document.addEventListener('DOMContentLoaded', function() {
 // -----------------------------------------------------------------------------
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    var carousel = document.getElementsByClassName('product-detail__carousel');
-
-    if (carousel.length > 0){
 
 
-        const $imagesContainer = document.getElementById('product-carousel');
-        const $lightbox = document.getElementById('lightbox');
-     
-        const delta = 6;
-        let startX;
-        let startY;
+    document.addEventListener("DOMContentLoaded", () => {
 
-        $imagesContainer.addEventListener('mousedown', (event) => {
-            startX = event.pageX;
-            startY = event.pageY;
-        });
-        $imagesContainer.addEventListener('mouseup', e => {
-            const diffX = Math.abs(event.pageX - startX);
-            const diffY = Math.abs(event.pageY - startY);
-            if (diffX < delta && diffY < delta) {
-                const imageWrapper = e.target.closest('.product-detail__carouselLink');
-                if (imageWrapper) {
-                    const image = imageWrapper.querySelector('img');
-                    const imagetitle = imageWrapper.querySelector('span');
-                    if (image) {
-                        $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML + imagetitle.outerHTML;
-                        $lightbox.classList.add('show');
+        var carousel = document.getElementsByClassName('product-detail__carousel');
+
+        if (carousel.length > 0){
+
+
+            const $imagesContainer = document.getElementById('product-carousel');
+            const $lightbox = document.getElementById('lightbox');
+        
+            const delta = 6;
+            let startX;
+            let startY;
+
+            $imagesContainer.addEventListener('mousedown', (event) => {
+                startX = event.pageX;
+                startY = event.pageY;
+            });
+            $imagesContainer.addEventListener('mouseup', e => {
+                const diffX = Math.abs(event.pageX - startX);
+                const diffY = Math.abs(event.pageY - startY);
+                if (diffX < delta && diffY < delta) {
+                    const imageWrapper = e.target.closest('.product-detail__carouselLink');
+                    if (imageWrapper) {
+                        const image = imageWrapper.querySelector('img');
+                        const imagetitle = imageWrapper.querySelector('span');
+                        if (image) {
+                            $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML + imagetitle.outerHTML;
+                            $lightbox.classList.add('show');
+                        }
+                    }
+                } else {
+                    // pause
+                }
+        
+            });
+        
+            $lightbox.addEventListener('click', (e) => {
+                if (!e.target.hasAttribute('src')) {
+                    $lightbox.classList.remove('show');
+                }
+            });
+
+
+            var multiCarousel = document.getElementsByClassName('product-detail__thumbs');
+
+
+                if (multiCarousel.length > 0){
+                const thumbCarousel = new Siema({
+                    selector: '.product-detail__carousel',
+                    duration: 200,
+                    easing: 'ease-out',
+                    perPage: 1,
+                    startIndex: 0,
+                    draggable: true,
+                    multipleDrag: true,
+                    threshold: 20,
+                    loop: true,
+                    rtl: false,
+                    onInit: () => {},
+                    onChange: () => {},
+                });
+            
+                document.querySelector('.prev').addEventListener('click', () => thumbCarousel.prev());
+                document.querySelector('.next').addEventListener('click', () => thumbCarousel.next());
+
+                // Add a function that generates pagination to prototype
+                Siema.prototype.addPagination = function() {
+                    for (let i = 0; i < this.innerElements.length; i++) {
+                        const thumb = document.getElementById("thumb" + i);
+                        thumb.addEventListener('click', () => this.goTo(i));
                     }
                 }
-              } else {
-                // pause
-              }
-    
-        });
-    
-        $lightbox.addEventListener('click', (e) => {
-            if (!e.target.hasAttribute('src')) {
-                $lightbox.classList.remove('show');
-            }
-        });
+                
+                thumbCarousel.addPagination();
 
-
-      
-        const thumbCarousel = new Siema({
-            selector: '.product-detail__carousel',
-            duration: 200,
-            easing: 'ease-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: true,
-            multipleDrag: true,
-            threshold: 20,
-            loop: true,
-            rtl: false,
-            onInit: () => {},
-            onChange: () => {},
-        });
-    
-        document.querySelector('.prev').addEventListener('click', () => thumbCarousel.prev());
-        document.querySelector('.next').addEventListener('click', () => thumbCarousel.next());
-
-        // Add a function that generates pagination to prototype
-        Siema.prototype.addPagination = function() {
-            for (let i = 0; i < this.innerElements.length; i++) {
-                const thumb = document.getElementById("thumb" + i);
-                thumb.addEventListener('click', () => this.goTo(i));
             }
         }
-        
-        thumbCarousel.addPagination();
+    });
 
-    }
-});
 
 
 // -----------------------------------------------------------------------------

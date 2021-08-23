@@ -11,7 +11,12 @@
 .product-detail__photos .prev, .product-detail__photos .next{
     display: none;
 }
-
+.product-detail__carousel > .product-detail__carouselItem{
+    display: none;
+}
+.product-detail__carousel > .product-detail__carouselItem:first-child{
+    display: flex;
+}
 .product-detail__carouselItem{
     position: relative;
     padding-bottom: 80%;
