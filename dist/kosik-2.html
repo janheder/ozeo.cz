@@ -98,23 +98,22 @@
               <h2 class="modal__title" id="modal-delivery-title">Balík na poštu</h2>
               <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </div>
-            <iframe src="/stranky/balik.php?doprava=30|90" width="100%" height="500"></iframe>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          MicroModal.show('modal-delivery',{
-              openClass: 'is-open', 
-              disableScroll: true, 
-              disableFocus: true, 
-              awaitOpenAnimation: true,
-              awaitCloseAnimation: true, 
-              debugMode: false 
-          }); 
-      });
-    </script>
+    <div class="modal micromodal-slide" id="modal-delivery2">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-labelledby="modal-delivery2-title">
+          <div class="modal__content" id="modal-delivery2-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-delivery2-title">Balík do ruky</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="header-top">
         <div class="container"> 
@@ -230,20 +229,20 @@
                 <form class="cart-content__form" method="post" id="cart-form">
                   <div class="cart-table__title">Způsob dopravy</div>
                   <div class="cart-table-shipping">
-                    <label class="cart-table-shipping-item" for="delivery-1">
+                    <label class="cart-table-shipping-item" for="delivery-1" onclick="MicroModal.show('modal-delivery');">
                       <input type="radio" id="delivery-1" name="delivery-1" required>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
-                      <div class="cart-table-shipping-text">Česká pošta - Balík do ruky <small>Doba dodání 2-4 dny</small></div>
+                      <div class="cart-table-shipping-text">Česká pošta - Balík do ruky <small>Doba dodání 2-4 dny</small> <span>Vybraná pobočka: Praha 1</span></div>
                       <div class="cart-table-shipping-price"><span>99</span> Kč</div>
                     </label>
-                    <label class="cart-table-shipping-item" for="delivery-2">
-                      <input type="radio" id="delivery-2" name="delivery-1" required disabled>
+                    <label class="cart-table-shipping-item" for="delivery-2" onclick="MicroModal.show('modal-delivery2');">
+                      <input type="radio" id="delivery-2" name="delivery-1" required>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
                       <div class="cart-table-shipping-text">Česká pošta - Balík do ruky</div>
                       <div class="cart-table-shipping-price"><span>99</span> Kč</div>
                     </label>
                     <label class="cart-table-shipping-item" for="delivery-3">
-                      <input type="radio" id="delivery-3" name="delivery-1" required>
+                      <input type="radio" id="delivery-3" name="delivery-1" required disabled>
                       <div class="cart-table-shipping-img"><img src="/img/ceska-posta.png" alt="Česká pošta - Balík do ruky"></div>
                       <div class="cart-table-shipping-text">Česká pošta - Balík do ruky</div>
                       <div class="cart-table-shipping-price --free"><span>0</span> Kč</div>

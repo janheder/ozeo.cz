@@ -260,6 +260,18 @@
     display: flex;
     flex-direction: column;
     padding-left: 30px;
+    align-items: flex-start;
+}
+.cart-table-shipping-text small{
+    color: $gray-500;
+    font-size: 14px;
+}
+.cart-table-shipping-text span{
+    color: $white;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: $green-500;
 }
 .cart-table-shipping-price{
     padding-left: 20px;
