@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var homecarousel = document.getElementById('homecarousel');
 
     if (homecarousel){
-        const indexCarousel = new Siema({
+        let indexCarousel = new Siema({
             selector: '#homecarousel',
             duration: 200,
             easing: 'ease-out',
@@ -181,10 +181,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (carousel.length > 0){
 
 
-            const $imagesContainer = document.getElementById('product-carousel');
-            const $lightbox = document.getElementById('lightbox');
+            let $imagesContainer = document.getElementById('product-carousel');
+            let $lightbox = document.getElementById('lightbox');
         
-            const delta = 6;
+            let delta = 6;
             let startX;
             let startY;
 
@@ -193,13 +193,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 startY = event.pageY;
             });
             $imagesContainer.addEventListener('mouseup', e => {
-                const diffX = Math.abs(event.pageX - startX);
-                const diffY = Math.abs(event.pageY - startY);
+                let diffX = Math.abs(event.pageX - startX);
+                let diffY = Math.abs(event.pageY - startY);
                 if (diffX < delta && diffY < delta) {
-                    const imageWrapper = e.target.closest('.product-detail__carouselLink');
+                    let imageWrapper = e.target.closest('.product-detail__carouselLink');
                     if (imageWrapper) {
-                        const image = imageWrapper.querySelector('img');
-                        const imagetitle = imageWrapper.querySelector('span');
+                        let image = imageWrapper.querySelector('img');
+                        let imagetitle = imageWrapper.querySelector('span');
                         if (image) {
                             $lightbox.innerHTML = '<div class="close-lightbox"></div>' + image.outerHTML + imagetitle.outerHTML;
                             $lightbox.classList.add('show');
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
                 if (multiCarousel.length > 0){
-                const thumbCarousel = new Siema({
+                let thumbCarousel = new Siema({
                     selector: '.product-detail__carousel',
                     duration: 200,
                     easing: 'ease-out',
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add a function that generates pagination to prototype
                 Siema.prototype.addPagination = function() {
                     for (let i = 0; i < this.innerElements.length; i++) {
-                        const thumb = document.getElementById("thumb" + i);
+                        let thumb = document.getElementById("thumb" + i);
                         thumb.addEventListener('click', () => this.goTo(i));
                     }
                 }

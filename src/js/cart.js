@@ -2,6 +2,8 @@ var cart = document.getElementsByClassName('cart-content');
 if (cart.length>0){
 
 
+
+
     /* CART 1 */
 
     function addInputListener(input) {
@@ -28,15 +30,15 @@ if (cart.length>0){
 
 
             if (document.getElementById('codePrice')){
-                const codePrice =  parseFloat(document.getElementById('codePrice').innerText);
+                let codePrice =  parseFloat(document.getElementById('codePrice').innerText);
                 codePriceN = codePrice;
             }else{
                codePriceN = 0;
             }
 
 
-            const pricegoods = document.querySelectorAll('.cart-item-price span ');
-            const result = Array.from(pricegoods).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
+            let pricegoods = document.querySelectorAll('.cart-item-price span ');
+            let result = Array.from(pricegoods).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
 
 
 
@@ -44,51 +46,51 @@ if (cart.length>0){
 
                 if(document.getElementById('codePrice').getAttribute("data-percentage") == undefined){
                
-                    const result_f = (result-codePriceN).toString().replace(/\./g, ',');
+                    let result_f = (result-codePriceN).toString().replace(/\./g, ',');
                     document.getElementById('goodsprice').innerText = result_f;
 
                 }else{
                    
-                    const salePer = document.getElementById('codePrice').dataset.percentage;
+                    let salePer = document.getElementById('codePrice').dataset.percentage;
                     document.getElementById('codePrice').innerHTML = parseInt(result*salePer);
 
-                    const x = result - (result*salePer);
+                    let x = result - (result*salePer);
               
-                    const result_f = parseInt(x);
+                    let result_f = parseInt(x);
                     document.getElementById('goodsprice').innerText = result_f;
 
                 }
 
             }else{
-                const result_f = result.toString().replace(/\./g, ',');
+                let result_f = result.toString().replace(/\./g, ',');
                 document.getElementById('goodsprice').innerText = result_f;
             }
             
             
             
 
-            const pricesum = document.querySelectorAll('.cart-item-price span, #delprice');
-            const result2 = Array.from(pricesum).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
+            let pricesum = document.querySelectorAll('.cart-item-price span, #delprice');
+            let result2 = Array.from(pricesum).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
 
             if (document.getElementById('codePrice')){
                 if(document.getElementById('codePrice').getAttribute("data-percentage") === null){
                
-                    const result2_f = (result2-codePriceN).toString().replace(/\./g, ',');
+                    let result2_f = (result2-codePriceN).toString().replace(/\./g, ',');
                     document.getElementById('sumprice').innerText = result2_f;
 
                 }else{
                    
-                    const salePer = document.getElementById('codePrice').dataset.percentage;
+                    let salePer = document.getElementById('codePrice').dataset.percentage;
                     document.getElementById('codePrice').innerHTML = parseInt(result2*salePer);
 
-                    const x = result2 - (result2*salePer);
+                    let x = result2 - (result2*salePer);
               
-                    const result2_f = parseInt(x);
+                    let result2_f = parseInt(x);
                     document.getElementById('sumprice').innerText = result2_f;
 
                 }
             }else{
-                const result2_f = result2.toString().replace(/\./g, ',');
+                let result2_f = result2.toString().replace(/\./g, ',');
                 document.getElementById('sumprice').innerText = result2_f;
             }
             
@@ -134,12 +136,14 @@ if (cart.length>0){
 
 
     /* CART 2 */
+    
+
     function recountDeliveryCart(){
     var elms = document.querySelectorAll('.cart-table-shipping-item');
 
     function deliveryCart() {
-        const pricedel = document.querySelectorAll('.cart-table-shipping-item input:checked ~ .cart-table-shipping-price span');
-        const deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
+        let pricedel = document.querySelectorAll('.cart-table-shipping-item input:checked ~ .cart-table-shipping-price span');
+        let deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
         document.getElementById('delprice').innerText = deliveryprice;
 
         var productprice = document.getElementById('goodsprice').textContent;
@@ -155,6 +159,9 @@ if (cart.length>0){
     }
     }
     recountDeliveryCart();
+
+
+
 
 
     /* CART 3 */
