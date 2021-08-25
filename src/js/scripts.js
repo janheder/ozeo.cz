@@ -356,7 +356,7 @@ if(document.getElementById('showLoginPassword')
 if(document.getElementById('showRegisterPassword')
 ){
     document.getElementById('showRegisterPassword').onclick = function() {
-        var x = document.getElementById('register-password');
+        var x = document.getElementById('heslo');
         if (x.type === "password") {
             x.type = "text";
         } else {
