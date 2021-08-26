@@ -173,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
     document.addEventListener("DOMContentLoaded", () => {
 
         var carousel = document.getElementsByClassName('product-detail__carousel');
@@ -242,9 +241,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Add a function that generates pagination to prototype
                 Siema.prototype.addPagination = function() {
-                    for (let i = 0; i < this.innerElements.length; i++) {
-                        let thumb = document.getElementById("thumb" + i);
-                        thumb.addEventListener('click', () => this.goTo(i));
+                    for (let lop = 0; lop < this.innerElements.length; lop++) {
+                        let thumb = document.getElementById("thumb" + lop);
+                        thumb.addEventListener('click', () => this.goTo(lop));
                     }
                 }
                 
@@ -253,7 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-
 
 
 // -----------------------------------------------------------------------------

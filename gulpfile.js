@@ -5,7 +5,7 @@ const sassGlob = require('gulp-sass-glob');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const pug = require('gulp-pug-3');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const postcss = require('gulp-postcss');
 const autoprefixer= require('autoprefixer');
 
@@ -39,7 +39,7 @@ function buildhtml() {
 function scripts() {
     return gulp.src('./src/js/*.js')
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(uglify({mangle: false}))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());

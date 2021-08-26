@@ -269,6 +269,9 @@
 
 .product-detail__description {
     padding: 60px 0 0 0;
+    iframe{
+        max-width: 100%;
+    }
 }
 .product-detail__description h2{
     padding-bottom: 20px;

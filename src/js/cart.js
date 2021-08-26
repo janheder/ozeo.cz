@@ -185,6 +185,4 @@ if (cart.length>0){
 
 
 
-
-
 }
