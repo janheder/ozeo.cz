@@ -80,23 +80,24 @@ html(lang=lang)
 
 
                                         .form-group.--checkbox
-                                            label(for="cart-fa-address" id="faToggle") Vyplnit fakturační adresu (pokud je rozdílná od dodací adresy)
+                                            label(for="cart-fa-address" id="faToggle") Vyplnit fakturační adresu #[span (pokud je rozdílná od dodací adresy nebo nakupuji na firmu)]
                                             input(type="checkbox" name="cart-fa-address" id="cart-fa-address")
 
                                             .form-collapse
 
+
+                                                .form-group     
+                                                    label(for="cart-fa-name") Jméno a příjmení (nepovinné)
+                                                    input(type="text" id="cart-fa-name" name="cart-fa-name")
+
                                                 .form-group.--checkbox
-                                                    label(for="cart-fa-company" id="faComToggle") Nakupuji na firmu
+                                                    label(for="cart-fa-company" id="faComToggle") Jsme firma a potřebujeme uvést také obchodní informace
                                                     input(type="checkbox" name="cart-fa-address" id="cart-fa-company")
 
                                                     .form-collapse
 
                                                         .form-group     
-                                                            label(for="cart-fa-name") Jméno a příjmení (nepovinné)
-                                                            input(type="text" id="cart-fa-name" name="cart-fa-name")
-
-                                                        .form-group     
-                                                            label(for="fakturacni_jmeno") Název firmy (nepovinné)
+                                                            label(for="fakturacni_jmeno") Název firmy
                                                             input(type="text" id="fakturacni_jmeno" name="fakturacni_jmeno")
 
                                                         .form-group     
@@ -104,7 +105,7 @@ html(lang=lang)
                                                             input(type="text" id="cart-fa-ico" name="cart-fa-ico")
                                                             
                                                         .form-group     
-                                                            label(for="dic") DIČ (nepovinné)
+                                                            label(for="dic") DIČ
                                                             input(type="text" id="dic" name="dic")
 
 

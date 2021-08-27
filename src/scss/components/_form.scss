@@ -115,6 +115,9 @@ button{
     border: 1px solid $gray-300;
     display: block;
     cursor: pointer;
+    span{
+        color: $gray-500;
+    }
 }
 
 .form-group.--checkbox > input{

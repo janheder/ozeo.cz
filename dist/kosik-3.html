@@ -265,19 +265,19 @@
                     </div>
                     <div class="form-spacer"> </div>
                     <div class="form-group --checkbox">
-                      <label for="cart-fa-address" id="faToggle">Vyplnit fakturační adresu</label>
+                      <label for="cart-fa-address" id="faToggle">Vyplnit fakturační adresu <span>(pokud je rozdílná od dodací adresy nebo nakupuji na firmu)</span></label>
                       <input type="checkbox" name="cart-fa-address" id="cart-fa-address">
                       <div class="form-collapse">
+                        <div class="form-group">    
+                          <label for="cart-fa-name">Jméno a příjmení (nepovinné)</label>
+                          <input type="text" id="cart-fa-name" name="cart-fa-name">
+                        </div>
                         <div class="form-group --checkbox">
-                          <label for="cart-fa-company" id="faComToggle">Nakupuji na firmu</label>
+                          <label for="cart-fa-company" id="faComToggle">Jsme firma a potřebujeme uvést také obchodní informace</label>
                           <input type="checkbox" name="cart-fa-address" id="cart-fa-company">
                           <div class="form-collapse">
                             <div class="form-group">    
-                              <label for="cart-fa-name">Jméno a příjmení (nepovinné)</label>
-                              <input type="text" id="cart-fa-name" name="cart-fa-name">
-                            </div>
-                            <div class="form-group">    
-                              <label for="fakturacni_jmeno">Název firmy (nepovinné)</label>
+                              <label for="fakturacni_jmeno">Název firmy</label>
                               <input type="text" id="fakturacni_jmeno" name="fakturacni_jmeno">
                             </div>
                             <div class="form-group">    
@@ -285,7 +285,7 @@
                               <input type="text" id="cart-fa-ico" name="cart-fa-ico">
                             </div>
                             <div class="form-group">    
-                              <label for="dic">DIČ (nepovinné)</label>
+                              <label for="dic">DIČ</label>
                               <input type="text" id="dic" name="dic">
                             </div>
                           </div>
