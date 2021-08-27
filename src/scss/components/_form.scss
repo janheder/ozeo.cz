@@ -9,6 +9,7 @@ input, select{
     border: 1px solid $gray-300;
     font-size: 16px;
     background-color: $white;
+    color: $gray-900;
 
 }
 .form-group input{
@@ -160,4 +161,14 @@ button{
     font-weight: 500;
     width: 100%;
     max-width: 540px;
+}
+.form-alert{
+    width: 100%;
+    max-width: 540px;
+    margin-top: 20px; 
+    background: rgba($green-500,0.1);
+    padding: 5px 10px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: -20px;
 }
