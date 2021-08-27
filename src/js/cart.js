@@ -173,10 +173,13 @@ if (cart.length>0){
         document.getElementById("cart-register").onclick = function() {
             toggleReg();
         }
-        document.getElementById("cart-fa-address").onclick = function() {
-            for (var e = document.querySelectorAll("#cart-fa-address + div > .form-group:not(.--checkbox) > input"), t = 0; t < e.length; ++t)
-                e[t].toggleAttribute("required")
+        if(document.getElementById("cart-fa-address")){
+            document.getElementById("cart-fa-address").onclick = function() {
+                for (var e = document.querySelectorAll("#cart-fa-address + div > .form-group:not(.--checkbox) > input"), t = 0; t < e.length; ++t)
+                    e[t].toggleAttribute("required")
+            }
         }
+
         document.getElementById("cart-fa-company").onclick = function() {
             for (var e = document.querySelectorAll("#cart-fa-company + div input:not(#dic, #fakturacni_jmeno)"), t = 0; t < e.length; ++t)
                 e[t].toggleAttribute("required")

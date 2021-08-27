@@ -71,6 +71,13 @@ button{
     padding: 12px;
 }
 
+.form-group input:disabled, .form-group select:disabled{
+    border: 0;
+    padding-left: 0;
+    height: 48px;
+    background-image: none;
+  }
+
 .show-password{
     position: absolute;
     right: 10px;
