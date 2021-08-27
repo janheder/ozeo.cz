@@ -181,7 +181,7 @@ if (cart.length>0){
         }
 
         document.getElementById("cart-fa-company").onclick = function() {
-            for (var e = document.querySelectorAll("#cart-fa-company + div input:not(#dic, #fakturacni_jmeno)"), t = 0; t < e.length; ++t)
+            for (var e = document.querySelectorAll("#cart-fa-company + div input:not(#dic, #fakturacni_jmeno, #cart-fa-name)"), t = 0; t < e.length; ++t)
                 e[t].toggleAttribute("required")
         } 
     }
