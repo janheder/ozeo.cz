@@ -99,11 +99,8 @@
               <h2 class="modal__title" id="modal-cart-title">Přidáno do košíku</h2>
               <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </div>
-            <p class="modal__cart-title">Dřevěná bedna na 2 vína CARMEN VI lorem ipsum dolor sit amet</p><span class="modal__cart-variant">Varianta: Černý lak + prosklená dvířka</span><span class="modal__cart-price">1 118 Kč</span><span class="modal__cart-vat">od 923,97 Kč bez DPH</span><a class="btn --cart" href="/kosik-1.html">Pokračovat v objednávce <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></a>
-            <div class="cart-table__footer-link" data-micromodal-close> 
-              <div class="cart-table__footer-icon"><img src="/img/icons/cheveron.svg" alt="Zpět do obchod"></div>
-              <div class="cart-table__footer-text">Zpět do obchodu</div>
-            </div>
+            <p class="modal__cart-title">Dřevěná bedna na 2 vína CARMEN VI lorem ipsum dolor sit amet</p><span class="modal__cart-variant">Varianta: Černý lak + prosklená dvířka</span><span class="modal__cart-price">1 118 Kč</span><span class="modal__cart-vat">od 923,97 Kč bez DPH</span>
+            <div class="modal__cart-btns"><span class="btn --cart-dark" aria-label="Close modal" data-micromodal-close>Zpět do obchodu</span><a class="btn --cart" href="/kosik-1.html">Do košíku <img src="/img/icons/cheveron-white.svg" alt="Pokračovat"></a></div>
           </div>
         </div>
       </div>
@@ -1129,14 +1126,14 @@
       
       
       document.getElementById('searchinput').addEventListener('keyup', function (e) {
-          if(this.value.length >=3){
+          if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{
               document.getElementById('searchAutocomplete').classList.remove('--active');
           }
       });
       document.getElementById('searchinput').addEventListener('click', function (e) {
-          if(this.value.length >=3){
+          if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{
               document.getElementById('searchAutocomplete').classList.remove('--active');

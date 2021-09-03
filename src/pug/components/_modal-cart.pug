@@ -19,11 +19,10 @@
             span.modal__cart-price 1 118 Kč
             span.modal__cart-vat od 923,97 Kč bez DPH
 
-            a.btn.--cart(href="/kosik-1.html") Pokračovat v objednávce #[img(src="/img/icons/cheveron-white.svg" alt="Pokračovat")]
-            .cart-table__footer-link(data-micromodal-close) 
-                .cart-table__footer-icon
-                    img(src="/img/icons/cheveron.svg" alt="Zpět do obchod")
-                .cart-table__footer-text Zpět do obchodu
+            .modal__cart-btns
+                span.btn.--cart-dark(aria-label="Close modal" data-micromodal-close) Zpět do obchodu
+                a.btn.--cart(href="/kosik-1.html") Do košíku #[img(src="/img/icons/cheveron-white.svg" alt="Pokračovat")]
+                
 
    
 

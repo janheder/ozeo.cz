@@ -787,14 +787,14 @@
       
       
       document.getElementById('searchinput').addEventListener('keyup', function (e) {
-          if(this.value.length >=3){
+          if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{
               document.getElementById('searchAutocomplete').classList.remove('--active');
           }
       });
       document.getElementById('searchinput').addEventListener('click', function (e) {
-          if(this.value.length >=3){
+          if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{
               document.getElementById('searchAutocomplete').classList.remove('--active');
