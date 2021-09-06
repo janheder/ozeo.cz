@@ -156,11 +156,14 @@ document.addEventListener('DOMContentLoaded', function() {
             draggable: true,
             multipleDrag: true,
             threshold: 20,
+            duration: 250,
             loop: true,
             rtl: false,
             onInit: () => {},
             onChange: () => {},
         });
+        setInterval(() => indexCarousel.next(), 7000);
+        
         document.querySelector('.prev').addEventListener('click', () => indexCarousel.prev());
         document.querySelector('.next').addEventListener('click', () => indexCarousel.next());
     }

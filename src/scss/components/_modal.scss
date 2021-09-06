@@ -148,12 +148,18 @@
 }
 .modal__cart-btns{
   margin: 0 -10px;
+  display: flex;
 }
 .modal__container.--cart .btn{
   width: auto;
   margin: 0 10px;
   margin-top: 40px;
-
+  white-space: nowrap;
+  &:hover, &:active, &:focus{
+    img {
+      margin-left: 15px;
+    }
+  }
 }
 
 #modal-login-content .modal__close{
@@ -208,6 +214,7 @@
   }
   .modal__cart-btns{
     margin: 0;
+    flex-wrap: wrap;
   }
 }
 
