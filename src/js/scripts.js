@@ -61,7 +61,7 @@ document.getElementById('navToggle').addEventListener('click', function() {
 
 document.getElementById('searchToggle').addEventListener('click', function() {
     document.body.classList.toggle('--search-active');
-    document.getElementById('searchinput').focus();
+    document.getElementById('searchbox').focus();
 });
 
 var filter = document.getElementById('filterContent');
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var homecarousel = document.getElementById('homecarousel');
 
     if (homecarousel){
-        let indexCarousel = new Siema({
+        const indexCarousel = new Siema({
             selector: '#homecarousel',
             duration: 200,
             easing: 'ease-out',
@@ -252,6 +252,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 thumbCarousel.addPagination();
 
+                var variants = document.getElementById('variants');
+
+                if (variants){
+                    document.querySelector('.variants__list').addEventListener('click', function (e) {
+                        thumbCarousel.goTo(0);
+
+                        var target = e.target;
+                        if (target.querySelector('img')) {
+                            var imgSrc = target.querySelector('img').dataset.src;
+                            var second =document.querySelector("#product-carousel > div > div:nth-child(2) img").src=imgSrc;
+                        }
+
+                    });
+                }
+
+
             }
         }
     });
@@ -288,7 +304,11 @@ if (variants){
         
         var target = e.target;
 
-        e.currentTarget.querySelector('.--active').classList.remove('--active');
+        if (e.currentTarget.querySelector('.--active')) {
+            e.currentTarget.querySelector('.--active').classList.remove('--active');
+        }
+        
+
         var input = target.querySelector('input').checked = true;
 
 
@@ -314,8 +334,6 @@ if (variants){
         document.getElementById('price-vat').innerHTML = pricevat;
     });
 }
-
-
 
 
 
@@ -377,4 +395,3 @@ if(document.getElementById('showCartRegisterPassword')
         }
     }
 }
-

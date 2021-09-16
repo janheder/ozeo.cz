@@ -93,7 +93,7 @@
     <div class="modal micromodal-slide" id="modal-info">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-labelledby="modal-info-title">
-          <div class="modal__header-img"> <img src="/img/news-thumb-large.jpg" alt="Lorem ipsum dolor"></div>
+          <div class="modal__header-img"> <img src="/img/info-modal.jpg" alt="Lorem ipsum dolor"></div>
           <div class="modal__content" id="modal-info-content">
             <div class="modal__header">
               <h2 class="modal__title" id="modal-info-title">Lorem ipsum dolor</h2>
@@ -129,7 +129,7 @@
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" method="post"> 
-                <input class="search__input" type="text" id="searchinput" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ">
+                <input class="search__input" type="text" id="searchbox" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ">
                 <button class="search__button"><img src="/img/icons/search.svg" alt="Vyhledávání" width="16" height="16"></button>
                 <div class="searchAutocomplete" id="searchAutocomplete">
                   <div class="searchAutocomplete__section"> 
@@ -633,14 +633,14 @@
       });
       
       
-      document.getElementById('searchinput').addEventListener('keyup', function (e) {
+      document.getElementById('searchbox').addEventListener('keyup', function (e) {
           if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{
               document.getElementById('searchAutocomplete').classList.remove('--active');
           }
       });
-      document.getElementById('searchinput').addEventListener('click', function (e) {
+      document.getElementById('searchbox').addEventListener('click', function (e) {
           if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{

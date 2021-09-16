@@ -130,7 +130,7 @@
           <div class="search"> 
             <div class="search-wrapper">    
               <form class="search-form" method="post"> 
-                <input class="search__input" type="text" id="searchinput" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ">
+                <input class="search__input" type="text" id="searchbox" autocomplete="off" placeholder="Hledejte název produktu, značku nebo typ">
                 <button class="search__button"><img src="/img/icons/search.svg" alt="Vyhledávání" width="16" height="16"></button>
                 <div class="searchAutocomplete" id="searchAutocomplete">
                   <div class="searchAutocomplete__section"> 
@@ -603,16 +603,16 @@
                           <input type="radio" name="variant-empty" id="variantId" value="123" aria-label="Zvolte variantu" required>
                           <div class="variants__item-text">Zvolte variantu</div>
                         </div>
-                        <div class="variants__item" data-code="12-AE6" data-stockstatus="active" data-stock="Skladem 10ks" data-priceold="1 500 Kč" data-price="1 200 Kč" data-pricevat="923 Kč"> 
-                          <input type="radio" name="variant" id="variantId1" value="123" aria-label="Černý lak + prosklená dvířka" required><img src="/img/logo.svg" alt="Černý lak + prosklená dvířka">
+                        <div class="variants__item" data-code="1" data-stockstatus="active" data-stock="Skladem 10ks" data-priceold="1 500 Kč" data-price="1 200 Kč" data-pricevat="923 Kč"> 
+                          <input type="radio" name="variant" id="variantId1" value="123" aria-label="Černý lak + prosklená dvířka" required><img src="/img/logo.svg" alt="Černý lak + prosklená dvířka" data-src="/img/product-thumb-large.jpg">
                           <div class="variants__item-text">Černý lak + prosklená dvířka</div>
                         </div>
-                        <div class="variants__item" data-code="25-AE6" data-stockstatus="disabled" data-stock="Nedostupné" data-priceold="150 Kč" data-price="100 Kč" data-pricevat="80 Kč"> 
-                          <input type="radio" name="variant" id="variantId2" value="123" aria-label="Zelená barva s neprůhlednými dvířky" required><img src="/img/product-thumb-small.jpg" alt="Zelená barva s neprůhlednými dvířky">
+                        <div class="variants__item" data-code="2" data-stockstatus="disabled" data-stock="Nedostupné" data-priceold="150 Kč" data-price="100 Kč" data-pricevat="80 Kč"> 
+                          <input type="radio" name="variant" id="variantId2" value="123" aria-label="Zelená barva s neprůhlednými dvířky" required><img src="/img/product-thumb-small.jpg" alt="Zelená barva s neprůhlednými dvířky" data-src="/img/product-thumb-large.jpg">
                           <div class="variants__item-text">Zelená barva s neprůhlednými dvířky</div>
                         </div>
-                        <div class="variants__item" data-code="60-AE6" data-stockstatus="disabled" data-stock="Nedostupné" data-price="1000 Kč" data-pricevat="800 Kč"> 
-                          <input type="radio" name="variant" id="variantId3" value="123" aria-label="Zelená barva" required><img src="/img/product-thumb-small.jpg" alt="Zelená barva">
+                        <div class="variants__item" data-code="3" data-stockstatus="disabled" data-stock="Nedostupné" data-price="1000 Kč" data-pricevat="800 Kč"> 
+                          <input type="radio" name="variant" id="variantId3" value="123" aria-label="Zelená barva" required><img src="/img/product-thumb-small.jpg" alt="Zelená barva" data-src="/img/product-thumb-large.jpg">
                           <div class="variants__item-text">Zelená barva</div>
                         </div>
                       </div>
@@ -1173,14 +1173,14 @@
       });
       
       
-      document.getElementById('searchinput').addEventListener('keyup', function (e) {
+      document.getElementById('searchbox').addEventListener('keyup', function (e) {
           if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{
               document.getElementById('searchAutocomplete').classList.remove('--active');
           }
       });
-      document.getElementById('searchinput').addEventListener('click', function (e) {
+      document.getElementById('searchbox').addEventListener('click', function (e) {
           if(this.value.length >=1){
               document.getElementById('searchAutocomplete').classList.add('--active');
           }else{

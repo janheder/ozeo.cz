@@ -150,8 +150,6 @@ if (cart.length>0){
         var pricecart2 = deliveryprice +  parseInt(productprice)
         document.getElementById('sumprice').innerText = pricecart2;
 
-
-
     };
 
     for (var ia = 0; ia < elms.length; ia++) {
