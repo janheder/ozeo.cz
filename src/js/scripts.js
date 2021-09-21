@@ -255,13 +255,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 var variants = document.getElementById('variants');
 
                 if (variants){
+                    var firstClick = true;
                     document.querySelector('.variants__list').addEventListener('click', function (e) {
-                        thumbCarousel.goTo(0);
 
                         var target = e.target;
                         if (target.querySelector('img')) {
                             var imgSrc = target.querySelector('img').dataset.src;
-                            var second =document.querySelector("#product-carousel > div > div:nth-child(2) img").src=imgSrc;
+                            var name = target.querySelector('.variants__item-text').innerHTML;
+
+                            if(firstClick){
+                                firstClick = false;
+                            } else {
+                                thumbCarousel.remove(0);
+                            }
+                            
+                            const newElement = document.createElement('div');
+                            newElement.classList.add("product-detail__carouselItem");
+                            newElement.innerHTML = '<div class="product-detail__carouselLink"><img src="'+ imgSrc +'" alt="' + name + '" title="' + name + '" loading="lazy"><span>' + name + '</span></div>';
+                            thumbCarousel.prepend(newElement);
+                            
+                            thumbCarousel.goTo(0);
+                            
+                            /*var second =document.querySelector("#product-carousel > div > div:nth-child(2) img").src=imgSrc;*/
                         }
 
                     });
