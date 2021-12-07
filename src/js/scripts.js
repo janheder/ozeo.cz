@@ -54,15 +54,20 @@ MicroModal.init({
 // RESPONSIVE TOGGLES
 // -----------------------------------------------------------------------------
 
+var navToggle = document.getElementById('navToggle');
+if (navToggle){
+    document.getElementById('navToggle').addEventListener('click', function() {
+        document.body.classList.toggle('--nav-active');
+    });
+}
 
-document.getElementById('navToggle').addEventListener('click', function() {
-    document.body.classList.toggle('--nav-active');
-});
-
-document.getElementById('searchToggle').addEventListener('click', function() {
-    document.body.classList.toggle('--search-active');
-    document.getElementById('searchbox').focus();
-});
+var searchToggle = document.getElementById('searchToggle');
+if (searchToggle){
+    document.getElementById('searchToggle').addEventListener('click', function() {
+        document.body.classList.toggle('--search-active');
+        document.getElementById('searchbox').focus();
+    });
+}
 
 var filter = document.getElementById('filterContent');
 if (filter){
@@ -359,12 +364,16 @@ if (variants){
 
 if(document.getElementById('register-form')){
     document.getElementById('faToggle').onclick = function() {
-        document.getElementById("register-fa-company").toggleAttribute("required");
-        document.getElementById("register-fa-ico").toggleAttribute("required");
+        document.getElementById("register-fa-name").toggleAttribute("required");
         document.getElementById("register-fa-street").toggleAttribute("required");
+        document.getElementById("register-fa-street-n").toggleAttribute("required");
         document.getElementById("register-fa-city").toggleAttribute("required");
         document.getElementById("register-fa-psc").toggleAttribute("required");
         document.getElementById("register-fa-state").toggleAttribute("required");
+    }
+
+    document.getElementById('faComToggle').onclick = function() {
+        document.getElementById("register-fa-ico").toggleAttribute("required");
     }
 }
 

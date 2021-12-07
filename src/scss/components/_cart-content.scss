@@ -486,11 +486,11 @@
     border-collapse: separate;
 }
 .cart-summary__price td{
-    white-space: nowrap;
     padding: 5px 0;
 }
 .cart-summary__price td:last-child{
     text-align: right;
+    white-space: nowrap;
     font-weight: 500;
 }
 
