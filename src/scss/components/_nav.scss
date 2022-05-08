@@ -94,12 +94,12 @@ nav .container{
         opacity: 0;
         pointer-events: none;
         transition: 0.2s ease opacity;
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
     }
     .nav-item.expandable:hover ~ .nav-item-backdrop{
         opacity: 1;
         pointer-events: auto;
-        animation: delay-pointer-events 0.5s linear;
+        animation: delay-pointer-events 0.3s linear;
     }
     .nav-item:hover .nav-link, .nav-item:hover .nav-linkDesktop {
         background: $white;
@@ -108,16 +108,16 @@ nav .container{
         opacity: 0;
         pointer-events: none;
         transition: 0.2s ease opacity;
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
     }
     .nav-item.expandable:hover .nav-submenu{
         opacity: 1;
         pointer-events: auto;
-        animation: delay-pointer-events 0.5s linear;
+        animation: delay-pointer-events 0.3s linear;
     }
     @keyframes delay-pointer-events {
         0%, 99% {
-            pointer-events: none;  
+            
           }  
     }
 }
