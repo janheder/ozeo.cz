@@ -19,7 +19,7 @@ if (cart.length>0){
         let calcEvent = function() {
 
             if (this.value > 0) {
-                overallPriceElement.innerText = (price * this.value).toString();
+                overallPriceElement.innerText = (price * this.value).toFixed(2).toString();
             } else {
                 overallPriceElement.innerText = "0";
             }
@@ -46,23 +46,23 @@ if (cart.length>0){
 
                 if(document.getElementById('codePrice').getAttribute("data-percentage") == undefined){
                
-                    let result_f = (result-codePriceN).toString().replace(/\./g, ',');
+                    let result_f = (result-codePriceN).toFixed(2).toString().replace(/\./g, ',');
                     document.getElementById('goodsprice').innerText = result_f;
 
                 }else{
                    
-                    let salePer = document.getElementById('codePrice').dataset.percentage;
-                    document.getElementById('codePrice').innerHTML = parseInt(result*salePer);
+                    let salePer = (document.getElementById('codePrice').dataset.percentage)*0.01;
+                    document.getElementById('codePrice').innerHTML = parseFloat(result*salePer).toFixed(2);
 
                     let x = result - (result*salePer);
               
-                    let result_f = parseInt(x);
+                    let result_f = parseFloat(x).toFixed(2);
                     document.getElementById('goodsprice').innerText = result_f;
 
                 }
 
             }else{
-                let result_f = result.toString().replace(/\./g, ',');
+                let result_f = result.toFixed(2).toString().replace(/\./g, ',');
                 document.getElementById('goodsprice').innerText = result_f;
             }
             
@@ -75,22 +75,22 @@ if (cart.length>0){
             if (document.getElementById('codePrice')){
                 if(document.getElementById('codePrice').getAttribute("data-percentage") === null){
                
-                    let result2_f = (result2-codePriceN).toString().replace(/\./g, ',');
+                    let result2_f = (result2-codePriceN).toFixed(2).toString().replace(/\./g, ',');
                     document.getElementById('sumprice').innerText = result2_f;
 
                 }else{
                    
-                    let salePer = document.getElementById('codePrice').dataset.percentage;
-                    document.getElementById('codePrice').innerHTML = parseInt(result2*salePer);
+                    let salePer = (document.getElementById('codePrice').dataset.percentage)*0.01;
+                    document.getElementById('codePrice').innerHTML = parseFloat(result2*salePer).toFixed(2);
 
                     let x = result2 - (result2*salePer);
               
-                    let result2_f = parseInt(x);
+                    let result2_f = parseFloat(x).toFixed(2);
                     document.getElementById('sumprice').innerText = result2_f;
 
                 }
             }else{
-                let result2_f = result2.toString().replace(/\./g, ',');
+                let result2_f = result2.toFixed(2).toString().replace(/\./g, ',');
                 document.getElementById('sumprice').innerText = result2_f;
             }
             
@@ -98,16 +98,18 @@ if (cart.length>0){
 
      
             
-
-            let shipping = document.getElementById('cartFreeShipping');
-            let shippingTreshold = parseFloat(shipping.dataset.price);
-            let goodsPrice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
-            let shippingLeft = shippingTreshold - goodsPrice;
-            if(shippingLeft <= 0){
-                shipping.innerHTML = "Dopravu máte zdarma";
-            }else{
-                shipping.innerHTML = "Nakupte ještě za " + shippingLeft + " Kč a máte dopravu zdarma";
+            if(document.getElementById('cartFreeShipping')){
+                let shipping = document.getElementById('cartFreeShipping');
+                let shippingTreshold = parseFloat(shipping.dataset.price);
+                let goodsPrice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
+                let shippingLeft = shippingTreshold - goodsPrice;
+                if(shippingLeft <= 0){
+                    shipping.innerHTML = "Dopravu máte zdarma";
+                }else{
+                    shipping.innerHTML = "Nakupte ještě za " + shippingLeft + " Kč a máte dopravu zdarma";
+                }
             }
+
         
 
         };
@@ -143,11 +145,15 @@ if (cart.length>0){
 
     function deliveryCart() {
         let pricedel = document.querySelectorAll('.cart-table-shipping-item input:checked ~ .cart-table-shipping-price span');
-        let deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0);
-        document.getElementById('delprice').innerText = deliveryprice;
+        let deliveryprice = Array.from(pricedel).reduce((sum, spanElm) => sum + Number(spanElm.textContent), 0); 
 
-        var productprice = document.getElementById('goodsprice').textContent;
-        var pricecart2 = deliveryprice +  parseInt(productprice)
+        
+        var delp = (deliveryprice).toFixed(2);
+        document.getElementById('delprice').innerText = delp;        
+    
+
+        var productprice = parseFloat(document.getElementById('goodsprice').innerText.replace(/,/g, '.'));
+        var pricecart2 = (deliveryprice + productprice).toFixed(2);
         document.getElementById('sumprice').innerText = pricecart2;
 
     };
