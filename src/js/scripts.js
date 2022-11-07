@@ -419,3 +419,11 @@ if(document.getElementById('showCartRegisterPassword')
         }
     }
 }
+
+
+document.addEventListener(
+    "ppl-parcelshop-map",
+    (event) => {
+    console.log("Vybraný parcel shop:", event.detail)
+    }
+    );

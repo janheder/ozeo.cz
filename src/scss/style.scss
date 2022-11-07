@@ -164,3 +164,14 @@ section.products h1{
 .cart-aside__free-shipping{
     display: none;
 }
+
+
+#modal-ppl .modal__container{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#ppl-parcelshop-map .smap {
+    touch-action: none;
+    height: 80vh !important;
+}
