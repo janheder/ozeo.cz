@@ -190,3 +190,24 @@ section.products h1{
     background: $gray-100;
     border: 1px solid white;
 }
+
+
+.variants.--wholesale .variants__list-wrap,
+.variants.--wholesale .variants__list{
+  height: 100%;
+}
+.variants.--wholesale .variants__list::after{
+  content: none;
+}
+.variants.--wholesale .variants__item.--active{
+  order: initial;
+  background: rgba(57, 152, 65, 0.1);
+  box-shadow: inset 0px 0px 0px 1px rgb(57 152 65);
+  z-index: 99;
+}
+.variants.--wholesale .variants__item{
+  order: initial;
+}
+.variants.--wholesale .variants__list.--active{
+  box-shadow: none;
+}
