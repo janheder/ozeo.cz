@@ -112,7 +112,10 @@
     padding-left: 6px;
 }
 .product-card__deliveryText.--unavailable{
-    color: $gray-500;
+    color: #F96C1D;
+}
+.product-card__deliveryText.--soon{
+    color: #F96C1D;
 }
 .product-card__price{
     display: flex;
