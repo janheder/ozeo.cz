@@ -99,49 +99,28 @@ document.body.addEventListener('click', function(e) {
 // -----------------------------------------------------------------------------
 // NUMBER STEPPER
 // -----------------------------------------------------------------------------
+function initializeSteppers() {
+    const steppers = document.querySelectorAll('.stepper');
 
+    steppers.forEach(stepper => {
+        const input = stepper.querySelector('input');
+        const incrementButton = stepper.querySelector('.plus');
+        const decrementButton = stepper.querySelector('.minus');
 
-var inc = document.getElementsByClassName("stepper");
+        incrementButton.addEventListener('click', () => {
+            input.value = parseInt(input.value) + 1;
+        });
 
-if (inc.length > 0){
-    
-    for (abc = 0; abc < inc.length; abc++) {
-    var incI = inc[abc].querySelector("input"),
-        id = incI.getAttribute("id"),
-        min = incI.getAttribute("min"),
-        max = incI.getAttribute("max"),
-        step = incI.getAttribute("step");
-    document
-        .getElementById(id)
-        .previousElementSibling.setAttribute(
-        "onclick",
-        "stepperInput('" + id + "', -" + step + ", " + min + ")"
-        ); 
-    document
-        .getElementById(id)
-        .nextElementSibling.setAttribute(
-        "onclick",
-        "stepperInput('" + id + "', " + step + ", " + max + ")"
-        ); 
-    }
-
-    function stepperInput(id, s, m) {
-        var event = new Event('change');
-        var el = document.getElementById(id);
-        if (s > 0) {
-            if (parseInt(el.value) < m) {
-            el.value = parseInt(el.value) + s;
-            el.dispatchEvent(event);
+        decrementButton.addEventListener('click', () => {
+            const currentValue = parseInt(input.value);
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
             }
-        } else {
-            if (parseInt(el.value) > m) {
-            el.value = parseInt(el.value) + s;
-            el.dispatchEvent(event);
-            }
-        }
-    }
+        });
+    });
 }
 
+initializeSteppers();
 
 // -----------------------------------------------------------------------------
 // HOMEPAGE CARUSEL
